@@ -6,9 +6,8 @@ interface Controller {
     getTasks: (request: TaskRequest, response: Response)=> void,
     createTask: (request: TaskRequest, response: Response)=> void,
     updateTask: (request: TaskRequest, response: Response)=> void,
-    deleteTask?: (request: TaskRequest, response: Response)=> void,
+    deleteTask: (request: TaskRequest, response: Response)=> void,
 }
-
 interface TaskRequest extends Request {
     body: TaskModel & { newTitle?: string }
 }
@@ -41,6 +40,17 @@ const TaskController : Controller = {
         .then( updatedTask => {
             if(!updatedTask)  return res.status(400).send('Tarefa não encontrada');
             res.status(203).send(updatedTask);
+        })
+        .catch(err => res.status(400).send(getMongooseError(err)));
+    },
+    deleteTask(req, res){
+        const {title} = req.body
+        if(!title) return res.status(400).send('Título não informado');
+
+        Tasks.findOneAndDelete({title: title})
+        .then( deletedTask => {
+            if(!deletedTask)  return res.status(400).send('Tarefa não encontrada');
+            res.status(204).send(undefined);
         })
         .catch(err => res.status(400).send(getMongooseError(err)));
     }
