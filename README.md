@@ -2,7 +2,7 @@
 
 ## A new era is coming
 
-### to be greatersrry
+### to be greater
 
 
 #### than yesterday
