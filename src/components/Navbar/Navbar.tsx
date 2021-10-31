@@ -3,7 +3,7 @@ import { useCallback, useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import Link from "next/link";
 import Image from "next/image";
-import Select, { GroupBase, StylesConfig } from 'react-select';
+import Select, { GroupBase, StylesConfig, OptionProps } from 'react-select';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import Sidebar from "react-sidebar";
 
@@ -103,7 +103,7 @@ export default function Navbar() {
       handleClose();
       setPath(url);
     });
-  }, []);
+  }, [handleClose]);
   
   return (
     (typeof window !== 'undefined' && window.innerWidth > 414) ? (
@@ -116,6 +116,8 @@ export default function Navbar() {
         {navItems}
         <Col className={`${styles.navbar__item} ${styles.navbar__select}`}>
           <Select
+            aria-labelledby='aria-label'
+            aria-label='Translate options'
             styles={selectStyles}
             options={availableLangs}
             value={currentLang}
