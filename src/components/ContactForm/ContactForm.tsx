@@ -128,7 +128,7 @@ export default function ContactForm() {
             <input 
               className={styles.contactForm__input} 
               placeholder={pageContent['contact']['name']}
-              alt={pageContent['contact']['name']}
+              aria-label={pageContent['contact']['name']}
               value={formData.name}
               onChange={(event) => { setFormData({...formData, name: event.target.value}) }}
             />
@@ -136,7 +136,7 @@ export default function ContactForm() {
               type="tel" 
               className={styles.contactForm__input} 
               placeholder={pageContent['contact']['tel']}
-              alt={pageContent['contact']['tel']}
+              aria-label={pageContent['contact']['tel']}
               value={formData.tel}
               onChange={(event) => { setFormData({...formData, tel: event.target.value}) }}
             />
@@ -147,7 +147,7 @@ export default function ContactForm() {
             value={formData.email}
             onChange={(event) => { setFormData({...formData, email: event.target.value}) }}
             placeholder="E-mail*" 
-            alt="E-mail" 
+            aria-label="E-mail" 
             required 
           />
           <textarea 
