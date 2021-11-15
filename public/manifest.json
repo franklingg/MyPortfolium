@@ -1,0 +1,13 @@
+{   
+    "background-color": "#1E1E1E",
+    "lang": "pt-BR",
+    "name": "Portfólio de Franklin Regis | Desenvolvedor de Software",
+    "short_name": "Portfólio | Franklin Regis",
+    "icons": [
+      {
+        "src": "favicon.png",
+        "type": "image/png",
+        "sizes": "40x40"
+      }
+    ]
+  }
