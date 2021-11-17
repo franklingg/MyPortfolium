@@ -1,7 +1,7 @@
 import Router from 'next/router';
 import { useEffect } from 'react';
 import { Container } from 'react-bootstrap';
-import { Header } from '~/components';
+import { Navbar } from '~/components';
 import styles from './home.module.css';
 
 export default function Home() {
@@ -13,6 +13,6 @@ export default function Home() {
 
   return (
     <Container fluid className={styles.home}>
-      <Header />
+      <Navbar />
     </Container>);
 }
