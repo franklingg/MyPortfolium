@@ -1,0 +1,28 @@
+.navbar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    padding: 0 65px;
+    color: var(--white);
+}
+
+.navbar__item{
+    margin: 0 65px;
+}
+
+.navbar__logo{
+    margin-right: 118px;
+}
+
+.navbar__logo__img{
+    width: 20px !important;
+}
+
+.navbar__select{
+    flex: 1;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
