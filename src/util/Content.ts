@@ -32,17 +32,17 @@ export default class Content {
 
     static DEFAULT_LANG : ILang = {value: 'pt-BR', label: 'PT BR'};
 
-    static DEFAULT_PAGE = this._DATA[this.DEFAULT_LANG.value];
+    static DEFAULT_PAGE = Content._DATA[Content.DEFAULT_LANG.value];
 
     static getPage(targetLang: ILang) : object {
-        const foundLang = this.AVAILABLE_LANGS.find( lang => lang.value === targetLang.value);
+        const foundLang = Content.AVAILABLE_LANGS.find( lang => lang.value === targetLang.value);
         if(foundLang){
-            return this._DATA[foundLang.value];
+            return Content._DATA[foundLang.value];
         }
-        return this._DATA[this.DEFAULT_LANG.value];
+        return Content._DATA[Content.DEFAULT_LANG.value];
     };
 
     static getSection(targetLang: ILang, section: string) : object {
-        return this.getPage(targetLang)[section];
+        return Content.getPage(targetLang)[section];
     };
 }
