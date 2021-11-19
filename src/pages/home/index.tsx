@@ -13,6 +13,5 @@ export default function Home() {
 
   return (
     <Container fluid className={styles.home}>
-      <Navbar />
     </Container>);
 }

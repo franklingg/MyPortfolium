@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import Link from "next/link";
 import Image from "next/image";
+import Select from 'react-select';
 
 import styles from "./Navbar.module.css";
 import Logo from '~/assets/logo.svg';
@@ -9,7 +10,7 @@ import { useLangContext } from "~/contexts/langContext";
 
 export default function Navbar() {
 
-  const { lang, availableLangs, changeLang } = useLangContext();
+  const { currentLang, availableLangs, changeLang, pageContent } = useLangContext();
 
   return (
     <Row as="nav" className={styles.navbar}>
@@ -20,29 +21,26 @@ export default function Navbar() {
       </Link>
       <Link href="/home" passHref>
         <Col className={styles.navbar__item} as="a">
-          Home
+          {pageContent['navbar']['home']}
         </Col>
       </Link>
-      <Link href="/sobre" passHref>
+      <Link href="/about" passHref>
         <Col className={styles.navbar__item} as="a">
-          Sobre mim
+          {pageContent['navbar']['about']}
         </Col>
       </Link>
-      <Link href="/habilidades" passHref>
+      <Link href="/skills" passHref>
         <Col className={styles.navbar__item} as="a">
-          Habilidades
+          {pageContent['navbar']['skills']}
         </Col>
       </Link>
-      <Link href="/projetos" passHref>
+      <Link href="/projects" passHref>
         <Col className={styles.navbar__item} as="a">
-          Projetos
+          {pageContent['navbar']['projects']}
         </Col>
       </Link>
       <Col className={`${styles.navbar__item} ${styles.navbar__select}`}>
-        <select>
-          <option>{lang}</option>
-          <option>EN</option>
-        </select>
+        <Select options={availableLangs} onChange={(newLang) => changeLang?.(newLang!.value)} />
       </Col>
     </Row>
   );

@@ -6,10 +6,18 @@
     height: 80px;
     padding: 0 65px;
     color: var(--white);
+    fill: var(--light);
 }
 
 .navbar__item{
     margin: 0 65px;
+    letter-spacing: 0.48px;
+}
+
+.navbar__item:hover{
+    font-weight: 700;
+    color: var(--light-blue);
+    letter-spacing: 0.1px;
 }
 
 .navbar__logo{
