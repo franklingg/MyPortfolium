@@ -2,15 +2,54 @@ import { useContext, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import Link from "next/link";
 import Image from "next/image";
-import Select from 'react-select';
+import Select, { GroupBase, StylesConfig } from 'react-select';
 
 import styles from "./Navbar.module.css";
 import Logo from '~/assets/logo.svg';
 import { useLangContext } from "~/contexts/langContext";
+import { ILang } from "~/util/Content";
 
 export default function Navbar() {
 
   const { currentLang, availableLangs, changeLang, pageContent } = useLangContext();
+
+  const selectStyles : StylesConfig<ILang, false, GroupBase<ILang>> = {
+    control: (provided) => ({
+      ...provided,
+      backgroundColor: 'transparent',
+      border: 'none',
+      boxShadow: 'none',
+      minWidth: '5rem',
+    }),
+    indicatorSeparator: () => ({}),
+    dropdownIndicator: () => ({
+      color: 'var(--white)',
+      display: 'flex',
+      alignItems: 'center'
+    }),
+    singleValue: (provided) => ({
+      ...provided,
+      color: 'var(--white)',
+      fontWeight: 300,
+      letterSpacing: 0.48,
+      ':hover': {
+        color: 'var(--light-blue)',
+        letterSpacing: 0.1,
+        fontWeight: 700
+      }
+    }),
+    valueContainer: (provided) => ({
+      ...provided,
+      paddingRight: 2
+    }),
+    option: (provided) => ({
+      ...provided,
+      color: 'black',
+      fontFamily: 'Poppins',
+      fontWeight: 300,
+      fontSize: 14
+    })
+  };
 
   return (
     <Row as="nav" className={styles.navbar}>
@@ -40,7 +79,13 @@ export default function Navbar() {
         </Col>
       </Link>
       <Col className={`${styles.navbar__item} ${styles.navbar__select}`}>
-        <Select options={availableLangs} onChange={(newLang) => changeLang?.(newLang!.value)} />
+        <Select
+          styles={selectStyles}
+          options={availableLangs}
+          value={currentLang}
+          isSearchable={false}
+          onChange={(newLang) => changeLang?.(newLang!.value)}
+        /> 
       </Col>
     </Row>
   );

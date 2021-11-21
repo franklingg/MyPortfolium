@@ -13,6 +13,7 @@ body {
 
 :root{
   --black: #1E1E1E;
+  --grey: #AFAFAF;
   --light: #F6F6F6;
   --white: #FFF;
   --light-blue: rgba(2, 223, 237, 1);
@@ -29,4 +30,22 @@ button {
 
 * {
   box-sizing: border-box;
+}
+
+@media (max-width: 1400px) {
+  :root{
+    font-size: 14px;
+  }
+  h1{
+    font-size: 4.57rem;
+  }
+  h2{
+    font-size: 2.29rem;
+  }
+  h3{
+    font-size: 1.57rem;
+  }
+  h4{
+    font-size: 1.29rem; 
+  }
 }

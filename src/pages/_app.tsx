@@ -2,7 +2,7 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { LangProvider } from '~/contexts/langContext';
-import { Navbar, ContactButton } from '~/components';
+import { Navbar, ContactButton, Footer } from '~/components';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -32,6 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Navbar />
         <ContactButton />
         <Component {...pageProps} />
+        <Footer />
       </LangProvider>
     </>
   );

@@ -11,13 +11,14 @@
 
 .navbar__item{
     margin: 0 65px;
-    letter-spacing: 0.48px;
+    letter-spacing: 0.034rem;
+    font-size: 1rem;
 }
 
 .navbar__item:hover{
     font-weight: 700;
     color: var(--light-blue);
-    letter-spacing: 0.1px;
+    letter-spacing: 0.007rem;
 }
 
 .navbar__logo{
