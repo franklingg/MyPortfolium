@@ -1,3 +1,42 @@
 .home{
-    height: 468px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home__banner{
+    margin: 70px 117px 186px 148px;
+    display: flex;
+    align-items: center;
+    gap: 110px;
+}
+
+.home__banner__text{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.home__banner__text__headings{
+    display: flex;
+    flex-direction: column;
+}
+
+.home__banner__text__headings > h1{
+    margin: 0;
+    color: var(--light-blue)
+}
+
+.home__banner__text__headings > h4 {
+    margin: 0;
+    color: var(--purple);
+}
+
+.home__banner__text > p {
+    color: var(--white);
+}
+
+.home__banner__image{
+    flex: 1;
 }

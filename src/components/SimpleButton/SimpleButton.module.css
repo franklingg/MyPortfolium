@@ -1,0 +1,16 @@
+.simpleButton{
+    margin: 0;
+    padding: 10px 30px;
+    background-color: var(--light-blue);
+    width: max-content;
+    border-radius: 10px;
+    font-family: Poppins;
+    font-weight: 400;
+    color: var(--light-black);
+    transition: 0.12s all ease-in;
+}
+
+.simpleButton:hover{
+    cursor: pointer;
+    transform: scale(1.035);
+}

@@ -12,7 +12,10 @@ export default class Content {
                 "skills": "Habilidades",
                 "projects": "Projetos"
             },
-            "contactButton": "Entre em contato"
+            "contactButton": "Entre em contato",
+            "simpleButton": {
+                "findMore": "Saiba mais"
+            }
         },
         "en-US": {
             "navbar": {
@@ -21,7 +24,10 @@ export default class Content {
                 "skills": "My Skills",
                 "projects": "Projects"
             },
-            "contactButton": "Contact me"
+            "contactButton": "Contact me",
+            "simpleButton": {
+                "findMore": "Find out more"
+            }
         }
     };
 

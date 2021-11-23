@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <LangProvider>
         <Navbar />
-        <ContactButton />
+        {/* <ContactButton /> */}
         <Component {...pageProps} />
         <Footer />
       </LangProvider>

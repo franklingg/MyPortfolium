@@ -13,10 +13,12 @@ body {
 
 :root{
   --black: #1E1E1E;
+  --light-black: #2F2F35;
   --grey: #AFAFAF;
   --light: #F6F6F6;
   --white: #FFF;
-  --light-blue: rgba(2, 223, 237, 1);
+  --light-blue: #02DFED;
+  --purple: #CB7BFF;
 }
 
 a {
