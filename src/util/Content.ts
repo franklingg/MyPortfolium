@@ -15,6 +15,9 @@ export default class Content {
             "contactButton": "Entre em contato",
             "simpleButton": {
                 "findMore": "Saiba mais"
+            },
+            "home": {
+                "recommendations": "Recomendações"
             }
         },
         "en-US": {
@@ -27,6 +30,9 @@ export default class Content {
             "contactButton": "Contact me",
             "simpleButton": {
                 "findMore": "Find out more"
+            },
+            "home": {
+                "recommendations": "Recommendations"
             }
         }
     };

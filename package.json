@@ -17,10 +17,13 @@
     "react-dom": "17.0.2",
     "react-icons": "^4.2.0",
     "react-select": "^5.2.1",
-    "sass": "^1.38.2"
+    "react-slick": "^0.28.1",
+    "sass": "^1.38.2",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@types/react": "17.0.15",
+    "@types/react-slick": "^0.23.7",
     "eslint": "7.31.0",
     "eslint-config-next": "11.0.1",
     "ts-enum-util": "^4.0.2",

@@ -3,11 +3,14 @@ import { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Image from "next/image";
 import Banner from "~/assets/banner.svg";
+import { useLangContext } from "~/contexts/langContext";
 
 import styles from "./home.module.css";
 import { SimpleButton, ButtonKind } from "~/components";
 
 export default function Home() {
+  const { pageContent } = useLangContext();
+
   useEffect(() => {
     if (Router.pathname === "/home") {
       Router.push("/");
@@ -38,7 +41,11 @@ export default function Home() {
           />
         </Col>
       </Row>
-      <Row></Row>
+      <Row className={styles.home__recommendations}>
+        <Row as="h3" className={styles.home__recommendations__title}>
+          {pageContent['home']['recommendations']}
+        </Row>
+      </Row>
     </Container>
   );
 }
