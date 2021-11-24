@@ -53,5 +53,43 @@
 }
 
 .home__recommendations__carousel{
-    width: 500px;
+    width: 100%;
+    align-self: center;
+}
+
+.home__recommendations__carouselBox{
+    display: flex !important;
+    flex-direction: row;
+    gap: 26px;
+    background-color: var(--light-black);
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 1000px;
+}
+
+.home__recommendations__carouselInfo{
+    flex: 1;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.home__recommendations__carouselInfo > p{
+    margin: 0;
+}
+
+.home__recommendations__carouselInfo__author{
+    display: flex;
+    flex-direction: column;
+}
+
+.home__recommendations__carouselInfo__author > span:first-child{
+    font-size: 1.14rem;
+    color: var(--purple);
+    font-weight: 700;
+}
+
+.home__recommendations__carouselInfo__author > span:last-child{
+    font-size: 0.79rem;
 }

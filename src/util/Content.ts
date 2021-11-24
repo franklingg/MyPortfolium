@@ -1,8 +1,16 @@
+import Recommendation1 from '~/assets/eduardo.svg';
+import Recommendation2 from '~/assets/maria.svg';
 export interface ILang {
     value: string,
     label: string
-}
+};
 
+export interface IRecommendation {
+    text: string,
+    author: string,
+    occupation: string,
+    icon: string
+};
 export default class Content {
     static _DATA  = {
         "pt-BR": {
@@ -18,7 +26,27 @@ export default class Content {
             },
             "home": {
                 "recommendations": "Recomendações"
-            }
+            },
+            "recommendations": [
+                {
+                    "text": "“Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+                    "author": "Eduardo Sousa",
+                    "occupation": "Líder de desenvolvimento",
+                    "icon": Recommendation1
+                },
+                {
+                    "text": "“Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+                    "author": "Maria da Paz",
+                    "occupation": "Chefe de QA",
+                    "icon": Recommendation2
+                },
+                {
+                    "text": "“Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+                    "author": "Joana Ferreira",
+                    "occupation": "Desenvolvedora Júnior",
+                    "icon": Recommendation2
+                }
+            ]
         },
         "en-US": {
             "navbar": {
@@ -33,7 +61,27 @@ export default class Content {
             },
             "home": {
                 "recommendations": "Recommendations"
-            }
+            },
+            "recommendations": [
+                {
+                    "text": "“Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+                    "author": "Eduardo Sousa",
+                    "occupation": "Development Leader",
+                    "icon": "eduardo.svg"
+                },
+                {
+                    "text": "“Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+                    "author": "Maria da Paz",
+                    "occupation": "QA Leader",
+                    "icon": "maria.svg"
+                },
+                {
+                    "text": "“Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+                    "author": "Joana Ferreira",
+                    "occupation": "Junior Developer",
+                    "icon": "maria.svg"
+                }
+            ]
         }
     };
 

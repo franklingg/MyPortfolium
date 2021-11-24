@@ -2,14 +2,29 @@ import Router from "next/router";
 import { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Image from "next/image";
-import Banner from "~/assets/banner.svg";
+import Slider, { Settings } from "react-slick";
+import { SimpleButton, ButtonKind } from "~/components";
 import { useLangContext } from "~/contexts/langContext";
 
 import styles from "./home.module.css";
-import { SimpleButton, ButtonKind } from "~/components";
+import Banner from "~/assets/banner.svg";
+import { IRecommendation } from "~/util/Content";
 
 export default function Home() {
   const { pageContent } = useLangContext();
+
+  const sliderSettings : Settings = {
+    className: styles.home__recommendations__carousel,
+    centerMode: true,
+    infinite: false,
+    centerPadding: "130px",
+    dots: true,
+    arrows: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    // dotsClass: styles.home__recommendations__carouselDots
+  };
 
   useEffect(() => {
     if (Router.pathname === "/home") {
@@ -45,6 +60,27 @@ export default function Home() {
         <Row as="h3" className={styles.home__recommendations__title}>
           {pageContent['home']['recommendations']}
         </Row>
+        <Slider {...sliderSettings}>
+          {pageContent['recommendations'].map((item : IRecommendation, idx : number) => (
+            <Row key={idx} className={styles.home__recommendations__carouselBox}>
+              <Col>
+                <Image 
+                  src={item.icon} 
+                  alt={`${item.author} recommendation for Franklin Regis`} 
+                  width={135} 
+                  height={135}
+                />
+              </Col>
+              <Col className={styles.home__recommendations__carouselInfo}>
+                <p>{item.text}</p>
+                <div className={styles.home__recommendations__carouselInfo__author}>
+                  <span>{item.author}</span>
+                  <span>{item.occupation}</span>
+                </div>
+              </Col>
+            </Row>
+          ))}
+        </Slider>
       </Row>
     </Container>
   );
