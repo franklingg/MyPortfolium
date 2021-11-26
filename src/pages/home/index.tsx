@@ -23,7 +23,9 @@ export default function Home() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // dotsClass: styles.home__recommendations__carouselDots
+    dotsClass: styles.home__recommendations__carousel__dots,
+    // eslint-disable-next-line react/display-name
+    customPaging: () => <button />,
   };
 
   useEffect(() => {
@@ -45,7 +47,7 @@ export default function Home() {
             sint. Velit officia consequat duis enim velit mollit. Exercitation
             veniam consequat sunt nostrud amet.
           </p>
-          <SimpleButton kind={ButtonKind.FIND_MORE} />
+          <SimpleButton kind={ButtonKind.FIND_MORE} href="/about" />
         </Col>
         <Col className={styles.home__banner__image}>
           <Image

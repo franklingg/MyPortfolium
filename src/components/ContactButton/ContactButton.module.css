@@ -1,5 +1,5 @@
 .contactButton{
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom: 150px;
     background: linear-gradient(239.94deg, #00EBB2 10.45%, #02DFED 40.94%, #CB7BFF 80.97%);

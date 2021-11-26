@@ -35,6 +35,10 @@ button {
   box-sizing: border-box;
 }
 
+.slick-active > button{
+  background-color: var(--light-blue) !important;
+}
+
 @media (max-width: 1400px) {
   :root{
     font-size: 14px;

@@ -6,16 +6,17 @@ export enum ButtonKind {
 }
 
 interface SimpleButtonProps {
-  kind: ButtonKind
+  kind: ButtonKind,
+  href: string
 }
 
-export default function SimpleButton({ kind } : SimpleButtonProps) {
+export default function SimpleButton({ kind, href } : SimpleButtonProps) {
 
   const { pageContent } = useLangContext();
 
   return (
-    <button className={styles.simpleButton}>
+    <a className={styles.simpleButton} href={href}>
       {pageContent['simpleButton'][kind]}
-    </button>
+    </a>
   );
 }

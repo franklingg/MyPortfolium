@@ -93,3 +93,23 @@
 .home__recommendations__carouselInfo__author > span:last-child{
     font-size: 0.79rem;
 }
+
+.home__recommendations__carousel__dots{
+    margin: 15px 0 125px 0;
+    display: flex !important;
+    gap: 4px;
+    justify-content: center;
+    list-style: none;
+}
+
+.home__recommendations__carousel__dots > li > button{
+    height: 14px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid var(--light-blue);
+    transform: scale(0.75);
+}
+
+.home__recommendations__carousel__dots > li > button:hover{
+    cursor: pointer;
+}
