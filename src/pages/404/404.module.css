@@ -1,0 +1,19 @@
+.error{
+    margin: 7px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error__text{
+    max-width: 300px;
+}
+
+.error__text > h2 {
+    color: var(--light-blue);
+}
+
+.error__text > p {
+    color: var(--white);
+    font-weight: 400;
+}
