@@ -6,7 +6,9 @@
     height: 80px;
     padding: 0 65px;
     color: var(--white);
-    fill: var(--light);
+    background-color: var(--lighter-black);
+    box-shadow: 0px 1px 4px rgba(255, 255, 255, 0.25);
+    border-radius: 0px 0px 10px 10px;
 }
 
 .navbar__item{
@@ -15,7 +17,7 @@
     font-size: 1rem;
 }
 
-.navbar__item:hover{
+.navbar__item__focused, .navbar__item:hover{
     font-weight: 700;
     color: var(--light-blue);
     letter-spacing: 0.007rem;

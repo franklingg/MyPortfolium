@@ -1,4 +1,5 @@
-import { useContext, useState } from "react";
+import Router from 'next/router';
+import { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import Link from "next/link";
 import Image from "next/image";
@@ -12,6 +13,14 @@ import { ILang } from "~/util/Content";
 export default function Navbar() {
 
   const { currentLang, availableLangs, changeLang, pageContent } = useLangContext();
+  const [ path, setPath ] = useState("");
+
+  useEffect(() => {
+    setPath(Router.pathname);
+    Router.events.on('routeChangeComplete', url => {
+      setPath(url);
+    });
+  }, []);
 
   const selectStyles : StylesConfig<ILang, false, GroupBase<ILang>> = {
     control: (provided) => ({
@@ -59,22 +68,22 @@ export default function Navbar() {
         </Col>
       </Link>
       <Link href="/home" passHref>
-        <Col className={styles.navbar__item} as="a">
+        <Col className={`${styles.navbar__item} ${path == "/home" || path === "/" ? styles.navbar__item__focused : ""}`} as="a">
           {pageContent['navbar']['home']}
         </Col>
       </Link>
       <Link href="/about" passHref>
-        <Col className={styles.navbar__item} as="a">
+        <Col className={`${styles.navbar__item} ${path == "/about" ? styles.navbar__item__focused : ""}`} as="a">
           {pageContent['navbar']['about']}
         </Col>
       </Link>
       <Link href="/skills" passHref>
-        <Col className={styles.navbar__item} as="a">
+        <Col className={`${styles.navbar__item} ${path == "/skills" ? styles.navbar__item__focused : ""}`} as="a">
           {pageContent['navbar']['skills']}
         </Col>
       </Link>
       <Link href="/projects" passHref>
-        <Col className={styles.navbar__item} as="a">
+        <Col className={`${styles.navbar__item} ${path == "/projects" ? styles.navbar__item__focused : ""}`} as="a">
           {pageContent['navbar']['projects']}
         </Col>
       </Link>
