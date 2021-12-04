@@ -11,6 +11,11 @@ export interface IRecommendation {
     occupation: string,
     icon: string
 };
+
+export interface IInformation {
+    value: number,
+    content: string
+}
 export default class Content {
     static _DATA  = {
         "pt-BR": {
@@ -46,7 +51,24 @@ export default class Content {
                     "occupation": "Desenvolvedora Júnior",
                     "icon": Recommendation2
                 }
-            ]
+            ],
+            "about": {
+                "who": "Quem sou eu?",
+                "text": `Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
+                Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
+                Velit officia consequat duis enim velit mollit. 
+                Exercitation veniam consequat sunt nostrud amet.`,
+                "informations": "Informações",
+                "info": [
+                    {value: 2, content: 'anos de experiência atuando como frontend developer'},
+                    {value: 5, content: 'anos de experiência atuando como frontend developer'},
+                    {value: 10, content: 'anos de experiência'},
+                    {value: 2, content: 'anos de experiência atuando como frontend developer'},
+                    {value: 5, content: 'anos de experiência atuando como frontend developer'},
+                    {value: 10, content: 'anos de experiência'},
+                ]
+            }
         },
         "en-US": {
             "navbar": {
@@ -81,7 +103,17 @@ export default class Content {
                     "occupation": "Junior Developer",
                     "icon": "maria.svg"
                 }
-            ]
+            ],
+            "about": {
+                "who": "Who am I?",
+                "text": `Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
+                Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
+                Velit officia consequat duis enim velit mollit. 
+                Exercitation veniam consequat sunt nostrud amet.`,
+                "informations": "Informations",
+                "info": []
+            }
         }
     };
 
