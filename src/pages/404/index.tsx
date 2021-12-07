@@ -2,7 +2,7 @@ import { Container, Row } from "react-bootstrap";
 import Image from "next/image";
 
 import styles from './404.module.css';
-import Banner404 from '~/assets/404.svg';
+import { Banner404 } from '~/assets';
 
 export default function Error404() {
 

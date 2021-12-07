@@ -4,7 +4,7 @@ import Image from "next/image";
 import { RiDiscordFill } from 'react-icons/ri';
 import { FaFacebookSquare, FaInstagramSquare, FaGithubSquare } from 'react-icons/fa';
 
-import Logo from '~/assets/logo_icon.svg';
+import { Logo } from '~/assets';
 import styles from "./Footer.module.css";
 
 export default function Footer() {

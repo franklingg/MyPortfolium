@@ -1,5 +1,4 @@
-import Recommendation1 from '~/assets/eduardo.svg';
-import Recommendation2 from '~/assets/maria.svg';
+import { RecomEduardo, RecomMaria, Book, Bulb, Gear } from '~/assets'
 export interface ILang {
     value: string,
     label: string
@@ -37,19 +36,19 @@ export default class Content {
                     "text": "“Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
                     "author": "Eduardo Sousa",
                     "occupation": "Líder de desenvolvimento",
-                    "icon": Recommendation1
+                    "icon": RecomEduardo
                 },
                 {
                     "text": "“Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
                     "author": "Maria da Paz",
                     "occupation": "Chefe de QA",
-                    "icon": Recommendation2
+                    "icon": RecomMaria
                 },
                 {
                     "text": "“Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
                     "author": "Joana Ferreira",
                     "occupation": "Desenvolvedora Júnior",
-                    "icon": Recommendation2
+                    "icon": RecomMaria
                 }
             ],
             "about": {
@@ -67,6 +66,14 @@ export default class Content {
                     {value: 2, content: 'anos de experiência atuando como frontend developer'},
                     {value: 5, content: 'anos de experiência atuando como frontend developer'},
                     {value: 10, content: 'anos de experiência'},
+                ]
+            },
+            "skills": {
+                tops: ['Melhores', 'Habilidades'],
+                topsList: [
+                    { icon: Book, text: 'anos de experiência atuando como frontend developer' },
+                    { icon: Bulb, text: 'anos de experiência atuando como frontend developer' },
+                    { icon: Gear, text: 'anos de experiência atuando como frontend developer' }
                 ]
             }
         },
@@ -89,19 +96,19 @@ export default class Content {
                     "text": "“Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
                     "author": "Eduardo Sousa",
                     "occupation": "Development Leader",
-                    "icon": "eduardo.svg"
+                    "icon": RecomEduardo
                 },
                 {
                     "text": "“Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
                     "author": "Maria da Paz",
                     "occupation": "QA Leader",
-                    "icon": "maria.svg"
+                    "icon": RecomMaria
                 },
                 {
                     "text": "“Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
                     "author": "Joana Ferreira",
                     "occupation": "Junior Developer",
-                    "icon": "maria.svg"
+                    "icon": RecomMaria
                 }
             ],
             "about": {
@@ -113,6 +120,14 @@ export default class Content {
                 Exercitation veniam consequat sunt nostrud amet.`,
                 "informations": "Informations",
                 "info": []
+            },
+            "skills": {
+                tops: ['Best', 'Skills'],
+                topsList: [
+                    { icon: Book, text: 'anos de experiência atuando como frontend developer' },
+                    { icon: Bulb, text: 'anos de experiência atuando como frontend developer' },
+                    { icon: Gear, text: 'anos de experiência atuando como frontend developer' }
+                ]
             }
         }
     };

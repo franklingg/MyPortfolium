@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useLangContext } from "~/contexts/langContext";
 
 import styles from "./about.module.css";
-import AboutImg from '~/assets/about.svg';
+import { BannerAbout } from '~/assets';
 import { IInformation } from "~/util/Content";
 
 export default function About() {
@@ -16,7 +16,7 @@ export default function About() {
           <h1>{pageContent['about']['who']}</h1>
           <p>{pageContent['about']['text']}</p>
         </Col>
-        <Image src={AboutImg} alt="Identidade visual de Franklin Regis" width={579} height={653} />
+        <Image src={BannerAbout} alt="Identidade visual de Franklin Regis" width={579} height={653} />
       </Row>
       <Row className={styles.about__informations}>
         <h3>{pageContent['about']['informations']}</h3>

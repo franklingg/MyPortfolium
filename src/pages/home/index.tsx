@@ -7,7 +7,7 @@ import { SimpleButton, ButtonKind } from "~/components";
 import { useLangContext } from "~/contexts/langContext";
 
 import styles from "./home.module.css";
-import Banner from "~/assets/banner.svg";
+import { BannerHome } from "~/assets";
 import { IRecommendation } from "~/util/Content";
 
 export default function Home() {
@@ -51,7 +51,7 @@ export default function Home() {
         </Col>
         <Col className={styles.home__banner__image}>
           <Image
-            src={Banner}
+            src={BannerHome}
             alt="Banner de Franklin Regis"
             width={588}
             height={598}

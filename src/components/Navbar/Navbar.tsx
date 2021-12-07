@@ -6,7 +6,7 @@ import Image from "next/image";
 import Select, { GroupBase, StylesConfig } from 'react-select';
 
 import styles from "./Navbar.module.css";
-import Logo from '~/assets/logo.svg';
+import { Logo } from '~/assets';
 import { useLangContext } from "~/contexts/langContext";
 import { ILang } from "~/util/Content";
 
