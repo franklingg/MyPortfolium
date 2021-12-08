@@ -23,6 +23,12 @@
     color: var(--white);
 }
 
+.about__banner__img{
+    position: relative;
+    width: 579px;
+    height: 653px;
+}
+
 .about__informations{
     width: 100%;
     padding: 83px 148px;

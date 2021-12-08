@@ -50,12 +50,7 @@ export default function Home() {
           <SimpleButton kind={ButtonKind.FIND_MORE} href="/about" />
         </Col>
         <Col className={styles.home__banner__image}>
-          <Image
-            src={BannerHome}
-            alt="Banner de Franklin Regis"
-            width={588}
-            height={598}
-          />
+          <Image src={BannerHome} alt="Banner de Franklin Regis" layout="fill" />
         </Col>
       </Row>
       <Row className={styles.home__recommendations}>
@@ -65,12 +60,11 @@ export default function Home() {
         <Slider {...sliderSettings}>
           {pageContent['recommendations'].map((item : IRecommendation, idx : number) => (
             <Row key={idx} className={styles.home__recommendations__carouselBox}>
-              <Col>
+              <Col className={styles.home__recommendations__carouselImg}>
                 <Image 
                   src={item.icon} 
                   alt={`${item.author} recommendation for Franklin Regis`} 
-                  width={135} 
-                  height={135}
+                  layout="fill"
                 />
               </Col>
               <Col className={styles.home__recommendations__carouselInfo}>

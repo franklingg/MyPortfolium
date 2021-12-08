@@ -1,10 +1,10 @@
 .skills__tops {
-    margin: 140px;
-    margin-bottom: 80px;
+    margin: 130px;
+    margin-bottom: 0;
 }
 
 .skills__topsTitle {
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 .skills__topsTitle > h1{
@@ -42,4 +42,34 @@
 .skills__topsList__item > div > span:first-child { 
     font-weight: 700;
     color: var(--purple);
+}
+
+.skills__all {
+    margin: 80px 65px 150px 130px;
+    display: flex;
+}
+
+.skills__all__left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 67px;
+}
+
+.skills__all__left > h3 {
+    margin: 0;
+    color: var(--green);
+}
+
+.skills__all__list{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.skills__all__banner{
+    position: relative;
+    height: 512px;
+    width: 279px;
 }

@@ -10,3 +10,4 @@ export { default as LogoIcon } from './icons/logo_icon.svg';
 export { default as Banner404 } from './img/404.svg';
 export { default as BannerAbout } from './img/about.svg';
 export { default as BannerHome } from './img/home.svg';
+export { default as BannerSkills } from './img/skills.svg';

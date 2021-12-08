@@ -16,7 +16,9 @@ export default function About() {
           <h1>{pageContent['about']['who']}</h1>
           <p>{pageContent['about']['text']}</p>
         </Col>
-        <Image src={BannerAbout} alt="Identidade visual de Franklin Regis" width={579} height={653} />
+        <Col className={styles.about__banner__img}>
+          <Image src={BannerAbout} alt="Identidade visual de Franklin Regis" layout="fill" />
+        </Col>
       </Row>
       <Row className={styles.about__informations}>
         <h3>{pageContent['about']['informations']}</h3>

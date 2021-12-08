@@ -1,0 +1,23 @@
+.skillbar{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.skillbar__title{
+    color: var(--white);
+}
+
+.skillbar__box{
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.skillbar__box__line{
+    border-radius: 10px;
+    height: 8px;
+    background: linear-gradient(239.94deg, #00EBB2 10.45%, #02DFED 40.94%, #CB7BFF 80.97%);
+}

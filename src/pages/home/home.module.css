@@ -38,7 +38,9 @@
 }
 
 .home__banner__image{
+    position: relative;
     flex: 1;
+    height: 588px;
 }
 
 .home__recommendations{
@@ -65,6 +67,12 @@
     padding: 40px;
     border-radius: 10px;
     max-width: 1000px;
+}
+
+.home__recommendations__carouselImg{
+    position: relative;
+    width: 135px;
+    height: 135px;
 }
 
 .home__recommendations__carouselInfo{
