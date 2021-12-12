@@ -1,19 +1,33 @@
 .error{
-    margin: 7px 0;
+    margin: 114px 139px 159px 278px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .error__text{
-    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.error__text > h2 {
+.error__text > h1 {
+    margin: 0;
     color: var(--light-blue);
+}
+
+.error__text > h3 {
+    margin: 0;
+    color: var(--green);
 }
 
 .error__text > p {
     color: var(--white);
     font-weight: 400;
+}
+
+.error__banner{
+    position: relative;
+    min-width: 495px;
+    height: 511px;
 }

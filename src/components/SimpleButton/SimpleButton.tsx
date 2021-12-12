@@ -2,7 +2,8 @@ import styles from "./SimpleButton.module.css";
 import { useLangContext } from "~/contexts/langContext";
 
 export enum ButtonKind {
-  FIND_MORE = "findMore"
+  FIND_MORE = "findMore",
+  BACK_HOME = "backHome"
 }
 
 interface SimpleButtonProps {

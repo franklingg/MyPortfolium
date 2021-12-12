@@ -26,7 +26,8 @@ export default class Content {
             },
             "contactButton": "Entre em contato",
             "simpleButton": {
-                "findMore": "Saiba mais"
+                "findMore": "Saiba mais",
+                "backHome": "Voltar para o Início"
             },
             "home": {
                 "recommendations": "Recomendações"
@@ -75,7 +76,11 @@ export default class Content {
                     { icon: Bulb, text: 'anos de experiência atuando como frontend developer' },
                     { icon: Gear, text: 'anos de experiência atuando como frontend developer' }
                 ]
-            }
+            },
+            "404": [
+                'A página que você está procurando não está disponível no momento :(',
+                'Atualize a página ou retorne para o menu principal!'
+            ]
         },
         "en-US": {
             "navbar": {
@@ -86,7 +91,8 @@ export default class Content {
             },
             "contactButton": "Contact me",
             "simpleButton": {
-                "findMore": "Find out more"
+                "findMore": "Find out more",
+                "backHome": "Return to Home"
             },
             "home": {
                 "recommendations": "Recommendations"
@@ -128,7 +134,11 @@ export default class Content {
                     { icon: Bulb, text: 'anos de experiência atuando como frontend developer' },
                     { icon: Gear, text: 'anos de experiência atuando como frontend developer' }
                 ]
-            }
+            },
+            "404": [
+                'The page you\'re looking for is not available at the moment :(',
+                'Please refresh or return to the home page!'
+            ]
         }
     };
 
