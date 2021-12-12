@@ -51,12 +51,27 @@ export default function Navbar() {
       ...provided,
       paddingRight: 2
     }),
-    option: (provided) => ({
+    option: (provided, state) => ({
       ...provided,
-      color: 'black',
+      backgroundColor: state.isSelected || state.isFocused ? 'var(--black)' : 'var(--lighter-black)',
+      borderRadius: 10,
+      color: state.isSelected ? 'var(--light-blue)' : 'var(--white)',
       fontFamily: 'Poppins',
-      fontWeight: 300,
-      fontSize: 14
+      fontWeight: 500,
+      fontSize: 14,
+    }),
+    menu: (provided) => ({
+      ...provided,
+      margin: 0,
+      borderRadius: 10,
+      backgroundColor: 'var(--lighter-black)'
+    }),
+    menuList: (provided) => ({
+      ...provided,
+      padding: 0,
+      backgroundColor: 'var(--lighter-black)',
+      borderRadius: 10,
+      boxShadow: '0px 1px 2px rgba(255, 255, 255, 0.25)'
     })
   };
 
