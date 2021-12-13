@@ -143,11 +143,11 @@ export default class Content {
     };
 
     static AVAILABLE_LANGS : ILang[] = [
-        {value: 'pt-BR', label: 'PT BR'}, 
-        {value: 'en-US', label: 'EN'}
+        {value: 'pt-BR', label: 'PT-BR'}, 
+        {value: 'en-US', label: 'EN-US'}
     ];
 
-    static DEFAULT_LANG : ILang = {value: 'pt-BR', label: 'PT BR'};
+    static DEFAULT_LANG : ILang = Content.AVAILABLE_LANGS[0];
 
     static DEFAULT_PAGE = Content._DATA[Content.DEFAULT_LANG.value];
 
