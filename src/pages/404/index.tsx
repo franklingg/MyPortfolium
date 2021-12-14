@@ -18,7 +18,7 @@ export default function Error404() {
           {pageContent['404'][0]} <br />
           {pageContent['404'][1]}
         </p>
-        <SimpleButton href="/home" kind={ButtonKind.BACK_HOME} />
+        <SimpleButton href="/home" kind={ButtonKind.BACK_HOME} color="var(--purple)" />
       </Col>
       <Col className={styles.error__banner}>
         <Image src={Banner404} alt="Imagem de erro retirada de https://storyset.com" layout="fill" />

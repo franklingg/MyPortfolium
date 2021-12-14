@@ -8,15 +8,16 @@ export enum ButtonKind {
 
 interface SimpleButtonProps {
   kind: ButtonKind,
-  href: string
+  href: string,
+  color?: string
 }
 
-export default function SimpleButton({ kind, href } : SimpleButtonProps) {
+export default function SimpleButton({ kind, href, color='var(--light-blue)' } : SimpleButtonProps) {
 
   const { pageContent } = useLangContext();
 
   return (
-    <a className={styles.simpleButton} href={href}>
+    <a className={styles.simpleButton} href={href} style={{backgroundColor: color}}>
       {pageContent['simpleButton'][kind]}
     </a>
   );

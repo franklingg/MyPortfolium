@@ -1,7 +1,6 @@
 .simpleButton{
     margin: 0;
     padding: 10px 30px;
-    background-color: var(--light-blue);
     width: max-content;
     border-radius: 10px;
     font-family: Poppins;
