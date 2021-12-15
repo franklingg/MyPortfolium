@@ -1,18 +1,16 @@
 .contactButton{
     position: fixed;
     right: 0;
-    bottom: 150px;
+    bottom: 40px;
     background: linear-gradient(239.94deg, #00EBB2 10.45%, #02DFED 40.94%, #CB7BFF 80.97%);
     border-radius: 10px 0px 0px 10px;
     color: var(--white);
     padding: 10px 25px;
     font-weight: 700;
     font-family: Poppins;
-    transition: 0.2s ease-in 0;
     z-index: 100;
 }
 
 .contactButton:hover{
     cursor: pointer;
-    transform: scale(0.98);
 }
