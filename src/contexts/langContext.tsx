@@ -1,17 +1,17 @@
 import React, { createContext, useState, useContext, ProviderProps, Provider, useEffect } from "react";
-import Content, { ILang } from '~/util/Content';
+import { AVAILABLE_LANGS, DEFAULT_LANG, ILang, IPage } from '~/util/Content';
 
 interface ILangContext {
     currentLang : ILang,
     availableLangs : Array<ILang>,
-    pageContent: object,
+    pageContent: IPage,
     changeLang ?: (newLang: string) => void;
 }
 
 const defaultState : ILangContext = {
-    currentLang: Content.DEFAULT_LANG,
-    pageContent: Content.DEFAULT_PAGE,
-    availableLangs: Content.AVAILABLE_LANGS
+    currentLang: DEFAULT_LANG,
+    pageContent: DEFAULT_LANG.page,
+    availableLangs: AVAILABLE_LANGS
 }
 
 const LangContext = createContext<ILangContext>(defaultState);
@@ -26,7 +26,7 @@ export function LangProvider({ children } : {children: React.ReactNode}) {
     }
 
     useEffect(()=>{
-      setPageContent(Content.getPage(currentLang));
+      setPageContent(currentLang.page);
     }, [currentLang]);
 
   return (

@@ -1,5 +1,5 @@
-export { default as RecomEduardo } from './icons/eduardo.svg';
-export { default as RecomMaria } from './icons/maria.svg';
+export { default as RecomDebora } from './icons/debora.svg';
+export { default as RecomTiago } from './icons/tiago.svg';
 
 export { default as Bulb } from './icons/bulb.svg';
 export { default as Book } from './icons/book.svg';

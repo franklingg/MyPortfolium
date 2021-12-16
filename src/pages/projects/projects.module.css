@@ -1,2 +1,23 @@
 .projects {
+    padding: 177px 65px;
+    padding-bottom: 120px;
+}
+
+.projects__title{
+    margin: 0;
+    margin-left: 83px;
+    color: var(--light-blue);
+}
+
+.projects__row{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+}
+
+.projects__row > h3 {
+    margin: 0;
+    margin-left: 83px;
+    color: var(--green);
 }

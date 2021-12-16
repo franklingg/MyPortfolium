@@ -1,7 +1,9 @@
-import { RecomEduardo, RecomMaria, Book, Bulb, Gear } from '~/assets'
+import PT_BR from './PT_BR';
+import EN_US from './EN_US';
 export interface ILang {
     value: string,
-    label: string
+    label: string,
+    page: IPage
 };
 
 export interface IRecommendation {
@@ -15,151 +17,44 @@ export interface IInformation {
     value: number,
     content: string
 }
-export default class Content {
-    static _DATA  = {
-        "pt-BR": {
-            "navbar": {
-                "home": "Home",
-                "about": "Sobre mim",
-                "skills": "Habilidades",
-                "projects": "Projetos"
-            },
-            "contactButton": "Entre em contato",
-            "simpleButton": {
-                "findMore": "Saiba mais",
-                "backHome": "Voltar para o Início"
-            },
-            "home": {
-                "recommendations": "Recomendações"
-            },
-            "recommendations": [
-                {
-                    "text": "“Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-                    "author": "Eduardo Sousa",
-                    "occupation": "Líder de desenvolvimento",
-                    "icon": RecomEduardo
-                },
-                {
-                    "text": "“Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-                    "author": "Maria da Paz",
-                    "occupation": "Chefe de QA",
-                    "icon": RecomMaria
-                },
-                {
-                    "text": "“Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-                    "author": "Joana Ferreira",
-                    "occupation": "Desenvolvedora Júnior",
-                    "icon": RecomMaria
-                }
-            ],
-            "about": {
-                "who": "Quem sou eu?",
-                "text": `Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
-                Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
-                Velit officia consequat duis enim velit mollit. 
-                Exercitation veniam consequat sunt nostrud amet.`,
-                "informations": "Informações",
-                "info": [
-                    {value: 2, content: 'anos de experiência atuando como frontend developer'},
-                    {value: 5, content: 'anos de experiência atuando como frontend developer'},
-                    {value: 10, content: 'anos de experiência'},
-                    {value: 2, content: 'anos de experiência atuando como frontend developer'},
-                    {value: 5, content: 'anos de experiência atuando como frontend developer'},
-                    {value: 10, content: 'anos de experiência'},
-                ]
-            },
-            "skills": {
-                tops: ['Melhores', 'Habilidades'],
-                topsList: [
-                    { icon: Book, text: 'anos de experiência atuando como frontend developer' },
-                    { icon: Bulb, text: 'anos de experiência atuando como frontend developer' },
-                    { icon: Gear, text: 'anos de experiência atuando como frontend developer' }
-                ]
-            },
-            "404": [
-                'A página que você está procurando não está disponível no momento :(',
-                'Atualize a página ou retorne para o menu principal!'
-            ]
-        },
-        "en-US": {
-            "navbar": {
-                "home": "Home",
-                "about": "About Me",
-                "skills": "My Skills",
-                "projects": "Projects"
-            },
-            "contactButton": "Contact me",
-            "simpleButton": {
-                "findMore": "Find out more",
-                "backHome": "Return to Home"
-            },
-            "home": {
-                "recommendations": "Recommendations"
-            },
-            "recommendations": [
-                {
-                    "text": "“Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-                    "author": "Eduardo Sousa",
-                    "occupation": "Development Leader",
-                    "icon": RecomEduardo
-                },
-                {
-                    "text": "“Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-                    "author": "Maria da Paz",
-                    "occupation": "QA Leader",
-                    "icon": RecomMaria
-                },
-                {
-                    "text": "“Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-                    "author": "Joana Ferreira",
-                    "occupation": "Junior Developer",
-                    "icon": RecomMaria
-                }
-            ],
-            "about": {
-                "who": "Who am I?",
-                "text": `Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
-                Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
-                Velit officia consequat duis enim velit mollit. 
-                Exercitation veniam consequat sunt nostrud amet.`,
-                "informations": "Informations",
-                "info": []
-            },
-            "skills": {
-                tops: ['Best', 'Skills'],
-                topsList: [
-                    { icon: Book, text: 'anos de experiência atuando como frontend developer' },
-                    { icon: Bulb, text: 'anos de experiência atuando como frontend developer' },
-                    { icon: Gear, text: 'anos de experiência atuando como frontend developer' }
-                ]
-            },
-            "404": [
-                'The page you\'re looking for is not available at the moment :(',
-                'Please refresh or return to the home page!'
-            ]
-        }
-    };
 
-    static AVAILABLE_LANGS : ILang[] = [
-        {value: 'pt-BR', label: 'PT-BR'}, 
-        {value: 'en-US', label: 'EN-US'}
-    ];
-
-    static DEFAULT_LANG : ILang = Content.AVAILABLE_LANGS[0];
-
-    static DEFAULT_PAGE = Content._DATA[Content.DEFAULT_LANG.value];
-
-    static getPage(targetLang: ILang) : object {
-        const foundLang = Content.AVAILABLE_LANGS.find( lang => lang.value === targetLang.value);
-        if(foundLang){
-            return Content._DATA[foundLang.value];
-        }
-        return Content._DATA[Content.DEFAULT_LANG.value];
-    };
-
-    static getSection(targetLang: ILang, section: string) : object {
-        return Content.getPage(targetLang)[section];
-    };
+interface ISkill {
+    icon: string,
+    text: string
 }
+
+export interface IPage {
+    navbar: {
+        home: string,
+        about: string,
+        skills: string,
+        projects: string
+    },
+    contactButton: string,
+    simpleButton: {
+        findMore: string,
+        backHome: string
+    },
+    home: {
+        recommendationsTitle: string,
+        recommendations: Array<IRecommendation>
+    },
+    about: {
+        who: string,
+        text: string,
+        informationsTitle: string,
+        informations: Array<IInformation>
+    },
+    skills: {
+        tops: Array<String>,
+        topsList: Array<ISkill>
+    },
+    "404": Array<String>
+}
+
+export const AVAILABLE_LANGS : ILang[] = [
+    {value: 'pt-BR', label: 'PT-BR', page: new PT_BR()}, 
+    {value: 'en-US', label: 'EN-US', page: new EN_US()}
+];
+
+export const DEFAULT_LANG : ILang = AVAILABLE_LANGS[0];

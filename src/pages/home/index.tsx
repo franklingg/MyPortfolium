@@ -55,10 +55,10 @@ export default function Home() {
       </Row>
       <Row className={styles.home__recommendations}>
         <Row as="h3" className={styles.home__recommendations__title}>
-          {pageContent['home']['recommendations']}
+          {pageContent.home.recommendationsTitle}
         </Row>
         <Slider {...sliderSettings}>
-          {pageContent['recommendations'].map((item : IRecommendation, idx : number) => (
+          {pageContent.home.recommendations.map((item, idx) => (
             <Row key={idx} className={styles.home__recommendations__carouselBox}>
               <Col className={styles.home__recommendations__carouselImg}>
                 <Image 
