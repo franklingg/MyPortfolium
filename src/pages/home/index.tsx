@@ -8,7 +8,6 @@ import { useLangContext } from "~/contexts/langContext";
 
 import styles from "./home.module.css";
 import { BannerHome } from "~/assets";
-import { IRecommendation } from "~/util/Content";
 
 export default function Home() {
   const { pageContent } = useLangContext();

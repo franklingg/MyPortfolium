@@ -1,0 +1,11 @@
+.projects__slider {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects__slider > h3 {
+    color: var(--green);
+    margin-left: 83px;
+    text-transform: capitalize;
+}

@@ -4,7 +4,6 @@ import { useLangContext } from "~/contexts/langContext";
 
 import styles from "./about.module.css";
 import { BannerAbout } from '~/assets';
-import { IInformation } from "~/util/Content";
 
 export default function About() {
   const { pageContent } = useLangContext();

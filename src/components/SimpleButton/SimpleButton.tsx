@@ -1,5 +1,6 @@
 import styles from "./SimpleButton.module.css";
 import { useLangContext } from "~/contexts/langContext";
+import Link from 'next/link';
 
 export enum ButtonKind {
   FIND_MORE = "findMore",
@@ -17,8 +18,10 @@ export default function SimpleButton({ kind, href, color='var(--light-blue)' } :
   const { pageContent } = useLangContext();
 
   return (
-    <a className={styles.simpleButton} href={href} style={{backgroundColor: color}}>
-      {pageContent['simpleButton'][kind]}
-    </a>
+    <Link href={href}>
+      <a className={styles.simpleButton} style={{backgroundColor: color}}>
+        {pageContent['simpleButton'][kind]}
+      </a>
+    </Link>
   );
 }

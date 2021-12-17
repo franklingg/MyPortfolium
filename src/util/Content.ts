@@ -6,14 +6,14 @@ export interface ILang {
     page: IPage
 };
 
-export interface IRecommendation {
+interface IRecommendation {
     text: string,
     author: string,
     occupation: string,
     icon: string
 };
 
-export interface IInformation {
+interface IInformation {
     value: number,
     content: string
 }
@@ -21,6 +21,13 @@ export interface IInformation {
 interface ISkill {
     icon: string,
     text: string
+}
+
+interface IProject {
+    image: string,
+    description: string,
+    label: Array<ToolTag>,
+    link: string
 }
 
 export interface IPage {
@@ -49,6 +56,11 @@ export interface IPage {
         tops: Array<String>,
         topsList: Array<ISkill>
     },
+    projects: {
+        title: string,
+        web: Array<IProject>,
+        software: Array<IProject>
+    },
     "404": Array<String>
 }
 
@@ -58,3 +70,10 @@ export const AVAILABLE_LANGS : ILang[] = [
 ];
 
 export const DEFAULT_LANG : ILang = AVAILABLE_LANGS[0];
+
+// TODO: COMPLETE
+export enum ToolTag {
+    JAVASCRIPT,
+    REACT,
+    FIREBASE
+}

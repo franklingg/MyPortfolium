@@ -71,4 +71,10 @@ export default class EN_US implements IPage {
         'The page you\'re looking for is not available at the moment :(',
         'Please refresh or return to the home page!'
     ];
+
+    projects = {
+        title: "My Projects",
+        web: [],
+        software: []
+    };
 }

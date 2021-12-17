@@ -71,4 +71,10 @@ export default class PT_BR implements IPage {
         'A página que você está procurando não está disponível no momento :(',
         'Atualize a página ou retorne para o menu principal!'
     ]
+
+    projects = {
+        title: "Meus projetos",
+        web: [],
+        software: []
+    };
 }
