@@ -23,13 +23,25 @@ interface ISkill {
     text: string
 }
 
+interface ILabel {
+    name: string,
+    color: string
+}
+
 interface IProject {
     image: string,
+    title: string,
     description: string,
-    label: Array<ToolTag>,
+    labels: Array<ILabel>,
     link: string
 }
 
+// TODO: COMPLETE
+export const LABELS : { [key: string] : ILabel } = {
+    JAVASCRIPT: { name: 'Javascript', color: 'yellow' },
+    FIREBASE:   { name: 'Firebase',   color: 'red'    },
+    REACT:      { name: 'React',      color: 'blue'   },
+}
 export interface IPage {
     navbar: {
         home: string,
@@ -70,10 +82,3 @@ export const AVAILABLE_LANGS : ILang[] = [
 ];
 
 export const DEFAULT_LANG : ILang = AVAILABLE_LANGS[0];
-
-// TODO: COMPLETE
-export enum ToolTag {
-    JAVASCRIPT,
-    REACT,
-    FIREBASE
-}

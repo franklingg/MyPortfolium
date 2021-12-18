@@ -1,5 +1,5 @@
-import { IPage } from "~/util/Content";
-import { RecomDebora, RecomTiago, Book, Bulb, Gear } from '~/assets'
+import { IPage, LABELS } from "~/util/Content";
+import { RecomDebora, RecomTiago, Book, Bulb, Gear, TODELETE } from '~/assets'
 
 export default class PT_BR implements IPage {
     navbar = {
@@ -74,7 +74,29 @@ export default class PT_BR implements IPage {
 
     projects = {
         title: "Meus projetos",
-        web: [],
+        web: [
+            {
+                image: TODELETE,
+                title: 'TESTE 1',
+                description: 'TESTE1',
+                labels: [LABELS.JAVASCRIPT],
+                link: ''
+            },
+            {
+                image: TODELETE,
+                title: 'TESTE 2',
+                description: 'TESTE2',
+                labels: [LABELS.FIREBASE, LABELS.REACT],
+                link: ''
+            },
+            {
+                image: TODELETE,
+                title: 'TESTE 3',
+                description: 'TESTE3',
+                labels: [],
+                link: ''
+            }
+        ],
         software: []
     };
 }
