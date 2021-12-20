@@ -1,6 +1,14 @@
 .arrow{
     position: absolute;
-    top: 50%;
+    top: 48px;
+    background-color: var(--lighter-black);
+    box-shadow: 0px 1px 4px rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    padding: 30px 16px 27px 16px;
+}
+
+.arrow:hover{
+    cursor: pointer;
 }
 
 .arrow__left{
@@ -8,5 +16,12 @@
 }
 
 .arrow__right{
-    right: 0;
+    right: -60px;
+}
+
+.arrow__image{
+    color: white;
+    stroke-width: 2px;
+    height: 1.2rem;
+    width: 1.2rem;
 }

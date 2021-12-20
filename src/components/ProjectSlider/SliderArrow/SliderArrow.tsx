@@ -13,7 +13,7 @@ export default function SliderArrow( props : SliderArrowProps) {
     <div 
       onClick={props.onClick}
       className={`${styles.arrow} ${props.direction == "left" ? styles.arrow__left : styles.arrow__right}`}>
-      {props.direction == "left" ? <BsChevronLeft color="var(--white)" /> : <BsChevronRight color="var(--white)" />}
+      {props.direction == "left" ? <BsChevronLeft className={styles.arrow__image} /> : <BsChevronRight className={styles.arrow__image} />}
     </div>
   );
 }
