@@ -30,7 +30,7 @@ export default function Footer() {
             <FaInstagramSquare size={20} color="var(--grey)" />
           </Col>
         </Link>
-        <Link href="/home" passHref>
+        <Link href="https://discord.com/users/502633304491819018" passHref>
           <Col className={styles.footer__social__item} as="a" target="_blank">
             <RiDiscordFill size={20} color="var(--grey)" />
           </Col>
