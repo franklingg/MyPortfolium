@@ -34,14 +34,21 @@
     height: 70px;
 }
 
-.skills__topsList__item > div {
+.skills__topsList__itemText {
     display: flex;
     flex-direction: column;
+    gap: 7px;
+    height: 100%;
 }
 
-.skills__topsList__item > div > span:first-child { 
+.skills__topsList__itemText > span { 
     font-weight: 700;
     color: var(--purple);
+}
+
+.skills__topsList__itemText > p { 
+    margin: 0;
+    flex: 1;
 }
 
 .skills__all {

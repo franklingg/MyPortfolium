@@ -61,9 +61,21 @@ export default class EN_US implements IPage {
     skills = {
         tops: ['Best', 'Skills'],
         topsList: [
-            { icon: Book, text: 'anos de experiência atuando como frontend developer' },
-            { icon: Bulb, text: 'anos de experiência atuando como frontend developer' },
-            { icon: Gear, text: 'anos de experiência atuando como frontend developer' }
+            { 
+                icon: Book,
+                title: 'Skill 1',
+                text: 'anos de experiência atuando como frontend developer' 
+            },
+            { 
+                icon: Bulb, 
+                title: 'Skill 2',
+                text: 'anos de experiência atuando como frontend developer' 
+            },
+            { 
+                icon: Gear,
+                title: 'Skill 3',
+                text: 'anos de experiência atuando como frontend developer' 
+            }
         ]
     };
 

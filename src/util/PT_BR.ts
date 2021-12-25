@@ -49,21 +49,33 @@ export default class PT_BR implements IPage {
                         Exercitation veniam consequat sunt nostrud amet.`,
         informationsTitle: "Informações",
         informations: [
-            { value: 2, content: 'anos de experiência atuando como frontend developer' },
-            { value: 5, content: 'anos de experiência atuando como frontend developer' },
-            { value: 10, content: 'anos de experiência' },
-            { value: 2, content: 'anos de experiência atuando como frontend developer' },
-            { value: 5, content: 'anos de experiência atuando como frontend developer' },
-            { value: 10, content: 'anos de experiência' },
+            { value: 5, content: 'meses de experiência atuando como Desenvolvedor Frontend' },
+            { value: 6, content: 'meses de experiência atuando como Desenvolvedor Web PD&I' },
+            { value: 1, content: 'participação em Olímpiada Internacional' },
+            { value: 1, content: 'ano de experiência com projetos de Extensão e Inovação Tecnológica' },
+            { value: 'B2', content: 'Nível QCE de Inglês (Avançado)' },
+            { value: 2, content: 'artigos publicados em congresso nacional' },
         ]
     };
 
     skills = {
         tops: ['Melhores', 'Habilidades'],
         topsList: [
-            { icon: Book, text: 'anos de experiência atuando como frontend developer' },
-            { icon: Bulb, text: 'anos de experiência atuando como frontend developer' },
-            { icon: Gear, text: 'anos de experiência atuando como frontend developer' }
+            { 
+                icon: Book, 
+                title: 'Habilidade 1', 
+                text: 'Desenvolvimento de páginas estáticas e dinâmicas com boas práticas de SEO.' 
+            },
+            { 
+                icon: Bulb,
+                title: 'Habilidade 2',
+                text: 'Autodidatismo e versatilidade. Capacidade de aprender e evoluir com os problemas que surgirem.' 
+            },
+            { 
+                icon: Gear,
+                title: 'Habilidade 3',
+                text: '' 
+            }
         ]
     };
 

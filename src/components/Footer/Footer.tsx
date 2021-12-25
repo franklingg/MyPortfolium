@@ -2,7 +2,7 @@ import { Row, Col } from "react-bootstrap";
 import Link from "next/link";
 import Image from "next/image";
 import { RiDiscordFill } from 'react-icons/ri';
-import { FaFacebookSquare, FaInstagramSquare, FaGithubSquare } from 'react-icons/fa';
+import { FaLinkedin, FaInstagramSquare, FaGithubSquare } from 'react-icons/fa';
 
 import { Logo } from '~/assets';
 import styles from "./Footer.module.css";
@@ -20,9 +20,9 @@ export default function Footer() {
             <FaGithubSquare size={20} color="var(--grey)" />
           </Col>
         </Link>
-        <Link href="https://www.facebook.com/franklin.regisdeoliveira.7/" passHref>
+        <Link href="https://www.linkedin.com/in/franklin-regis/" passHref>
           <Col className={styles.footer__social__item} as="a" target="_blank">
-            <FaFacebookSquare size={20} color="var(--grey)" />
+            <FaLinkedin size={20} color="var(--grey)" />
           </Col>
         </Link>
         <Link href="https://www.instagram.com/franklingg1/" passHref>

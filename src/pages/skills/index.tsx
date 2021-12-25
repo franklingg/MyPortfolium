@@ -11,11 +11,11 @@ import styles from "./skills.module.css";
 
 export default function Skills() {
   const [ allSkills ] = useState<ISkill[]>([
-    { name: 'Habilidade 1', value: 100 },
-    { name: 'Habilidade 2', value: 90 },
-    { name: 'Habilidade 3', value: 75 },
-    { name: 'Habilidade 4', value: 95 },
-    { name: 'Habilidade 5', value: 40 },
+    { name: 'Javascript/TypeScript', value: 80 },
+    { name: 'React/Redux/NextJS', value: 75 },
+    { name: 'React Native', value: 65 },
+    { name: 'Machine Learning - Python (Sklearn, Tensorflow)', value: 40 },
+    { name: 'Node/Express/MongoDB', value: 25 },
   ]);
   const { pageContent } = useLangContext();
 
@@ -32,9 +32,9 @@ export default function Skills() {
               <div className={styles.skills__topsList__itemImg}>
                 <Image src={skill.icon} alt={skill.text} layout="fill" />
               </div>
-              <div>
-                <span>Habilidade {idx + 1}</span>
-                <span>{skill.text}</span>
+              <div className={styles.skills__topsList__itemText}>
+                <span>{skill.title}</span>
+                <p>{skill.text}</p>
               </div>
             </div>
           ))}

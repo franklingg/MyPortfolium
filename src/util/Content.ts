@@ -14,12 +14,13 @@ interface IRecommendation {
 };
 
 interface IInformation {
-    value: number,
+    value: number | string,
     content: string
 }
 
 interface ISkill {
     icon: string,
+    title: string,
     text: string
 }
 
