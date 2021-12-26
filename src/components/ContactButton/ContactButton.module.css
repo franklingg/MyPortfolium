@@ -1,16 +1,53 @@
-.contactButton{
+.fixedContainer{
     position: fixed;
     right: 0;
     bottom: 40px;
     background: linear-gradient(239.94deg, #00EBB2 10.45%, #02DFED 40.94%, #CB7BFF 80.97%);
     border-radius: 10px 0px 0px 10px;
-    color: var(--white);
-    padding: 10px 25px;
-    font-weight: 700;
     font-family: Poppins;
     z-index: 100;
 }
 
+.contactButton{
+    color: var(--white);
+    padding: 10px 25px;
+    font-weight: 700;
+}
+
 .contactButton:hover{
     cursor: pointer;
+}
+
+.contactForm {
+    padding: 30px 32px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-end;
+}
+
+.contactForm__title {
+    margin: 0;
+    margin-bottom: 20px;
+    color: var(--black);
+}
+
+.contactForm__inputs{
+    width: 100%;
+}
+
+.contactForm__send {
+    width: max-content;
+    padding: 9px 3.7rem;
+    border-radius: 10px;
+    background-color: var(--black);
+    color: var(--white);
+    font-family: Poppins;
+    font-size: 1rem;
+    transition: all 0.15s ease-in-out;
+}
+
+.contactForm__send:hover{
+    cursor: pointer;
+    transform: scale(1.015);
 }
