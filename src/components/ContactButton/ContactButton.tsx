@@ -8,7 +8,7 @@ import { SimpleButton } from "..";
 export default function ContactButton() {
 
   const [ formOpen, setFormOpen ] = useState(false);
-  const formRef = useRef<HTMLDivElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
   const { pageContent } = useLangContext();
 
   const handleOpenForm = useCallback(() => { setFormOpen(true) }, []);
