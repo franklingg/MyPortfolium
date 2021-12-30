@@ -34,6 +34,8 @@
 
 .contactForm__inputs{
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .contactForm__send {

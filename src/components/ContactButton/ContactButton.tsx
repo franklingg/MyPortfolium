@@ -31,16 +31,19 @@ export default function ContactButton() {
         {pageContent['contactButton']}
       </button>
     ) : (
-      <Container className={`${styles.fixedContainer} ${styles.contactForm}`} ref={formRef}>
+      <Container as="form" className={`${styles.fixedContainer} ${styles.contactForm}`} ref={formRef}>
         <h4 className={styles.contactForm__title}>
           Vamos conversar sobre o seu projeto?
         </h4>
         <Row className={styles.contactForm__inputs}>
-          <input />
+          <Row>
+            <input className={styles.contactForm__input} placeholder="Nome" />
+            <input type="tel" className={styles.contactForm__input} placeholder="Telefone" />
+          </Row>
+          <input type="email" className={styles.contactForm__input} placeholder="Email*" required />
+          <input className={styles.contactForm__input} placeholder="Mensagem*" required />
         </Row>
-        <button className={styles.contactForm__send}> 
-          Enviar 
-        </button>
+        <input className={styles.contactForm__send} type="submit" value="Enviar" />
       </Container>
     )
   );
