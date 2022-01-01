@@ -4,7 +4,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { LangProvider } from '~/contexts/langContext';
-import { Navbar, ContactButton, Footer } from '~/components';
+import { Navbar, ContactForm, Footer } from '~/components';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <LangProvider>
         <Navbar />
-        <ContactButton />
+        <ContactForm />
         <Component {...pageProps} />
         <Footer />
       </LangProvider>

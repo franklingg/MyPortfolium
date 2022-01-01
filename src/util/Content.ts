@@ -50,7 +50,14 @@ export interface IPage {
         skills: string,
         projects: string
     },
-    contactButton: string,
+    contact: {
+        button: string,
+        title: string,
+        name: string,
+        tel: string,
+        message: string,
+        send: string
+    }
     simpleButton: {
         findMore: string,
         backHome: string

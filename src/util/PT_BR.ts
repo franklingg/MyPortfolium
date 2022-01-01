@@ -9,7 +9,14 @@ export default class PT_BR implements IPage {
         projects: "Projetos"
     };
 
-    contactButton = "Entre em contato";
+    contact = {
+        button: "Entre em contato",
+        title: "Vamos conversar sobre o seu projeto?",
+        name: "Nome",
+        tel: "Telefone",
+        message: "Mensagem",
+        send: "Enviar"
+    };
 
     simpleButton = {
         findMore: "Saiba mais",

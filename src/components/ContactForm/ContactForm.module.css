@@ -23,7 +23,8 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    align-items: flex-end;
+    align-items: center;
+    max-width: 30.3rem;
 }
 
 .contactForm__title {
@@ -36,12 +37,35 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 20px;
+}
+
+.contactForm__inputs__person{
+    display: flex;
+    gap: 22px;
+}
+
+.contactForm__input{
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 0.86rem;
+}
+
+.contactForm__input__textarea{
+    height: 10rem;
 }
 
 .contactForm__send {
+    align-self: flex-end;
     width: max-content;
     padding: 9px 3.7rem;
     border-radius: 10px;
+    border: none;
     background-color: var(--black);
     color: var(--white);
     font-family: Poppins;
