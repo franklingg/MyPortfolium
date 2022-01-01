@@ -12,12 +12,7 @@ type FormInfo = {
   message: string;
 };
 
-const DEFAULT_FORM : FormInfo = {
-  name: "No Name",
-  email: "",
-  tel: "No Telephone",
-  message: ""
-};
+const DEFAULT_FORM : FormInfo = { name: "", email: "", tel: "", message: "" };
 
 export default function ContactForm() {
 
@@ -45,6 +40,7 @@ export default function ContactForm() {
         //TODO: Tooltip de sucesso/falha
         .then(function(response) {
           console.log('SUCCESS!', response.status, response.text);
+          setFormData(DEFAULT_FORM);
         }, function(err) {
           console.log('FAILED...', err);
         });
@@ -53,7 +49,7 @@ export default function ContactForm() {
   useEffect(()=>{
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
-  });
+  }, [handleClickOutside]);
 
   return (
     !formOpen ? (
@@ -76,15 +72,32 @@ export default function ContactForm() {
             <input 
               className={styles.contactForm__input} 
               placeholder={pageContent['contact']['name']}
+              value={formData.name}
+              onChange={(event) => { setFormData({...formData, name: event.target.value}) }}
             />
-            <input type="tel" className={styles.contactForm__input} placeholder={pageContent['contact']['tel']} />
+            <input 
+              type="tel" 
+              className={styles.contactForm__input} 
+              placeholder={pageContent['contact']['tel']}
+              value={formData.tel}
+              onChange={(event) => { setFormData({...formData, tel: event.target.value}) }}
+            />
           </Row>
-          <input type="email" className={styles.contactForm__input} placeholder="E-mail*" required />
+          <input 
+            type="email" 
+            className={styles.contactForm__input}
+            value={formData.email}
+            onChange={(event) => { setFormData({...formData, email: event.target.value}) }}
+            placeholder="E-mail*" 
+            required 
+          />
           <textarea 
             form="contactForm"
             className={styles.contactForm__input}
             style={{resize: 'none'}}
             placeholder={`${pageContent['contact']['message']}*`}
+            value={formData.message}
+            onChange={(event) => { setFormData({...formData, message: event.target.value}) }}
             rows={7}
             required 
           />
