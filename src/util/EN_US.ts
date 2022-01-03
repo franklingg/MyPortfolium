@@ -93,7 +93,7 @@ export default class EN_US implements IPage {
 
     projects = {
         title: "My Projects",
-        web: [],
+        frontend: [],
         software: []
     };
 }

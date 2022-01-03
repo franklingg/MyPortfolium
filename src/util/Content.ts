@@ -1,5 +1,8 @@
 import PT_BR from './PT_BR';
 import EN_US from './EN_US';
+import { SiFirebase, SiHaskell, SiJava, SiJavascript, SiJupyter, SiNextdotjs, SiPython, SiReact, SiTypescript } from 'react-icons/si';
+import { DiProlog } from 'react-icons/di';
+import { IconType } from 'react-icons';
 export interface ILang {
     value: string,
     label: string,
@@ -26,7 +29,8 @@ interface ISkill {
 
 interface ILabel {
     name: string,
-    color: string
+    color: string,
+    icon: IconType
 }
 
 interface IProject {
@@ -37,11 +41,17 @@ interface IProject {
     link: string
 }
 
-// TODO: COMPLETE
 export const LABELS : { [key: string] : ILabel } = {
-    JAVASCRIPT: { name: 'Javascript', color: 'yellow' },
-    FIREBASE:   { name: 'Firebase',   color: 'red'    },
-    REACT:      { name: 'React',      color: 'blue'   },
+    JAVASCRIPT: { name: 'Javascript'        , color: 'var(--javascript)', icon: SiJavascript },
+    TYPESCRIPT: { name: 'Typescript'        , color: 'var(--typescript)', icon: SiTypescript },
+    FIREBASE:   { name: 'Firebase'          , color: 'var(--firebase)'  , icon: SiFirebase   },
+    REACT:      { name: 'ReactJS'           , color: 'var(--react)'     , icon: SiReact      },
+    NEXT:       { name: 'NextJS'            , color: 'var(--next)'      , icon: SiNextdotjs  },
+    JAVA:       { name: 'Java'              , color: 'var(--java)'      , icon: SiJava       },
+    PYTHON:     { name: 'Python'            , color: 'var(--python)'    , icon: SiPython     },
+    HASKELL:    { name: 'Haskell'           , color: 'var(--haskell)'   , icon: SiHaskell    },
+    PROLOG:     { name: 'Prolog'            , color: 'var(--prolog)'    , icon: DiProlog     },
+    JUPYTER:    { name: 'Jupyter Notebook'  , color: 'var(--jupyter)'   , icon: SiJupyter    },
 }
 export interface IPage {
     navbar: {
@@ -78,7 +88,7 @@ export interface IPage {
     },
     projects: {
         title: string,
-        web: Array<IProject>,
+        frontend: Array<IProject>,
         software: Array<IProject>
     },
     "404": Array<String>

@@ -11,7 +11,7 @@ export default class PT_BR implements IPage {
 
     contact = {
         button: "Entre em contato",
-        title: "Vamos conversar sobre o seu projeto?",
+        title: "Vamos conversar sobre o seu projeto/empresa?",
         name: "Nome",
         tel: "Telefone",
         message: "Mensagem",
@@ -69,19 +69,19 @@ export default class PT_BR implements IPage {
         tops: ['Melhores', 'Habilidades'],
         topsList: [
             { 
-                icon: Book, 
-                title: 'Habilidade 1', 
-                text: 'Desenvolvimento de páginas estáticas e dinâmicas com boas práticas de SEO.' 
+                icon: Bulb,
+                title: 'Habilidade 1',
+                text: 'Autodidatismo e versatilidade. Capacidade de aprender e evoluir com os problemas que surgirem.' 
             },
             { 
-                icon: Bulb,
-                title: 'Habilidade 2',
-                text: 'Autodidatismo e versatilidade. Capacidade de aprender e evoluir com os problemas que surgirem.' 
+                icon: Book, 
+                title: 'Habilidade 2', 
+                text: 'Desenvolvimento de páginas estáticas e dinâmicas com boas práticas de SEO.' 
             },
             { 
                 icon: Gear,
                 title: 'Habilidade 3',
-                text: '' 
+                text: 'Trabalho organizado e escalável, seguindo os padrões de projeto e requisitos do sistema.' 
             }
         ]
     };
@@ -93,19 +93,19 @@ export default class PT_BR implements IPage {
 
     projects = {
         title: "Meus projetos",
-        web: [
+        frontend: [
             {
                 image: TODELETE,
                 title: 'TESTE 1',
                 description: 'TESTE1',
-                labels: [LABELS.JAVASCRIPT],
+                labels: [LABELS.JAVASCRIPT, LABELS.NEXT, LABELS.TYPESCRIPT],
                 link: ''
             },
             {
                 image: TODELETE,
                 title: 'TESTE 2',
                 description: 'TESTE2',
-                labels: [LABELS.FIREBASE, LABELS.REACT],
+                labels: [],
                 link: ''
             },
             {

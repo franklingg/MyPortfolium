@@ -8,8 +8,8 @@ import styles from "./ProjectSlider.module.css";
 import { useLangContext } from "~/contexts/langContext";
 import SliderArrow from "./SliderArrow";
 
-interface ProjectSliderProps {
-  kind: "web" | "software";
+type ProjectSliderProps = {
+  kind: "frontend" | "software";
 }
 
 export default function ProjectSlider({ kind }: ProjectSliderProps) {
@@ -47,14 +47,19 @@ export default function ProjectSlider({ kind }: ProjectSliderProps) {
                 <span>{project.title}</span>
                 <p>{project.description}</p>
                 <div className={styles.projects__carousel__labels}>
-                  {project.labels.map((label, idx) => (
-                    <span 
-                      key={idx} 
+                  {project.labels.map((label, idx) => {
+                    const LabelIcon = label.icon;
+                    return (
+                      <div 
+                      key={idx}
+                      className={styles.projects__carousel__label}
                       style={{borderColor: label.color, color: label.color}}
-                    >
-                      {label.name}
-                    </span>
-                  ))}
+                      >
+                        <LabelIcon size="1rem" />
+                        <span>{label.name}</span>
+                      </div>
+                    )}
+                  )}
                 </div>
               </div>
             </a>

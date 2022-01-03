@@ -1,6 +1,7 @@
 import { useCallback, useState, useRef, useEffect, FormEventHandler } from "react";
 import { Container, Row } from "react-bootstrap";
 import emailjs from 'emailjs-com';
+import { IoMdClose } from 'react-icons/io';
 
 import styles from "./ContactForm.module.css";
 import { useLangContext } from "~/contexts/langContext";
@@ -64,6 +65,7 @@ export default function ContactForm() {
         ref={formRef}
         onSubmit={handleSubmit}
       >
+        <IoMdClose size={20} className={styles.closeButton} onClick={handleCloseForm} />
         <h4 className={styles.contactForm__title}>
           {pageContent['contact']['title']}
         </h4>

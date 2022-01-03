@@ -10,7 +10,7 @@ export default function Projects() {
       <h1 className={styles.projects__title}>
         Meus Projetos
       </h1>
-      <ProjectSlider kind="web" />
+      <ProjectSlider kind="frontend" />
       <ProjectSlider kind="software" />
     </Container>
   );

@@ -15,7 +15,7 @@
 .skills__topsList {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 64px;
+    gap: 50px;
 }
 
 .skills__topsList__item {
