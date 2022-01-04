@@ -2,4 +2,5 @@
 
 🚧 Em construção 🚧
 
-Acesse em: [Vecel Next](https://franklin-regis.vercel.app)
+Acesse em:
+[Vecel Next](https://franklin-regis.vercel.app)
