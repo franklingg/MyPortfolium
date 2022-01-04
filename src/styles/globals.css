@@ -21,6 +21,18 @@ body {
   --light-blue: #02DFED;
   --purple: #CB7BFF;
   --green: #00EBB2;
+
+  /* Labels colors */
+  --javascript: #F7DF1E;
+  --typescript: #3178C6;
+  --firebase: #FFA510;
+  --react: #61DAFB;
+  --next: #FFF;
+  --java: #CC4438;
+  --python: #3775A8;
+  --haskell: #8f4e8b;
+  --prolog: #F25921;
+  --jupyter: #F37726;
 }
 
 a {

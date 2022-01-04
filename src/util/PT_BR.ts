@@ -1,5 +1,9 @@
 import { IPage, LABELS } from "~/util/Content";
-import { RecomDebora, RecomTiago, Book, Bulb, Gear, TODELETE } from '~/assets'
+import { 
+    RecomDebora, RecomTiago, 
+    Book, Bulb, Gear,
+    DiscordLogo, SigesLogo, LittleGamesLogo, PlantManagerLogo, PortfoliumLogo, DesafioTsLogo, DsBeginsLogo
+} from '~/assets'
 
 export default class PT_BR implements IPage {
     navbar = {
@@ -95,27 +99,56 @@ export default class PT_BR implements IPage {
         title: "Meus projetos",
         frontend: [
             {
-                image: TODELETE,
-                title: 'TESTE 1',
-                description: 'TESTE1',
-                labels: [LABELS.JAVASCRIPT, LABELS.NEXT, LABELS.TYPESCRIPT],
-                link: ''
+                image: PlantManagerLogo,
+                title: 'PlantManager',
+                description: 'Aplicação Mobile para cadastrar e gerenciar suas plantas de casa.',
+                labels: [LABELS.TYPESCRIPT, LABELS.REACT, LABELS.FIREBASE],
+                link: 'https://github.com/franklingg/PlantManager'
             },
             {
-                image: TODELETE,
-                title: 'TESTE 2',
-                description: 'TESTE2',
-                labels: [],
-                link: ''
+                image: PortfoliumLogo,
+                title: 'MyPortfolium',
+                description: 'Código-fonte deste portfólio, usando Static Site Generation (SSG).',
+                labels: [LABELS.TYPESCRIPT, LABELS.NEXT],
+                link: 'https://github.com/franklingg/MyPortfolium'
             },
             {
-                image: TODELETE,
-                title: 'TESTE 3',
-                description: 'TESTE3',
-                labels: [],
-                link: ''
+                image: DesafioTsLogo,
+                title: 'Desafio-TS',
+                description: 'Construção de uma página de delivery responsiva e dinâmica.',
+                labels: [LABELS.REACT, LABELS.JAVASCRIPT],
+                link: 'https://github.com/franklingg/desafio-teamsoft'
             }
         ],
-        software: []
+        software: [
+            {
+                image: SigesLogo,
+                title: 'SIGES',
+                description: 'Sistema de gerenciamento e ocupação de salas, laboratórios e ambientes coletivos.',
+                labels: [LABELS.HASKELL, LABELS.PROLOG],
+                link: 'https://github.com/franklingg/SIGES'
+            },
+            {
+                image: DiscordLogo,
+                title: 'Gummy',
+                description: 'Bot para o Discord com funcionalidades lúdicas/do dia-a-dia.',
+                labels: [LABELS.JAVASCRIPT],
+                link: 'https://github.com/franklingg/Gummy'
+            },
+            {
+                image: LittleGamesLogo,
+                title: 'LittleGames',
+                description: 'Games autorais (código e assets) feitos para aprender programação de jogos.',
+                labels: [LABELS.PYTHON],
+                link: 'https://github.com/franklingg/LittleGames'
+            },
+            {
+                image: DsBeginsLogo,
+                title: 'DS-Begins',
+                description: 'Modelos introdutórios de Ciência de Dados, Machine Learning e Deep Learning.',
+                labels: [LABELS.JUPYTER, LABELS.PYTHON],
+                link: 'https://github.com/franklingg/DS-Begins'
+            }
+        ]
     };
 }
