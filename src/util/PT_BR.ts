@@ -1,6 +1,6 @@
 import { IPage, LABELS } from "~/util/Content";
 import { 
-    RecomDebora, RecomTiago, 
+    RecomDebora, RecomTiago, RecomTaynara,
     Book, Bulb, Gear,
     DiscordLogo, SigesLogo, LittleGamesLogo, PlantManagerLogo, PortfoliumLogo, DesafioTsLogo, DsBeginsLogo
 } from '~/assets'
@@ -51,7 +51,7 @@ export default class PT_BR implements IPage {
                 text: "“Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
                 author: "Taynara Lacerda",
                 occupation: "Designer UX/UI",
-                icon: RecomDebora
+                icon: RecomTaynara
             }
         ]
     };
@@ -65,32 +65,32 @@ export default class PT_BR implements IPage {
                         Exercitation veniam consequat sunt nostrud amet.`,
         informationsTitle: "Informações",
         informations: [
-            { value: 5, content: 'meses de experiência atuando como Desenvolvedor Frontend' },
-            { value: 6, content: 'meses de experiência atuando como Desenvolvedor Web PD&I' },
-            { value: 1, content: 'participação em Olímpiada Internacional' },
-            { value: 1, content: 'ano de experiência com projetos de Extensão e Inovação Tecnológica' },
-            { value: 'B2', content: 'Nível QCE de Inglês (Avançado)' },
-            { value: 2, content: 'artigos publicados em congresso nacional' },
+            { type: 'Trabalho', value: 5, content: 'meses de experiência atuando como Desenvolvedor Frontend' },
+            { type: 'Trabalho', value: 6, content: 'meses de experiência atuando como Desenvolvedor Web PD&I' },
+            { type: 'Competições', value: 1, content: 'participação em Olímpiada Internacional' },
+            { type: 'Inovação', value: 1, content: 'ano de experiência com projetos de Extensão e Inovação Tecnológica' },
+            { type: 'Inglês', value: 'B2', content: 'Nível QCE de Inglês (Avançado)' },
+            { type: 'Produção', value: 2, content: 'artigos publicados em congresso nacional' },
         ]
     };
 
     skills = {
-        tops: ['Melhores', 'Habilidades'],
+        tops: 'Melhores Habilidades',
         topsList: [
             { 
                 icon: Bulb,
-                title: 'Habilidade 1',
-                text: 'Autodidatismo e versatilidade. Capacidade de aprender e evoluir com os problemas que surgirem.' 
+                title: 'Autodidatismo e versatilidade',
+                text: 'Capacidade de aprender e evoluir com os problemas que surgirem.' 
             },
             { 
                 icon: Book, 
-                title: 'Habilidade 2', 
+                title: 'Habilidade com SEO', 
                 text: 'Desenvolvimento de páginas estáticas e dinâmicas com boas práticas de SEO.' 
             },
             { 
                 icon: Gear,
-                title: 'Habilidade 3',
-                text: 'Trabalho organizado e escalável, seguindo os padrões de projeto e requisitos do sistema.' 
+                title: 'Organização e Escalabilidade',
+                text: 'Seguindo os padrões de projeto e requisitos do cliente e do sistema.' 
             }
         ]
     };

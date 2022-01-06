@@ -14,17 +14,17 @@ export default function Skills() {
     { name: 'Javascript/TypeScript', value: 80 },
     { name: 'React/Redux/NextJS', value: 75 },
     { name: 'React Native', value: 65 },
-    { name: 'Machine Learning - Python (Sklearn, Tensorflow)', value: 40 },
-    { name: 'Node/Express/MongoDB', value: 25 },
+    { name: 'Node/Express/MongoDB', value: 40 },
+    { name: 'Machine Learning - Python (Sklearn, Tensorflow)', value: 25 },
   ]);
+  const [ maxValue ] = useState(allSkills.reduce((acc, current) => (current.value > acc.value ? current : acc)));
   const { pageContent } = useLangContext();
 
   return (
     <Container fluid className={styles.skills}>
       <Row className={styles.skills__tops}>
-        <Row className={styles.skills__topsTitle}>
-          <h1>{pageContent.skills.tops[0]}</h1>
-          <h1>{pageContent.skills.tops[1]}</h1>
+        <Row as="h1" className={styles.skills__topsTitle}>
+          {pageContent.skills.tops}
         </Row>
         <Row className={styles.skills__topsList}>
           { pageContent.skills.topsList.map( (skill, idx) => (
@@ -44,7 +44,7 @@ export default function Skills() {
         <Col className={styles.skills__all__left}>
           <h3>Skills</h3>
           <Row className={styles.skills__all__list}>
-              {allSkills.map( (skill, idx) => <SkillBar key={idx} skill={skill}  /> )}
+              {allSkills.map( (skill, idx) => <SkillBar key={idx} skill={skill} maxValue={maxValue.value}  /> )}
           </Row>
         </Col>
         <Col className={styles.skills__all__banner}>

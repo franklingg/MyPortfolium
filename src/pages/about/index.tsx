@@ -24,8 +24,11 @@ export default function About() {
         <Row className={styles.about__informations__grid}>
           {pageContent.about.informations.map((item, idx) => (
             <div key={idx} className={styles.about__informations__gridItem}>
-              <span>{item.value}</span>
-              <span>{item.content}</span>
+              <h4>{item.type}</h4>
+              <div>
+                <span>{item.value}</span>
+                <span>{item.content}</span>
+              </div>
             </div>
           ))}
         </Row>

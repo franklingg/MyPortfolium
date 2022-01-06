@@ -17,6 +17,7 @@ interface IRecommendation {
 };
 
 interface IInformation {
+    type: string,
     value: number | string,
     content: string
 }
@@ -85,7 +86,7 @@ export interface IPage {
         informations: Array<IInformation>
     },
     skills: {
-        tops: Array<String>,
+        tops: string,
         topsList: Array<ISkill>
     },
     projects: {

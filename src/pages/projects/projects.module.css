@@ -1,9 +1,8 @@
 .projects {
-    padding: 177px 146px 120px 65px;
+    padding: 118px 68px 122px;
 }
 
 .projects__title{
     margin: 0;
-    margin-left: 83px;
     color: var(--light-blue);
 }

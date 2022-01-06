@@ -5,9 +5,8 @@
 }
 
 .about__banner{
-    margin: 70px 73px 6px 148px;
+    margin: 23px 73px -20px 148px;
     display: flex;
-    align-items: center;
     gap: 80px;
 }
 
@@ -16,6 +15,7 @@
 }
 
 .about__banner__info > h1 {
+    margin-top: 185px;
     color: var(--light-blue);
 }
 
@@ -26,20 +26,18 @@
 .about__banner__img{
     position: relative;
     width: 579px;
-    height: 653px;
+    height: 628px;
 }
 
 .about__informations{
-    width: 100%;
-    padding: 83px 148px;
-    padding-top: 0;
+    margin: 0 148px 120px;
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 60px;
 }
 
 .about__informations > h3{
-    margin: 0;
+    margin: 0 -75px;
     color: var(--green);
 }
 
@@ -51,17 +49,30 @@
 }
 
 .about__informations__gridItem{
-    padding: 24px 40px;
+    padding: 18px 29px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 10px;
     background-color: var(--lighter-black);
     box-shadow: 0px 1px 4px rgba(255, 255, 255, 0.25);
     border-radius: 10px;
 }
 
-.about__informations__gridItem > span:first-child{
+.about__informations__gridItem > h4{
+    margin: 0;
+    font-size: 1.14rem;
+    color: var(--green);
+}
+
+.about__informations__gridItem > div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.about__informations__gridItem > div > span:first-child{
     font-size: 6.86rem;
+    line-height: 1;
     font-weight: 700;
     background: linear-gradient(239.94deg, #00EBB2 10.45%, #02DFED 40.94%, #CB7BFF 80.97%);
     background-clip: text;

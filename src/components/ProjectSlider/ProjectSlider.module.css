@@ -6,12 +6,12 @@
 
 .projects__slider > h3 {
     color: var(--green);
-    margin: 0 0 55px 83px;
+    margin-bottom: 55px;
     text-transform: capitalize;
 }
 
 .projects__carousel {
-    padding-left: 83px;
+    padding: 0 83px;
 }
 
 .projects__carousel__box{
@@ -20,7 +20,7 @@
     box-shadow: 0px 1px 4px rgba(255, 255, 255, 0.25);
     border-radius: 10px;
     margin-left: 4px;
-    max-width: 479px;
+    max-width: 473px;
     padding: 37px 20px;
     display: flex !important;
     gap: 20px;

@@ -5,7 +5,7 @@
 }
 
 .home__banner{
-    margin: 70px 117px 166px 148px;
+    margin: 55px 117px 70px 148px;
     display: flex;
     align-items: center;
     gap: 110px;
@@ -40,7 +40,7 @@
 .home__banner__image{
     position: relative;
     flex: 1;
-    height: 588px;
+    height: 560px;
 }
 
 .home__recommendations{
@@ -51,7 +51,7 @@
 
 .home__recommendations__title{
     color: var(--green);
-    margin: 0 0 80px 148px;
+    margin: 0 0 80px 70px;
 }
 
 .home__recommendations__carousel{
@@ -103,7 +103,7 @@
 }
 
 .home__recommendations__carousel__dots{
-    margin: 15px 0 125px 0;
+    margin: 30px 0 90px 0;
     display: flex !important;
     gap: 4px;
     justify-content: center;

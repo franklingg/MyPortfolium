@@ -79,7 +79,7 @@ export default function Navbar() {
     <Row as="nav" className={styles.navbar}>
       <Link href="/" passHref>
         <Col className={styles.navbar__logo} as="a">
-          <Image src={Logo} alt="Logo de Franklin Regis" width={40} height={40} />
+          <Image src={Logo} alt="Logo de Franklin Regis" width={25} height={25} />
         </Col>
       </Link>
       <Link href="/home" passHref>
