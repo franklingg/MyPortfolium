@@ -24,6 +24,8 @@ export default class EN_US implements IPage {
     };
 
     home = {
+        occupation: 'Software Developer',
+        description: '',
         recommendationsTitle: "Recommendations",
         recommendations: [
             {

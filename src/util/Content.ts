@@ -73,6 +73,8 @@ export interface IPage {
         backHome: string
     },
     home: {
+        occupation: string,
+        description: string,
         recommendationsTitle: string,
         recommendations: Array<IRecommendation>
     },

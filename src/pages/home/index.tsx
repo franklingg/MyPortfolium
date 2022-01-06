@@ -39,13 +39,9 @@ export default function Home() {
         <Col className={styles.home__banner__text}>
           <div className={styles.home__banner__text__headings}>
             <h1>Franklin Regis</h1>
-            <h4>Front-end developer</h4>
+            <h4>{pageContent.home.occupation}</h4>
           </div>
-          <p>
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit. Exercitation
-            veniam consequat sunt nostrud amet.
-          </p>
+          <p>{pageContent.home.description}</p>
           <SimpleButton kind={ButtonKind.FIND_MORE} href="/about" />
         </Col>
         <Col className={styles.home__banner__image}>
