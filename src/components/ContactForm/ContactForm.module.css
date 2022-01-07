@@ -21,8 +21,17 @@
 
 .contactButton{
     color: var(--white);
-    padding: 10px 25px;
-    font-weight: 700;
+    padding: 0;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    right: 11px;
+}
+
+.contactButton > *{
+    margin: auto !important;
+    width: 42px;
+    height: 31px;
 }
 
 .contactButton:hover{

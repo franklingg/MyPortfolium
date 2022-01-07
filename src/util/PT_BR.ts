@@ -30,25 +30,25 @@ export default class PT_BR implements IPage {
     home = {
         occupation: 'Desenvolvedor de Software',
         description: `
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit. Exercitation
-            veniam consequat sunt nostrud amet.`,
+            Olá, seja bem vindo ao meu portfólio!
+            Por aqui você irá conhecer um pouco sobre mim, minhas habilidades e meus projetos! 
+            Preparado?!`,
         recommendationsTitle: "Recomendações",
         recommendations: [
             {
-                text: "“Proativo, responsável, dedicado e bem-humorado! Franklin colabora com a equipe resolvendo problemas com inovação e desejo de aprender mais 😄",
+                text: "“Proativo, responsável, dedicado e bem-humorado! Franklin colabora com a equipe resolvendo problemas com inovação e desejo de aprender mais 😄”",
                 author: "Débora Lêda",
                 occupation: "Líder de desenvolvimento",
                 icon: RecomDebora
             },
             {
-                text: "“Trabalhei com o Franklin em um projeto complexo e sua capacidade de resolver problemas nos ajudou a realizar as entregas no prazo. Tenho certeza de que ele será um grande trunfo para qualquer equipe que ingressar.",
+                text: "“Trabalhei com o Franklin em um projeto complexo e sua capacidade de resolver problemas nos ajudou a realizar as entregas no prazo. Tenho certeza de que ele será um grande trunfo para qualquer equipe que ingressar.”",
                 author: "Tiago Chaves",
                 occupation: "Gerente de QA",
                 icon: RecomTiago
             },
             {
-                text: "“Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+                text: "“Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.”",
                 author: "Taynara Lacerda",
                 occupation: "Designer UX/UI",
                 icon: RecomTaynara
@@ -69,7 +69,7 @@ export default class PT_BR implements IPage {
             { type: 'Trabalho', value: 6, content: 'meses de experiência atuando como Desenvolvedor Web PD&I' },
             { type: 'Competições', value: 1, content: 'participação em Olímpiada Internacional' },
             { type: 'Inovação', value: 1, content: 'ano de experiência com projetos de Extensão e Inovação Tecnológica' },
-            { type: 'Inglês', value: 'B2', content: 'Nível QCE de Inglês (Avançado)' },
+            { type: 'Inglês', value: 'B2', content: 'nível QCE de inglês (Avançado)' },
             { type: 'Produção', value: 2, content: 'artigos publicados em congresso nacional' },
         ]
     };

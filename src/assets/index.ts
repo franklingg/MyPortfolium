@@ -7,6 +7,7 @@ export { default as Book } from './icons/book.svg';
 export { default as Gear } from './icons/gear.svg';
 export { default as Logo } from './icons/logo.svg';
 export { default as LogoIcon } from './icons/logo_icon.svg';
+export { default as Email } from './icons/email.svg';
 
 export { default as Banner404 } from './img/404.svg';
 export { default as BannerAbout } from './img/about.svg';

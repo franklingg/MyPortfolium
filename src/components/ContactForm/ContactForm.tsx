@@ -2,7 +2,9 @@ import { useCallback, useState, useRef, useEffect, FormEventHandler } from "reac
 import { Container, Row } from "react-bootstrap";
 import emailjs from 'emailjs-com';
 import { IoMdClose } from 'react-icons/io';
+import Image from "next/image";
 
+import { Email } from '~/assets';
 import styles from "./ContactForm.module.css";
 import { useLangContext } from "~/contexts/langContext";
 
@@ -55,7 +57,7 @@ export default function ContactForm() {
   return (
     !formOpen ? (
       <button className={`${styles.fixedContainer} ${styles.contactButton}`} onClick={handleOpenForm}>
-        {pageContent['contact']['button']}
+        <Image src={Email} alt="Entre em contato" layout="fill" />
       </button>
     ) : (
       <Container 
