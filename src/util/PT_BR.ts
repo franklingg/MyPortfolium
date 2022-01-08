@@ -14,7 +14,6 @@ export default class PT_BR implements IPage {
     };
 
     contact = {
-        button: "Entre em contato",
         title: "Vamos conversar sobre o seu projeto/empresa?",
         name: "Nome",
         tel: "Telefone",

@@ -62,7 +62,6 @@ export interface IPage {
         projects: string
     },
     contact: {
-        button: string,
         title: string,
         name: string,
         tel: string,
