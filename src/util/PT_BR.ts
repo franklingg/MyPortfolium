@@ -18,7 +18,9 @@ export default class PT_BR implements IPage {
         name: "Nome",
         tel: "Telefone",
         message: "Mensagem",
-        send: "Enviar"
+        send: "Enviar",
+        success: ['Muito obrigado!', 'Logo mais entrarei em contato com você.'],
+        failure: ['ERRO!', 'Infelizmente sua mensagem não foi enviada.']
     };
 
     simpleButton = {

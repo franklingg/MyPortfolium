@@ -26,6 +26,7 @@
     height: 65px;
     border-radius: 50%;
     right: 11px;
+    transition: 0.12s all ease-in;
 }
 
 .contactButton > *{
@@ -36,6 +37,7 @@
 
 .contactButton:hover{
     cursor: pointer;
+    transform: scale(1.045);
 }
 
 .contactForm {
@@ -97,4 +99,10 @@
 .contactForm__send:hover{
     cursor: pointer;
     transform: scale(1.015);
+}
+
+.feedback__image{
+    position: relative;
+    width: 200px;
+    height: 200px;
 }

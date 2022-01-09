@@ -20,3 +20,5 @@ export { default as PlantManagerLogo } from './img/plantmanager.svg';
 export { default as PortfoliumLogo } from './img/portfolium.svg';
 export { default as DesafioTsLogo } from './img/desafiots.svg';
 export { default as DsBeginsLogo } from './img/dsbegins.svg';
+export { default as ThumbsUp } from './img/thumbsup.svg';
+export { default as ThumbsDown } from './img/thumbsdown.svg';

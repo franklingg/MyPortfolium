@@ -66,7 +66,9 @@ export interface IPage {
         name: string,
         tel: string,
         message: string,
-        send: string
+        send: string,
+        success: Array<String>,
+        failure: Array<String>
     }
     simpleButton: {
         findMore: string,

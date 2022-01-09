@@ -1,12 +1,36 @@
-import { useCallback, useState, useRef, useEffect, FormEventHandler } from "react";
+import { useCallback, useState, useRef, useEffect, FormEventHandler, ReactElement } from "react";
 import { Container, Row } from "react-bootstrap";
 import emailjs from 'emailjs-com';
 import { IoMdClose } from 'react-icons/io';
 import Image from "next/image";
 
-import { Email } from '~/assets';
+import { Email, ThumbsDown, ThumbsUp } from '~/assets';
 import styles from "./ContactForm.module.css";
 import { useLangContext } from "~/contexts/langContext";
+import { IPage } from "~/util/Content";
+import React from "react";
+
+const FEEDBACK_OK = (content : IPage) => (
+  <Container className={`${styles.fixedContainer} ${styles.feedback}`}>
+    <div className={styles.feedback__text}>
+      {content.contact.success.map((msg, idx) => <span key={idx}>{msg}</span>)}
+    </div>
+    <div className={styles.feedback__image}>
+      <Image src={ThumbsUp} alt="Sucesso no contato" layout="fill" />
+    </div>
+  </Container>
+);
+
+const FEEDBACK_ERR = (content : IPage) => (
+  <Container className={`${styles.fixedContainer} ${styles.feedback}`}>
+    <div className={styles.feedback__text}>
+      {content.contact.failure.map((msg, idx) => <span key={idx}>{msg}</span>)}
+    </div>
+    <div className={styles.feedback__image}>
+      <Image src={ThumbsDown} alt="Falha no contato" layout="fill" />
+    </div>
+  </Container>
+);
 
 type FormInfo = {
   name: string;
@@ -21,10 +45,14 @@ export default function ContactForm() {
 
   const [ formOpen, setFormOpen ] = useState(false);
   const [ formData, setFormData ] = useState<FormInfo>(DEFAULT_FORM);
+  const [ formStatus, setFormStatus ] = useState(0);
   const formRef = useRef<HTMLFormElement>(null);
   const { pageContent } = useLangContext();
 
-  const handleOpenForm = useCallback(() => { setFormOpen(true) }, []);
+  const handleOpenForm = useCallback(() => {
+    setFormStatus(0);
+    setFormOpen(true);
+  }, []);
   const handleCloseForm = useCallback(() => { setFormOpen(false)}, []);
 
   const handleClickOutside = useCallback((event: MouseEvent ) => {
@@ -39,14 +67,16 @@ export default function ContactForm() {
       const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "";
       const TEMPLATE_ID : string = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "";
       const USER_ID : string = process.env.NEXT_PUBLIC_EMAILJS_USER_ID || "";
-      emailjs.send(SERVICE_ID, TEMPLATE_ID, formData, USER_ID)
-        //TODO: Tooltip de sucesso/falha
-        .then(function(response) {
-          console.log('SUCCESS!', response.status, response.text);
-          setFormData(DEFAULT_FORM);
-        }, function(err) {
-          console.log('FAILED...', err);
-        });
+
+      setFormStatus(2);
+      // emailjs.send(SERVICE_ID, TEMPLATE_ID, formData, USER_ID)
+      //   .then(function(_){
+      //     setFormStatus(1);
+      //     setFormData(DEFAULT_FORM);
+      //   }, function(_){
+      //     setFormStatus(2);
+      //   }
+      // );
     }, [formData]);
 
   useEffect(()=>{
@@ -59,7 +89,7 @@ export default function ContactForm() {
       <button className={`${styles.fixedContainer} ${styles.contactButton}`} onClick={handleOpenForm}>
         <Image src={Email} alt="Entre em contato" layout="fill" />
       </button>
-    ) : (
+    ) : formStatus === 0 ? (
       <Container 
         as="form" 
         id="contactForm" 
@@ -108,6 +138,7 @@ export default function ContactForm() {
         </Row>
         <input className={styles.contactForm__send} type="submit" value={pageContent['contact']['send']} />
       </Container>
-    )
+    ) : formStatus === 1 ? ( FEEDBACK_OK(pageContent) ) 
+      : ( FEEDBACK_ERR(pageContent) )
   );
 }
