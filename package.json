@@ -19,6 +19,7 @@
     "react-icons": "^4.2.0",
     "react-select": "^5.2.1",
     "react-slick": "^0.28.1",
+    "react-spinners": "^0.11.0",
     "sass": "^1.38.2",
     "slick-carousel": "^1.8.1"
   },

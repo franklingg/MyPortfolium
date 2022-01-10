@@ -1,5 +1,5 @@
 import { useCallback, useState, useRef, useEffect, FormEventHandler, ReactElement } from "react";
-import { Container, Row } from "react-bootstrap";
+import { Container, Row, Spinner } from "react-bootstrap";
 import emailjs from 'emailjs-com';
 import { IoMdClose } from 'react-icons/io';
 import Image from "next/image";
@@ -7,30 +7,7 @@ import Image from "next/image";
 import { Email, ThumbsDown, ThumbsUp } from '~/assets';
 import styles from "./ContactForm.module.css";
 import { useLangContext } from "~/contexts/langContext";
-import { IPage } from "~/util/Content";
-import React from "react";
-
-const FEEDBACK_OK = (content : IPage) => (
-  <Container className={`${styles.fixedContainer} ${styles.feedback}`}>
-    <div className={styles.feedback__text}>
-      {content.contact.success.map((msg, idx) => <span key={idx}>{msg}</span>)}
-    </div>
-    <div className={styles.feedback__image}>
-      <Image src={ThumbsUp} alt="Sucesso no contato" layout="fill" />
-    </div>
-  </Container>
-);
-
-const FEEDBACK_ERR = (content : IPage) => (
-  <Container className={`${styles.fixedContainer} ${styles.feedback}`}>
-    <div className={styles.feedback__text}>
-      {content.contact.failure.map((msg, idx) => <span key={idx}>{msg}</span>)}
-    </div>
-    <div className={styles.feedback__image}>
-      <Image src={ThumbsDown} alt="Falha no contato" layout="fill" />
-    </div>
-  </Container>
-);
+import { PacmanLoader } from "react-spinners";
 
 type FormInfo = {
   name: string;
@@ -39,18 +16,25 @@ type FormInfo = {
   message: string;
 };
 
+enum FormStatus {
+  READY,
+  SENDING,
+  SENT,
+  ERROR
+};
+
 const DEFAULT_FORM : FormInfo = { name: "", email: "", tel: "", message: "" };
 
 export default function ContactForm() {
 
   const [ formOpen, setFormOpen ] = useState(false);
   const [ formData, setFormData ] = useState<FormInfo>(DEFAULT_FORM);
-  const [ formStatus, setFormStatus ] = useState(0);
+  const [ formStatus, setFormStatus ] = useState(FormStatus.READY);
   const formRef = useRef<HTMLFormElement>(null);
   const { pageContent } = useLangContext();
 
   const handleOpenForm = useCallback(() => {
-    setFormStatus(0);
+    setFormStatus(FormStatus.READY);
     setFormOpen(true);
   }, []);
   const handleCloseForm = useCallback(() => { setFormOpen(false)}, []);
@@ -61,22 +45,52 @@ export default function ContactForm() {
     }
   }, [handleCloseForm]);
 
+  const getFeedback = useCallback( (status: FormStatus) => {
+    return (
+      <Container className={`${styles.fixedContainer} ${styles.feedback}`}>
+        {status === FormStatus.SENT ? (
+          <>
+            <IoMdClose size={20} className={styles.closeButton} onClick={handleCloseForm} />
+            <div className={styles.feedback__text}>
+              {pageContent.contact.success.map((msg, idx) => <span key={idx}>{msg}</span>)}
+            </div>
+            <div className={styles.feedback__image}>
+              <Image src={ThumbsUp} alt="Sucesso no contato" layout="fill" />
+            </div>
+          </>
+        ) : (
+          <>
+            <IoMdClose size={20} className={styles.closeButton} onClick={handleCloseForm} />
+            <div className={styles.feedback__text}>
+              {pageContent.contact.failure.map((msg, idx) => <span key={idx}>{msg}</span>)}
+            </div>
+            <div className={styles.feedback__image}>
+              <Image src={ThumbsDown} alt="Falha no contato" layout="fill" />
+            </div>
+          </>
+        )}
+      </Container>
+    );
+  }, [handleCloseForm, pageContent.contact.failure, pageContent.contact.success]);
+
   const handleSubmit : FormEventHandler<HTMLFormElement> = useCallback( 
     (event) => {
+      setFormStatus(FormStatus.SENDING);
       event.preventDefault();
       const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "";
       const TEMPLATE_ID : string = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "";
       const USER_ID : string = process.env.NEXT_PUBLIC_EMAILJS_USER_ID || "";
 
-      setFormStatus(2);
-      // emailjs.send(SERVICE_ID, TEMPLATE_ID, formData, USER_ID)
-      //   .then(function(_){
-      //     setFormStatus(1);
-      //     setFormData(DEFAULT_FORM);
-      //   }, function(_){
-      //     setFormStatus(2);
-      //   }
-      // );
+      emailjs.send(SERVICE_ID, TEMPLATE_ID, formData, USER_ID)
+        .then(function(_){
+          setTimeout(() => {
+            setFormStatus(FormStatus.SENT);
+            setFormData(DEFAULT_FORM);
+          }, 2000);
+        }, function(_){
+          setFormStatus(FormStatus.ERROR);
+        }
+      );
     }, [formData]);
 
   useEffect(()=>{
@@ -89,7 +103,7 @@ export default function ContactForm() {
       <button className={`${styles.fixedContainer} ${styles.contactButton}`} onClick={handleOpenForm}>
         <Image src={Email} alt="Entre em contato" layout="fill" />
       </button>
-    ) : formStatus === 0 ? (
+    ) : formStatus === FormStatus.READY || formStatus === FormStatus.SENDING ? (
       <Container 
         as="form" 
         id="contactForm" 
@@ -136,9 +150,15 @@ export default function ContactForm() {
             required 
           />
         </Row>
-        <input className={styles.contactForm__send} type="submit" value={pageContent['contact']['send']} />
+        { formStatus === FormStatus.READY ? (
+            <input className={styles.contactForm__send} type="submit" value={pageContent['contact']['send']} />
+          ) : (
+            <span className={styles.contactForm__spinner}>
+              <PacmanLoader color="var(--black)" size="1.25rem" speedMultiplier={1.1} />
+            </span>
+          )}
       </Container>
-    ) : formStatus === 1 ? ( FEEDBACK_OK(pageContent) ) 
-      : ( FEEDBACK_ERR(pageContent) )
+    ) : formStatus === FormStatus.SENT ? ( getFeedback(FormStatus.SENT) ) 
+      : ( getFeedback(FormStatus.ERROR) )
   );
 }
