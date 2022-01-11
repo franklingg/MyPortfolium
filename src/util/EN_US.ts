@@ -8,19 +8,19 @@ import {
 export default class PT_BR implements IPage {
     navbar = {
         home: "Home",
-        about: "Sobre mim",
-        skills: "Habilidades",
-        projects: "Projetos"
+        about: "About Me",
+        skills: "Skills",
+        projects: "Projects"
     };
 
     contact = {
         title: "Vamos conversar sobre o seu projeto/empresa?",
-        name: "Nome",
-        tel: "Telefone",
-        message: "Mensagem",
-        send: "Enviar",
-        success: [],
-        failure: []
+        name: "Name",
+        tel: "Telephone",
+        message: "Message",
+        send: "Send",
+        success: ['Thank you!', 'I\'ll be contacting you shortly'],
+        failure: ['ERROR!', 'Unfortanetly your message has not been sent']
     };
 
     simpleButton = {
