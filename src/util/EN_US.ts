@@ -24,34 +24,34 @@ export default class PT_BR implements IPage {
     };
 
     simpleButton = {
-        findMore: "Saiba mais",
-        backHome: "Voltar para o Início"
+        findMore: "Get to know me",
+        backHome: "Return Home"
     };
 
     home = {
-        occupation: 'Desenvolvedor de Software',
+        occupation: 'Software Developer',
         description: `
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint. Velit officia consequat duis enim velit mollit. Exercitation
             veniam consequat sunt nostrud amet.`,
-        recommendationsTitle: "Recomendações",
+        recommendationsTitle: "Recommendations",
         recommendations: [
             {
                 text: "“Proativo, responsável, dedicado e bem-humorado! Franklin colabora com a equipe resolvendo problemas com inovação e desejo de aprender mais 😄",
                 author: "Débora Lêda",
-                occupation: "Líder de desenvolvimento",
+                occupation: "Development Leader",
                 icon: RecomDebora
             },
             {
                 text: "“Trabalhei com o Franklin em um projeto complexo e sua capacidade de resolver problemas nos ajudou a realizar as entregas no prazo. Tenho certeza de que ele será um grande trunfo para qualquer equipe que ingressar.",
                 author: "Tiago Chaves",
-                occupation: "Gerente de QA",
+                occupation: "QA Manager",
                 icon: RecomTiago
             },
             {
                 text: "“Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
                 author: "Taynara Lacerda",
-                occupation: "Designer UX/UI",
+                occupation: "UX/UI Designer",
                 icon: RecomTaynara
             }
         ]
