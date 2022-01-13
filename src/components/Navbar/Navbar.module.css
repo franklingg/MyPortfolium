@@ -84,7 +84,7 @@
     .navbar__sidebar{
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 25px;
         background-color: black;
         padding: 25px;
     }
