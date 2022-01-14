@@ -21,6 +21,9 @@
 
 .about__banner__info > p {
     color: var(--white);
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
 }
 
 .about__banner__img{

@@ -13,7 +13,7 @@ export default function About() {
       <Row className={styles.about__banner}>
         <Col className={styles.about__banner__info}>
           <h1>{pageContent.about.who}</h1>
-          <p>{pageContent.about.text}</p>
+          <p>{pageContent.about.text.map((line, idx) => (<span key={idx}>{line}</span>))}</p>
         </Col>
         <Col className={styles.about__banner__img}>
           <Image src={BannerAbout} alt="Identidade visual de Franklin Regis" layout="fill" />

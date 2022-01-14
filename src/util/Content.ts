@@ -82,7 +82,7 @@ export interface IPage {
     },
     about: {
         who: string,
-        text: string,
+        text: Array<String>,
         informationsTitle: string,
         informations: Array<IInformation>
     },

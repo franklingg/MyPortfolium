@@ -14,7 +14,7 @@ export default class PT_BR implements IPage {
     };
 
     contact = {
-        title: "Vamos conversar sobre o seu projeto/empresa?",
+        title: "Let's talk about your project/company?",
         name: "Name",
         tel: "Telephone",
         message: "Message",
@@ -31,9 +31,9 @@ export default class PT_BR implements IPage {
     home = {
         occupation: 'Software Developer',
         description: `
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit. Exercitation
-            veniam consequat sunt nostrud amet.`,
+            Hi, welcome to my portfolium!
+            Here you'll get to know about me, my skills and my projects!
+            Are you ready?!`,
         recommendationsTitle: "Recommendations",
         recommendations: [
             {
@@ -59,11 +59,12 @@ export default class PT_BR implements IPage {
 
     about = {
         who: "Quem sou eu?",
-        text: `Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
-                        Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
-                        Velit officia consequat duis enim velit mollit. 
-                        Exercitation veniam consequat sunt nostrud amet.`,
+        text:  [`Me chamo Franklin Regis, tenho 22 anos e sou graduando em Ciência da Computação na Universidade Federal 
+                de Campina Grande.`,
+                `Nos momentos de lazer costumo jogar e ler bastante (sou fã de carteirinha de Tolkien!),
+                além de estar sempre a par dos memes - como um bom jovem moderno.`,
+                `Sou um rapaz muito tranquilo, extrovertido e apaixonado pelo que faço, sempre buscando
+                fazer as pessoas ao meu redor se sentirem bem e confortáveis.`],
         informationsTitle: "Informações",
         informations: [
             { type: 'Trabalho', value: 5, content: 'meses de experiência atuando como Desenvolvedor Frontend' },
