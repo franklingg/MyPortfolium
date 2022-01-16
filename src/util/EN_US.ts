@@ -35,6 +35,7 @@ export default class PT_BR implements IPage {
             Here you'll get to know about me, my skills and my projects!
             Are you ready?!`,
         recommendationsTitle: "Recommendations",
+        // TODO
         recommendations: [
             {
                 text: "“Proativo, responsável, dedicado e bem-humorado! Franklin colabora com a equipe resolvendo problemas com inovação e desejo de aprender mais 😄",
@@ -58,71 +59,71 @@ export default class PT_BR implements IPage {
     };
 
     about = {
-        who: "Quem sou eu?",
-        text:  [`Me chamo Franklin Regis, tenho 22 anos e sou graduando em Ciência da Computação na Universidade Federal 
-                de Campina Grande.`,
-                `Nos momentos de lazer costumo jogar e ler bastante (sou fã de carteirinha de Tolkien!),
-                além de estar sempre a par dos memes - como um bom jovem moderno.`,
-                `Sou um rapaz muito tranquilo, extrovertido e apaixonado pelo que faço, sempre buscando
-                fazer as pessoas ao meu redor se sentirem bem e confortáveis.`],
-        informationsTitle: "Informações",
+        who: "Who am I?",
+        text:  [`My name is Franklin Regis, I'm 22 years old and I'm an undergraduate student in Computer Science at the 
+                 Federal University of Campina Grande.`,
+                `During my fre time I usually play games and read a lot (great fan of Tolkien here!),
+                as well as always being tuned on the "memes" - like a good modern person.`,
+                `I'm a very peaceful boy, extrovert and passioned with my work, always seeking for the
+                well being of the people around me, whether we are in a workplace or not.`],
+        informationsTitle: "Informations",
         informations: [
-            { type: 'Trabalho', value: 5, content: 'meses de experiência atuando como Desenvolvedor Frontend' },
-            { type: 'Trabalho', value: 6, content: 'meses de experiência atuando como Desenvolvedor Web PD&I' },
-            { type: 'Competições', value: 1, content: 'participação em Olímpiada Internacional' },
-            { type: 'Inovação', value: 1, content: 'ano de experiência com projetos de Extensão e Inovação Tecnológica' },
-            { type: 'Inglês', value: 'B2', content: 'Nível QCE de Inglês (Avançado)' },
-            { type: 'Produção', value: 2, content: 'artigos publicados em congresso nacional' },
+            { type: 'Work', value: 5, content: 'months of experience acting as Frontend Developer' },
+            { type: 'Work', value: 6, content: 'months of experience acting as Web Developer RD&I' },
+            { type: 'Competitions', value: 1, content: 'participation on International Olympiads' },
+            { type: 'Innovation', value: 1, content: 'year of experience with extension and technology projects' },
+            { type: 'English', value: 'B2', content: 'QCE English level (Advanced)' },
+            { type: 'Production', value: 2, content: 'articles published on national congress' },
         ]
     };
 
     skills = {
-        tops: 'Melhores Habilidades',
+        tops: 'Best Skills',
         topsList: [
             { 
                 icon: Bulb,
-                title: 'Habilidade 1',
-                text: 'Autodidatismo e versatilidade. Capacidade de aprender e evoluir com os problemas que surgirem.' 
+                title: 'Self-learning and versatility',
+                text: 'Capable of learning and evolving from the problems that arise.' 
             },
             { 
                 icon: Book, 
-                title: 'Habilidade 2', 
-                text: 'Desenvolvimento de páginas estáticas e dinâmicas com boas práticas de SEO.' 
+                title: 'SEO skillset', 
+                text: 'Static and dynamic pages development with good SEO practices.' 
             },
             { 
                 icon: Gear,
-                title: 'Habilidade 3',
-                text: 'Trabalho organizado e escalável, seguindo os padrões de projeto e requisitos do sistema.' 
+                title: 'Organization and Scalability',
+                text: 'Following all the project patterns and client/system requirements, as well as code readability.' 
             }
         ]
     };
 
     "404" = [
-        'A página que você está procurando não está disponível no momento :(',
-        'Atualize a página ou retorne para o menu principal!'
+        'The page you\'re attempting to reach is not available right now :(',
+        'Refresh the page or return to home page!'
     ]
 
     projects = {
-        title: "Meus projetos",
+        title: "My projects",
         frontend: [
             {
                 image: PlantManagerLogo,
                 title: 'PlantManager',
-                description: 'Aplicação Mobile para cadastrar e gerenciar suas plantas de casa.',
+                description: 'Mobile application for register and management of your home plants.',
                 labels: [LABELS.TYPESCRIPT, LABELS.REACT, LABELS.FIREBASE],
                 link: 'https://github.com/franklingg/PlantManager'
             },
             {
                 image: PortfoliumLogo,
                 title: 'MyPortfolium',
-                description: 'Código-fonte deste portfólio, usando Static Site Generation (SSG).',
+                description: 'Source-code of this portfolium, using Static Site Generation (SSG).',
                 labels: [LABELS.TYPESCRIPT, LABELS.NEXT],
                 link: 'https://github.com/franklingg/MyPortfolium'
             },
             {
                 image: DesafioTsLogo,
                 title: 'Desafio-TS',
-                description: 'Construção de uma página de delivery responsiva e dinâmica.',
+                description: 'Building a food delivery page that is reponsive and dynamic.',
                 labels: [LABELS.REACT, LABELS.JAVASCRIPT],
                 link: 'https://github.com/franklingg/desafio-teamsoft'
             }
@@ -131,28 +132,28 @@ export default class PT_BR implements IPage {
             {
                 image: SigesLogo,
                 title: 'SIGES',
-                description: 'Sistema de gerenciamento e ocupação de salas, laboratórios e ambientes coletivos.',
+                description: 'Management system that deals with occupation of rooms, laboratories and public environments.',
                 labels: [LABELS.HASKELL, LABELS.PROLOG],
                 link: 'https://github.com/franklingg/SIGES'
             },
             {
                 image: DiscordLogo,
                 title: 'Gummy',
-                description: 'Bot para o Discord com funcionalidades lúdicas/do dia-a-dia.',
+                description: 'Discord bot with playful/daytime functionalities.',
                 labels: [LABELS.JAVASCRIPT],
                 link: 'https://github.com/franklingg/Gummy'
             },
             {
                 image: LittleGamesLogo,
                 title: 'LittleGames',
-                description: 'Games autorais (código e assets) feitos para aprender programação de jogos.',
+                description: 'Authoral games made for learning gaming programming.',
                 labels: [LABELS.PYTHON],
                 link: 'https://github.com/franklingg/LittleGames'
             },
             {
                 image: DsBeginsLogo,
                 title: 'DS-Begins',
-                description: 'Modelos introdutórios de Ciência de Dados, Machine Learning e Deep Learning.',
+                description: 'A set of introductory models for Data Science, Machine Learning and Deep Learning.',
                 labels: [LABELS.JUPYTER, LABELS.PYTHON],
                 link: 'https://github.com/franklingg/DS-Begins'
             }
