@@ -4,7 +4,7 @@ Portfólio com as principais informações sobre Franklin Regis, desenvolvedor j
 
 * Hospedado em: [Vercel App](https://franklin-regis.vercel.app)
 
-🚧 Próximos passos 🚧
+#### 🚧 Próximos passos 🚧
 
 * Adicionar SSG nas páginas com revalidate;
 * Responsividade:
