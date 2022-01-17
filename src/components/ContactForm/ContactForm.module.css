@@ -27,6 +27,7 @@
     border-radius: 50%;
     right: 11px;
     transition: 0.12s all ease-in;
+    bottom: 70px;
 }
 
 .contactButton > *{

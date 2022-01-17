@@ -5,11 +5,11 @@ import {
     DiscordLogo, SigesLogo, LittleGamesLogo, PlantManagerLogo, PortfoliumLogo, DesafioTsLogo, DsBeginsLogo
 } from '~/assets'
 
-export default class PT_BR implements IPage {
+export default class EN_US implements IPage {
     navbar = {
         home: "Home",
         about: "About Me",
-        skills: "Skills",
+        skills: "My Skills",
         projects: "Projects"
     };
 
@@ -32,28 +32,27 @@ export default class PT_BR implements IPage {
         occupation: 'Software Developer',
         description: `
             Hi, welcome to my portfolium!
-            Here you'll get to know about me, my skills and my projects!
-            Are you ready?!`,
+            Here you will get to know more about me, my skills and my projects!
+            Are you ready to dive in?!`,
         recommendationsTitle: "Recommendations",
-        // TODO
         recommendations: [
             {
-                text: "“Proativo, responsável, dedicado e bem-humorado! Franklin colabora com a equipe resolvendo problemas com inovação e desejo de aprender mais 😄",
-                author: "Débora Lêda",
-                occupation: "Development Leader",
-                icon: RecomDebora
-            },
-            {
-                text: "“Trabalhei com o Franklin em um projeto complexo e sua capacidade de resolver problemas nos ajudou a realizar as entregas no prazo. Tenho certeza de que ele será um grande trunfo para qualquer equipe que ingressar.",
+                text: "“I've worked with Franklin on a complex project and his capability of solving problems helped us deliver our demands in time.",
                 author: "Tiago Chaves",
                 occupation: "QA Manager",
                 icon: RecomTiago
             },
             {
-                text: "“Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+                text: "“Franklin is a proactive and dedicated professional, always understanding the team's needs. He was one of the first developers that made sure to work and comprehend designer demands, in order to deliver the best result possible. It was an enourmous pleasure to work by your side!”",
                 author: "Taynara Lacerda",
                 occupation: "UX/UI Designer",
                 icon: RecomTaynara
+            },
+            {
+                text: "Proactive, liable, dedicated and humorous! Franklin always contributes with the team with innovation and eager of learning more 😄",
+                author: "Débora Lêda",
+                occupation: "Development Leader",
+                icon: RecomDebora
             }
         ]
     };
@@ -93,7 +92,7 @@ export default class PT_BR implements IPage {
             { 
                 icon: Gear,
                 title: 'Organization and Scalability',
-                text: 'Following all the project patterns and client/system requirements, as well as code readability.' 
+                text: 'Following all the project patterns and client/system requirements.' 
             }
         ]
     };
@@ -104,7 +103,7 @@ export default class PT_BR implements IPage {
     ]
 
     projects = {
-        title: "My projects",
+        title: "My Projects",
         frontend: [
             {
                 image: PlantManagerLogo,
@@ -132,7 +131,7 @@ export default class PT_BR implements IPage {
             {
                 image: SigesLogo,
                 title: 'SIGES',
-                description: 'Management system that deals with occupation of rooms, laboratories and public environments.',
+                description: 'Management system to handle occupation of rooms, labs and public places.',
                 labels: [LABELS.HASKELL, LABELS.PROLOG],
                 link: 'https://github.com/franklingg/SIGES'
             },

@@ -45,6 +45,10 @@ export default function ContactForm() {
     }
   }, [handleCloseForm]);
 
+  const handlePress = useCallback((event: KeyboardEvent ) => {
+    if (event.key === 'Escape') handleCloseForm();
+  }, [handleCloseForm]);
+
   const getFeedback = useCallback( (status: FormStatus) => {
     return (
       <Container className={`${styles.fixedContainer} ${styles.feedback}`}>
@@ -95,8 +99,12 @@ export default function ContactForm() {
 
   useEffect(()=>{
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [handleClickOutside]);
+    document.addEventListener('keydown', handlePress);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handlePress);
+    }
+  }, [handleClickOutside, handlePress]);
 
   return (
     !formOpen ? (

@@ -15,6 +15,7 @@
     flex: 1;
     display: flex;
     flex-direction: column;
+    min-width: 467px;
     gap: 20px;
 }
 
@@ -41,6 +42,7 @@
     position: relative;
     flex: 1;
     height: 560px;
+    min-width: 467px;
 }
 
 .home__recommendations{
@@ -85,6 +87,7 @@
 
 .home__recommendations__carouselInfo > p{
     margin: 0;
+    flex: 1;
 }
 
 .home__recommendations__carouselInfo__author{
