@@ -6,8 +6,6 @@ Portfólio com as principais informações sobre Franklin Regis, desenvolvedor j
 
 #### 🚧 Próximos passos 🚧
 
-* Adicionar SSG nas páginas com revalidate;
-* Responsividade:
-  * 768px;
+* Responsividade para os breakpoints:
   * 480px;
   * 360px;
