@@ -5,6 +5,7 @@ import { useLangContext } from "~/contexts/langContext";
 import styles from './404.module.css';
 import { Banner404 } from '~/assets';
 import { ButtonKind, SimpleButton } from "~/components";
+import { GetStaticProps } from "next";
 
 export default function Error404() {
   const { pageContent } = useLangContext();
@@ -25,4 +26,12 @@ export default function Error404() {
       </Col>
     </Container>
   );
+}
+
+export const getStaticProps : GetStaticProps = async () => {
+  const rev_time = process.env.REVALIDATE_TIME ? parseInt(process.env.REVALIDATE_TIME) : false;
+  return {
+    props: {},
+    revalidate: rev_time
+   }
 }

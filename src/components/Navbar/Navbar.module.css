@@ -24,11 +24,10 @@
 }
 
 .navbar__logo{
+    position: relative;
     margin-right: 118px;
-}
-
-.navbar__logo__img{
-    width: 20px !important;
+    min-width: 25px;
+    height: 25px;
 }
 
 .navbar__select{
@@ -36,4 +35,18 @@
     margin: 0;
     display: flex;
     justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+    .navbar{
+        padding: 0 20px;
+    }
+
+    .navbar__logo{
+        margin-right: 50px;
+    }
+
+    .navbar__item{
+        margin: 0 30px;
+    }
 }

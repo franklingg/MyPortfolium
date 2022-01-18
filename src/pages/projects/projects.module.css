@@ -6,3 +6,9 @@
     margin: 0;
     color: var(--light-blue);
 }
+
+@media (max-width: 768px) {
+    .projects {
+        padding: 100px 50px;
+    }
+}

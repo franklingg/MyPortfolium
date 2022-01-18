@@ -25,3 +25,10 @@
     height: 1.2rem;
     width: 1.2rem;
 }
+
+@media (max-width: 768px) {
+    .arrow{
+        top: 65px;
+        padding: 27px 13px 24px 13px;
+    }
+}

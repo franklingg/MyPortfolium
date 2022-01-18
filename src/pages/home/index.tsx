@@ -8,6 +8,7 @@ import { useLangContext } from "~/contexts/langContext";
 
 import styles from "./home.module.css";
 import { BannerHome } from "~/assets";
+import { GetStaticProps } from "next";
 
 export default function Home() {
   const { pageContent } = useLangContext();
@@ -16,7 +17,7 @@ export default function Home() {
     className: styles.home__recommendations__carousel,
     centerMode: true,
     infinite: false,
-    centerPadding: "130px",
+    centerPadding: (typeof window !== 'undefined' && window.innerWidth <= 768) ? "70px" : "130px",
     dots: true,
     arrows: false,
     speed: 500,
@@ -75,4 +76,12 @@ export default function Home() {
       </Row>
     </Container>
   );
+}
+
+export const getStaticProps : GetStaticProps = async () => {
+  const rev_time = process.env.REVALIDATE_TIME ? parseInt(process.env.REVALIDATE_TIME) : false;
+  return {
+    props: {},
+    revalidate: rev_time
+   }
 }

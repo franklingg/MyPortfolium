@@ -84,3 +84,37 @@
     height: 575px;
     width: 330px;
 }
+
+@media (max-width: 768px) {
+    .skills {
+        margin: 90px 50px; 
+    }
+
+    .skills__tops{
+        gap: 55px;
+    }
+
+    .skills__topsList {
+        margin: 0 30px;
+        gap: 40px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills__all {
+        margin: 80px -10px 110px;
+        gap: 15px;
+    }
+
+    .skills__all__left {
+        gap: 40px;
+    }
+
+    .skills__all__list{
+        margin-left: 25px;
+    }
+
+    .skills__all__banner{
+        height: 500px;
+        width: 300px;
+    }
+}

@@ -27,3 +27,10 @@
     justify-content: flex-end;
     gap: 7px;
 }
+
+@media (max-width: 768px) {
+    .footer{
+        padding: 19px 45px;
+        gap: 35px;
+    }
+}

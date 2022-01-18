@@ -4,6 +4,7 @@ import { useLangContext } from "~/contexts/langContext";
 
 import styles from "./about.module.css";
 import { BannerAbout } from '~/assets';
+import { GetStaticProps } from "next";
 
 export default function About() {
   const { pageContent } = useLangContext();
@@ -35,4 +36,12 @@ export default function About() {
       </Row>
     </Container>
   );
+}
+
+export const getStaticProps : GetStaticProps = async () => {
+  const rev_time = process.env.REVALIDATE_TIME ? parseInt(process.env.REVALIDATE_TIME) : false;
+  return {
+    props: {},
+    revalidate: rev_time
+   }
 }

@@ -31,3 +31,14 @@
     min-width: 495px;
     height: 511px;
 }
+
+@media (max-width: 768px) {
+    .error{
+        margin: 144px 119px 159px 180px;
+    }
+
+    .error__banner{
+        min-width: 500px;
+        height: 590px;
+    }
+}

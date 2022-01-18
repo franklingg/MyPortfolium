@@ -124,3 +124,33 @@
 .home__recommendations__carousel__dots > li > button:hover{
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    .home__banner{
+        margin: 40px 107px 50px 138px;
+        gap: 45px;
+    }
+
+    .home__banner__text{
+        min-width: 280px;
+    }
+
+    .home__banner__image{
+        height: 470px;
+        min-width: 380px;
+    }
+
+    .home__recommendations__title{
+        margin: 0 0 50px 40px;
+    }
+
+    .home__recommendations__carouselBox{
+        padding: 25px;
+        max-width: 580px;
+        min-height: 16.5rem;
+    }
+
+    .home__recommendations__carousel__dots{
+        margin: 20px 0 75px 0;
+    }
+}

@@ -7,6 +7,7 @@ import { SkillBar } from '~/components';
 import { ISkill } from '~/components/SkillBar/SkillBar';
 import { BannerSkills } from '~/assets';
 import styles from "./skills.module.css";
+import { GetStaticProps } from 'next';
 
 
 export default function Skills() {
@@ -53,4 +54,12 @@ export default function Skills() {
       </Row>
     </Container>
   );
+}
+
+export const getStaticProps : GetStaticProps = async () => {
+  const rev_time = process.env.REVALIDATE_TIME ? parseInt(process.env.REVALIDATE_TIME) : false;
+  return {
+    props: {},
+    revalidate: rev_time
+   }
 }
