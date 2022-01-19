@@ -118,3 +118,37 @@
         width: 300px;
     }
 }
+
+@media (max-width: 414px) {
+    .skills {
+        margin: 70px 25px; 
+    }
+
+    .skills__tops{
+        gap: 40px;
+    }
+
+    .skills__topsTitle{
+        text-align: center;
+    }
+
+    .skills__topsList {
+        grid-template-columns: 1fr;
+    }
+
+    .skills__all {
+        margin: 80px 10px 70px;
+    }
+
+    .skills__all__left > h3 {
+        text-align: center;
+    }
+
+    .skills__all__list{
+        margin-left: 0;
+    }
+
+    .skills__all__banner{
+        display: none;
+    }
+}

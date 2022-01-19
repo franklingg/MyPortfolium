@@ -108,13 +108,14 @@
 .home__recommendations__carousel__dots{
     margin: 30px 0 90px 0;
     display: flex !important;
-    gap: 4px;
+    gap: 10px;
     justify-content: center;
     list-style: none;
 }
 
 .home__recommendations__carousel__dots > li > button{
-    height: 14px;
+    height: 18px;
+    width: 18px;
     border-radius: 50%;
     background-color: transparent;
     border: 1px solid var(--light-blue);
@@ -152,5 +153,53 @@
 
     .home__recommendations__carousel__dots{
         margin: 20px 0 75px 0;
+    }
+}
+
+@media (max-width: 414px) {
+    .home__banner{
+        margin: 80px 40px;
+    }
+
+    .home__banner__text {
+        align-items: center;
+    }
+
+    .home__banner__text > * {
+        text-align: center;
+    }
+
+    .home__banner__image{
+        display: none;
+    }
+
+    .home__banner__text__headings{
+        gap: 20px;
+    }
+
+    .home__recommendations__title{
+        margin: 0 auto 50px;
+    }
+
+    .home__recommendations__carousel > div{
+        padding: 0 25px !important;
+    }
+
+    .home__recommendations__carouselBox{
+        padding: 18px;
+        max-width: 350px;
+        min-height: 27rem;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .home__recommendations__carousel__dots{
+        margin: 40px 0 75px 0;
+        gap: 35px;
+    }
+
+    .home__recommendations__carousel__dots > li > button{
+        height: 20px;
+        width: 20px;
     }
 }

@@ -1,5 +1,5 @@
 import Router from "next/router";
-import { useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Image from "next/image";
 import Slider, { Settings } from "react-slick";
@@ -13,11 +13,20 @@ import { GetStaticProps } from "next";
 export default function Home() {
   const { pageContent } = useLangContext();
 
-  const sliderSettings : Settings = {
+  const responsiveAttr = useCallback((attr : string) => {
+    if(attr == 'centerPadding'){
+      if(typeof window !== 'undefined' && window.innerWidth <= 768){
+        return window.innerWidth <= 414 ? "0px" : "70px";
+      }
+      return "130px";
+    }
+  }, []);
+
+  const [sliderSettings] = useState<Settings>({
     className: styles.home__recommendations__carousel,
     centerMode: true,
     infinite: false,
-    centerPadding: (typeof window !== 'undefined' && window.innerWidth <= 768) ? "70px" : "130px",
+    centerPadding: responsiveAttr('centerPadding'),
     dots: true,
     arrows: false,
     speed: 500,
@@ -26,7 +35,7 @@ export default function Home() {
     dotsClass: styles.home__recommendations__carousel__dots,
     // eslint-disable-next-line react/display-name
     customPaging: () => <button />,
-  };
+  });
 
   useEffect(() => {
     if (Router.pathname === "/home") {

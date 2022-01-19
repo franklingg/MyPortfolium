@@ -71,12 +71,12 @@ button {
 
 @media (max-width: 768px) {
   :root{
-    font-size: 12.5px;
+    font-size: 13px;
   }
 }
 
-@media (max-width: 480px) {
-}
-
-@media (max-width: 360px) {
+@media (max-width: 414px) {
+  :root{
+    font-size: 12px;
+  }
 }

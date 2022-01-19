@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import Slider, { Settings } from "react-slick";
 import { Row } from "react-bootstrap";
 import Image from "next/image";
@@ -15,13 +15,19 @@ type ProjectSliderProps = {
 export default function ProjectSlider({ kind }: ProjectSliderProps) {
   const { pageContent } = useLangContext();
 
+  const responsiveAttr = useCallback((attr : string) => {
+    if(attr == 'slidesToShow'){
+      return (typeof window !== 'undefined' && window.innerWidth <= 414 ? 1 : 2);
+    }
+  }, []);
+
   const [sliderSettings] = useState<Settings>({
     className: styles.projects__carousel,
     infinite: true,
     dots: false,
     arrows: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: responsiveAttr('slidesToShow'),
     slidesToScroll: 1,
     nextArrow: <SliderArrow direction="right" />,
     prevArrow: <SliderArrow direction="left" />,

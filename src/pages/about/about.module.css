@@ -118,3 +118,42 @@
         font-size: 6.2rem;
     }
 }
+
+@media (max-width: 414px) {
+    .about__banner{
+        margin: 0 22px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about__banner__info > h1 {
+        margin-top: 70px;
+    }
+
+    .about__banner__info > p {
+        padding: 0 25px;
+    }
+
+    .about__banner__img{
+        min-height: 350px;
+        width: 300px;
+    }
+
+    .about__informations{
+        margin: 20px 20px 100px;
+    }
+
+    .about__informations > h3{
+        margin: 0;
+        text-align: center;
+    }
+
+    .about__informations__grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px 25px;
+    }
+
+    .about__informations__gridItem{
+        padding: 10px 16px;
+    }
+}

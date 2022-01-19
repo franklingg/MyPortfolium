@@ -34,3 +34,14 @@
         gap: 35px;
     }
 }
+
+@media (max-width: 768px) {
+    .footer{
+        padding: 19px 22px;
+        justify-content: space-between;
+    }
+
+    .footer__brand{
+        flex: initial;
+    }
+}

@@ -12,3 +12,14 @@
         padding: 100px 50px;
     }
 }
+
+@media (max-width: 414px) {
+    .projects {
+        padding: 90px 20px;
+    }
+
+    .projects__title{
+        font-size: 4.3rem;
+        line-height: 4.3rem;
+    }
+}

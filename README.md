@@ -7,5 +7,5 @@ Portfólio com as principais informações sobre Franklin Regis, desenvolvedor j
 #### 🚧 Próximos passos 🚧
 
 * Responsividade para os breakpoints:
-  * 480px;
+  * 414px;
   * 360px;

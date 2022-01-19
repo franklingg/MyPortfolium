@@ -32,3 +32,14 @@
         padding: 27px 13px 24px 13px;
     }
 }
+
+@media (max-width: 414px) {
+    .arrow{
+        top: 70px;
+        padding: 28px 15px 25px 15px;
+    }
+
+    .arrow__right{
+        right: 0;
+    }
+}
