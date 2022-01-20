@@ -35,10 +35,19 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 414px) {
     .footer{
         padding: 19px 22px;
         justify-content: space-between;
+    }
+
+    .footer__social{
+        gap: 15px;
+    }
+
+    .footer__social__item{
+        width: 23px;
+        height: 20px;
     }
 
     .footer__brand{

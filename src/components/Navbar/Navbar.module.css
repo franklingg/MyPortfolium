@@ -52,5 +52,44 @@
 }
 
 @media (max-width: 414px) {
+    .navbar{
+        padding: 0 15px;
+    }
 
+    .navbar__select{
+        margin: 0;
+    }
+
+    .navbar__logo{
+        margin-left: calc(50% - 16px);
+        min-width: 32px;
+        height: 32px;
+    }
+
+    .navbar__sidebar__content{
+        top: 18px !important;
+        left: 14px !important;
+    }
+
+    .navbar__sidebar__content > button {
+        background-color: transparent;
+    }
+
+    .navbar__sidebar__contentIcon{
+        color: var(--white);
+        height: 2.3rem;
+        width: 2.3rem;
+    }
+
+    .navbar__sidebar{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background-color: black;
+        padding: 25px;
+    }
+
+    .navbar__item{
+        margin: 0;
+    }
 }

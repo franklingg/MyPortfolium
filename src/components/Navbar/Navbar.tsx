@@ -1,9 +1,11 @@
 import Router from 'next/router';
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import Link from "next/link";
 import Image from "next/image";
 import Select, { GroupBase, StylesConfig } from 'react-select';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import Sidebar from "react-sidebar";
 
 import styles from "./Navbar.module.css";
 import { Logo } from '~/assets';
@@ -14,15 +16,8 @@ export default function Navbar() {
 
   const { currentLang, availableLangs, changeLang, pageContent } = useLangContext();
   const [ path, setPath ] = useState("");
-
-  useEffect(() => {
-    setPath(Router.pathname);
-    Router.events.on('routeChangeComplete', url => {
-      setPath(url);
-    });
-  }, []);
-
-  const selectStyles : StylesConfig<ILang, false, GroupBase<ILang>> = {
+  const [ sidebarOpen, setSidebarOpen ] = useState(false);
+  const [selectStyles] = useState<StylesConfig<ILang, false, GroupBase<ILang>>>({
     control: (provided) => ({
       ...provided,
       backgroundColor: 'transparent',
@@ -73,15 +68,10 @@ export default function Navbar() {
       borderRadius: 10,
       boxShadow: '0px 1px 2px rgba(255, 255, 255, 0.25)'
     })
-  };
+  });
 
-  return (
-    <Row as="nav" className={styles.navbar}>
-      <Link href="/" passHref>
-        <Col className={styles.navbar__logo} as="a">
-          <Image src={Logo} alt="Logo de Franklin Regis" layout='fill' />
-        </Col>
-      </Link>
+  const navItems =
+    <>
       <Link href="/home" passHref>
         <Col className={`${styles.navbar__item} ${path == "/home" || path === "/" ? styles.navbar__item__focused : ""}`} as="a">
           {pageContent['navbar']['home']}
@@ -102,15 +92,67 @@ export default function Navbar() {
           {pageContent['navbar']['projects']}
         </Col>
       </Link>
-      <Col className={`${styles.navbar__item} ${styles.navbar__select}`}>
+    </>;
+
+  const handleOpen = useCallback(()=> setSidebarOpen(true), []);
+  const handleClose = useCallback(()=> setSidebarOpen(false), []);
+
+  useEffect(() => {
+    setPath(Router.pathname);
+    Router.events.on('routeChangeComplete', url => {
+      handleClose();
+      setPath(url);
+    });
+  }, []);
+  
+  return (
+    (typeof window !== 'undefined' && window.innerWidth > 414) ? (
+      <Row as="nav" className={styles.navbar}>
+        <Link href="/" passHref>
+          <Col className={styles.navbar__logo} as="a">
+            <Image src={Logo} alt="Logo de Franklin Regis" layout='fill' />
+          </Col>
+        </Link>
+        {navItems}
+        <Col className={`${styles.navbar__item} ${styles.navbar__select}`}>
+          <Select
+            styles={selectStyles}
+            options={availableLangs}
+            value={currentLang}
+            isSearchable={false}
+            onChange={(newLang) => changeLang?.(newLang!.value)}
+          /> 
+        </Col>
+      </Row>
+    ) : (
+      <Row as="nav" className={styles.navbar}>
+        <Sidebar
+          sidebar={navItems}
+          sidebarClassName={styles.navbar__sidebar}
+          contentClassName={styles.navbar__sidebar__content}
+          overlayClassName={styles.navbar__sidebar__overlay}
+          open={sidebarOpen}
+          onSetOpen={(state) => {setSidebarOpen(state)}}
+        >
+          <button onClick={handleOpen}>
+            <GiHamburgerMenu className={styles.navbar__sidebar__contentIcon} />
+          </button>
+        </Sidebar>
+        <Link href="/" passHref>
+          <Col className={styles.navbar__logo} as="a">
+            <Image src={Logo} alt="Logo de Franklin Regis" layout='fill' />
+          </Col>
+        </Link>
+        <Col className={`${styles.navbar__item} ${styles.navbar__select}`}>
         <Select
           styles={selectStyles}
           options={availableLangs}
           value={currentLang}
           isSearchable={false}
           onChange={(newLang) => changeLang?.(newLang!.value)}
-        /> 
-      </Col>
-    </Row>
+          /> 
+        </Col>
+      </Row>
+    )
   );
 }
