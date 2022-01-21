@@ -15,11 +15,23 @@
 
 @media (max-width: 414px) {
     .projects {
-        padding: 90px 20px;
+        padding: 80px 20px;
     }
 
     .projects__title{
+        text-align: center;
         font-size: 4.3rem;
-        line-height: 4.3rem;
+        line-height: 5rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .projects {
+        padding: 70px 15px;
+    }
+
+    .projects__title{
+        font-size: 4rem;
+        line-height: 4.5rem;
     }
 }

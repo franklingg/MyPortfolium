@@ -203,3 +203,21 @@
         width: 20px;
     }
 }
+
+@media (max-width: 360px) {
+    .home__recommendations__carousel > div{
+        padding: 0 15px !important;
+    }
+
+    .home__recommendations__carouselBox{
+        padding: 14px 10px;
+        max-width: 88vw;
+        gap: 14px;
+        min-height: 30rem;
+    }
+
+    .home__recommendations__carouselImg{
+        width: 110px;
+        height: 110px;
+    }
+}

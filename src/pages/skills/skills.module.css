@@ -152,3 +152,17 @@
         display: none;
     }
 }
+
+@media (max-width: 360px) {
+    .skills {
+        margin: 70px 10px; 
+    }
+    
+    .skills__topsTitle{
+        font-size: 3.2rem;
+    }
+
+    .skills__all__list{
+        gap: 25px;
+    }
+}

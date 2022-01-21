@@ -16,7 +16,8 @@ export default function Home() {
   const responsiveAttr = useCallback((attr : string) => {
     if(attr == 'centerPadding'){
       if(typeof window !== 'undefined' && window.innerWidth <= 768){
-        return window.innerWidth <= 414 ? "0px" : "70px";
+        return  window.innerWidth <= 414 
+              ? (window.innerWidth <= 360 ? "8px" : "0px") : "70px";
       }
       return "130px";
     }

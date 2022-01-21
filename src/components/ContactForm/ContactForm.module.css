@@ -133,3 +133,15 @@
         bottom: 90px;
     }
 }
+
+@media (max-width: 414px) {
+    .contactForm{
+        max-width: 360px;
+    }
+}
+
+@media (max-width: 360px) {
+    .contactForm{
+        max-width: 310px;
+    }
+}

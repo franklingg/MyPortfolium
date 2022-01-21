@@ -108,8 +108,13 @@
 }
 
 @media (max-width: 414px) {
+    .projects__slider{
+        margin-top: 40px;
+    }
+
     .projects__slider > h3 {
         text-align: center;
+        margin-bottom: 40px;
     }
 
     .projects__carousel {
@@ -129,5 +134,29 @@
 
     .projects__carousel__label {
         width: max-content;
+    }
+}
+
+@media (max-width: 360px) {
+    .projects__carousel__box{
+        padding: 14px 8px;
+    }
+
+    .projects__carousel {
+        padding: 0 48px;
+    }
+
+    .projects__carousel__box{
+        margin-left: 0;
+    }
+
+    .projects__carousel__image{
+        min-width: 72px;
+        width: 72px;
+        height: 72px;
+    }
+
+    .projects__carousel__label {
+        padding: 3px 5px;
     }
 }

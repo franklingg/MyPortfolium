@@ -43,3 +43,9 @@
         right: 0;
     }
 }
+
+@media (max-width: 360px) {
+    .arrow{
+        padding: 25px 12px 22px 12px;
+    }
+}

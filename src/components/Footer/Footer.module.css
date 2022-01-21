@@ -54,3 +54,15 @@
         flex: initial;
     }
 }
+
+@media (max-width: 360px) {
+    .footer{
+        padding: 13px 15px;
+        gap: 15px;
+    }
+
+    .footer__social__item{
+        width: 20px;
+    }
+
+}

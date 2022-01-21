@@ -24,6 +24,7 @@
     display: flex;
     flex-direction: column;
     text-align: justify;
+    gap: 0.5rem;
 }
 
 .about__banner__img{
@@ -90,7 +91,7 @@
     }
 
     .about__banner__info > h1 {
-        margin-top: 110px;
+        margin-top: 50px;
     }
 
     .about__banner__img{
@@ -127,6 +128,7 @@
     }
 
     .about__banner__info > h1 {
+        text-align: center;
         margin-top: 70px;
     }
 
@@ -155,5 +157,25 @@
 
     .about__informations__gridItem{
         padding: 10px 16px;
+    }
+}
+
+@media (max-width: 360px) {
+    .about__banner{
+        margin: 0 13px;
+    }
+
+    .about__informations{
+        gap: 50px;
+    }
+
+    .about__informations__grid{
+        margin: 0 10px;
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+
+    .about__informations__gridItem{
+        padding: 8px 16px;
     }
 }

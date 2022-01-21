@@ -47,7 +47,7 @@ export default function ProjectSlider({ kind }: ProjectSliderProps) {
               draggable={false}
             >
               <div className={styles.projects__carousel__image}>
-                <Image src={project.image} alt="Logo de Franklin Regis" layout="fill" />
+                <Image src={project.image} alt={project.title} layout="fill" />
               </div>
               <div className={styles.projects__carousel__info}>
                 <span>{project.title}</span>
