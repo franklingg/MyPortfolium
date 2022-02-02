@@ -25,6 +25,7 @@
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
+    "@types/node": "^17.0.14",
     "@types/react": "17.0.15",
     "@types/react-sidebar": "^3.0.2",
     "@types/react-slick": "^0.23.7",
