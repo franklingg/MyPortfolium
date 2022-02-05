@@ -15,22 +15,22 @@ export default function Footer() {
         Franklin Regis
       </Col>
       <Col className={styles.footer__social}>
-        <Link href="https://github.com/franklingg" passHref>
+        <Link href="https://github.com/franklingg" passHref prefetch={false}>
           <Col className={styles.footer__social__item} as="a" target="_blank">
             <FaGithubSquare size={20} color="var(--grey)" />
           </Col>
         </Link>
-        <Link href="https://www.linkedin.com/in/franklin-regis/" passHref>
+        <Link href="https://www.linkedin.com/in/franklin-regis/" passHref prefetch={false}>
           <Col className={styles.footer__social__item} as="a" target="_blank">
             <FaLinkedin size={20} color="var(--grey)" />
           </Col>
         </Link>
-        <Link href="https://www.instagram.com/franklingg1/" passHref>
+        <Link href="https://www.instagram.com/franklingg1/" passHref prefetch={false}>
           <Col className={styles.footer__social__item} as="a" target="_blank">
             <FaInstagramSquare size={20} color="var(--grey)" />
           </Col>
         </Link>
-        <Link href="https://discord.com/users/502633304491819018" passHref>
+        <Link href="https://discord.com/users/502633304491819018" passHref prefetch={false}>
           <Col className={styles.footer__social__item} as="a" target="_blank">
             <RiDiscordFill size={20} color="var(--grey)" />
           </Col>

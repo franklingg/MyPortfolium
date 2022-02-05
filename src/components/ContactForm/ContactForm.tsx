@@ -1,5 +1,5 @@
-import { useCallback, useState, useRef, useEffect, FormEventHandler, ReactElement } from "react";
-import { Container, Row, Spinner } from "react-bootstrap";
+import { useCallback, useState, useRef, useEffect, FormEventHandler } from "react";
+import { Container, Row } from "react-bootstrap";
 import emailjs from 'emailjs-com';
 import { IoMdClose } from 'react-icons/io';
 import Image from "next/image";

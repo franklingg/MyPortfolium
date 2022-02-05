@@ -18,7 +18,7 @@ export default function SimpleButton({ kind, href, color='var(--light-blue)' } :
   const { pageContent } = useLangContext();
 
   return (
-    <Link href={href}>
+    <Link href={href} prefetch={false}>
       <a className={styles.simpleButton} style={{backgroundColor: color}}>
         {pageContent['simpleButton'][kind]}
       </a>

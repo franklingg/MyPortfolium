@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext, ProviderProps, Provider, useEffect } from "react";
+import React, { createContext, useState, useContext, useEffect } from "react";
 import { AVAILABLE_LANGS, DEFAULT_LANG, ILang, IPage } from '~/util/Content';
 
 interface ILangContext {

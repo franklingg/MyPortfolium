@@ -2,7 +2,6 @@ import { useCallback, useState } from "react";
 import Slider, { Settings } from "react-slick";
 import { Row } from "react-bootstrap";
 import Image from "next/image";
-import Link from "next/link";
 
 import styles from "./ProjectSlider.module.css";
 import { useLangContext } from "~/contexts/langContext";
