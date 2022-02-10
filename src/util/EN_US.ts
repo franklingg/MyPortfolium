@@ -68,7 +68,7 @@ export default class EN_US implements IPage {
         informationsTitle: "Informations",
         informations: [
             { type: 'Work', value: 5, content: 'months of experience acting as Frontend Developer' },
-            { type: 'Work', value: 6, content: 'months of experience acting as Web Developer RD&I' },
+            { type: 'Work', value: 8, content: 'months of experience acting as RD&I Developer' },
             { type: 'Competitions', value: 1, content: 'participation on International Olympiads' },
             { type: 'Innovation', value: 1, content: 'year of experience with extension and technology projects' },
             { type: 'English', value: 'B2', content: 'QCE English level (Advanced)' },

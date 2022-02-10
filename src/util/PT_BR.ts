@@ -68,7 +68,7 @@ export default class PT_BR implements IPage {
         informationsTitle: "Informações",
         informations: [
             { type: 'Trabalho', value: 5, content: 'meses de experiência atuando como Desenvolvedor Frontend' },
-            { type: 'Trabalho', value: 6, content: 'meses de experiência atuando como Desenvolvedor Web PD&I' },
+            { type: 'Trabalho', value: 8, content: 'meses de experiência atuando como Desenvolvedor PD&I' },
             { type: 'Competições', value: 1, content: 'participação em Olímpiada Internacional' },
             { type: 'Inovação', value: 1, content: 'ano de experiência com projetos de Extensão e Inovação Tecnológica' },
             { type: 'Inglês', value: 'B2', content: 'nível QCE de inglês (Avançado)' },
