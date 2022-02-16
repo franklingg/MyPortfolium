@@ -32,7 +32,7 @@
 .contactButton > *{
     margin: auto !important;
     width: 38px;
-    height: 28px;
+    max-height: 28px;
 }
 
 .contactButton:hover{
