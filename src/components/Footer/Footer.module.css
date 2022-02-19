@@ -28,6 +28,12 @@
     gap: 7px;
 }
 
+.footer__brandImg{
+    position: relative;
+    width: 25px;
+    height: 25px;
+}
+
 @media (max-width: 768px) {
     .footer{
         padding: 19px 45px;

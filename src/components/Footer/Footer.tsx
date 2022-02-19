@@ -37,7 +37,9 @@ export default function Footer() {
         </Link>
       </Col>
       <Col className={styles.footer__brand}>
-        <Image src={Logo} alt="Logo de Franklin Regis" width={25} height={25} />
+        <span className={styles.footer__brandImg}>
+          <Image src={Logo} alt="Logo de Franklin Regis" layout="fill" />
+        </span>
         <span>2021</span>
       </Col>
     </Row>
