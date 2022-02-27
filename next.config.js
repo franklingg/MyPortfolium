@@ -18,3 +18,9 @@ module.exports = {
 const withImages = require('next-images');
 
 module.exports = withImages();
+
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+	enabled: true
+});
+
+module.exports = withBundleAnalyzer({});
