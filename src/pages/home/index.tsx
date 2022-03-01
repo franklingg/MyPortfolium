@@ -56,7 +56,7 @@ export default function Home() {
           <SimpleButton kind={ButtonKind.FIND_MORE} href="/about" />
         </Col>
         <Col className={styles.home__banner__image}>
-          <Image src={BannerHome} alt="Banner de Franklin Regis" layout="fill" priority />
+          <Image src={BannerHome} alt="Banner de Franklin Regis" layout="fill" />
         </Col>
       </Row>
       <Row className={styles.home__recommendations}>
