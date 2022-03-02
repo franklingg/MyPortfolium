@@ -42,6 +42,8 @@ export default function Home() {
     if (Router.pathname === "/home") {
       Router.push("/");
     }
+    const slickButtons = Array.from(document.querySelectorAll(`.${styles.home__recommendations__carousel__dots} > li > button`));
+    slickButtons.forEach((button, idx) => button.setAttribute('aria-label', `Move to page ${idx}`));
   }, []);
 
   return (
