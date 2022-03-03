@@ -29,8 +29,9 @@
     color: var(--light-blue)
 }
 
-.home__banner__text__headings > h4 {
+.home__banner__text__headings > h2 {
     margin: 0;
+    font-size: 1.29rem; 
     color: var(--purple);
 }
 

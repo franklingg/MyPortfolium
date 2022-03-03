@@ -52,7 +52,7 @@ export default function Home() {
         <Col className={styles.home__banner__text}>
           <div className={styles.home__banner__text__headings}>
             <h1>Franklin Regis</h1>
-            <h4>{pageContent.home.occupation}</h4>
+            <h2>{pageContent.home.occupation}</h2>
           </div>
           <p>{pageContent.home.description}</p>
           <SimpleButton kind={ButtonKind.FIND_MORE} href="/about" />
