@@ -15,23 +15,23 @@ export default function Footer() {
         Franklin Regis
       </Col>
       <Col className={styles.footer__social}>
-        <Link href="https://github.com/franklingg" passHref prefetch={false} aria-label="Link for Github">
-          <Col className={styles.footer__social__item} as="a" target="_blank">
+        <Link href="https://github.com/franklingg" passHref prefetch={false}>
+          <Col className={styles.footer__social__item} as="a" target="_blank" aria-label="Link for Github">
             <FaGithubSquare size={20} color="var(--grey)" />
           </Col>
         </Link>
-        <Link href="https://www.linkedin.com/in/franklin-regis/" passHref prefetch={false} aria-label="Link for Linkedin">
-          <Col className={styles.footer__social__item} as="a" target="_blank">
+        <Link href="https://www.linkedin.com/in/franklin-regis/" passHref prefetch={false}>
+          <Col className={styles.footer__social__item} as="a" target="_blank" aria-label="Link for Linkedin">
             <FaLinkedin size={20} color="var(--grey)" />
           </Col>
         </Link>
-        <Link href="https://www.instagram.com/franklingg1/" passHref prefetch={false} aria-label="Link for Instagram">
-          <Col className={styles.footer__social__item} as="a" target="_blank">
+        <Link href="https://www.instagram.com/franklingg1/" passHref prefetch={false}>
+          <Col className={styles.footer__social__item} as="a" target="_blank" aria-label="Link for Instagram">
             <FaInstagramSquare size={20} color="var(--grey)" />
           </Col>
         </Link>
-        <Link href="https://discord.com/users/502633304491819018" passHref prefetch={false} aria-label="Link for Discord">
-          <Col className={styles.footer__social__item} as="a" target="_blank">
+        <Link href="https://discord.com/users/502633304491819018" passHref prefetch={false}>
+          <Col className={styles.footer__social__item} as="a" target="_blank" aria-label="Link for Discord">
             <RiDiscordFill size={20} color="var(--grey)" />
           </Col>
         </Link>

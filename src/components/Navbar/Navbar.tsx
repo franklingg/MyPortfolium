@@ -116,8 +116,6 @@ export default function Navbar() {
         {navItems}
         <Col className={`${styles.navbar__item} ${styles.navbar__select}`}>
           <Select
-            aria-labelledby='aria-label'
-            aria-label='Translate options'
             styles={selectStyles}
             options={availableLangs}
             value={currentLang}
