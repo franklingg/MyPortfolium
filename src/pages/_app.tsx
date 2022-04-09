@@ -5,6 +5,7 @@ import type { AppProps, NextWebVitalsMetric } from "next/app";
 import Head from "next/head";
 import { LangProvider } from "~/contexts/langContext";
 import { Navbar, ContactForm, Footer } from "~/components";
+import '~/i18n';
 
 export function reportWebVitals(metric: NextWebVitalsMetric) {
   console.log(metric);
