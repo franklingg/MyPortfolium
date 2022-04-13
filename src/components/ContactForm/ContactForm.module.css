@@ -31,7 +31,7 @@
 
 .contactButton > *{
     margin: auto !important;
-    width: 38px;
+    max-width: 36px;
     max-height: 28px;
 }
 
