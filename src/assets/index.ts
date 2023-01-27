@@ -21,5 +21,6 @@ export { default as PortfoliumLogo } from './img/portfolium.svg';
 export { default as DesafioTsLogo } from './img/desafiots.svg';
 export { default as DsBeginsLogo } from './img/dsbegins.svg';
 export { default as FriacaPartyLogo } from './img/friacaparty.svg';
+export { default as SimlaLogo } from './img/simla.svg';
 export { default as ThumbsUp } from './img/thumbsup.svg';
 export { default as ThumbsDown } from './img/thumbsdown.svg';

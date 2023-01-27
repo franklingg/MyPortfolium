@@ -92,7 +92,7 @@ export interface IPage {
     },
     projects: {
         title: string,
-        frontend: Array<IProject>,
+        webDev: Array<IProject>,
         software: Array<IProject>
     },
     "404": Array<String>

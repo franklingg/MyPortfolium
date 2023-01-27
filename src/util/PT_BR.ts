@@ -2,7 +2,7 @@ import { IPage, LABELS } from "~/util/Content";
 import { 
     RecomDebora, RecomTiago, RecomTaynara,
     Book, Bulb, Gear,
-    DiscordLogo, SigesLogo, LittleGamesLogo, PlantManagerLogo, PortfoliumLogo, DesafioTsLogo, DsBeginsLogo, FriacaPartyLogo
+    DiscordLogo, SigesLogo, LittleGamesLogo, PlantManagerLogo, PortfoliumLogo, DesafioTsLogo, DsBeginsLogo, FriacaPartyLogo, SimlaLogo
 } from '~/assets'
 
 export default class PT_BR implements IPage {
@@ -104,7 +104,7 @@ export default class PT_BR implements IPage {
 
     projects = {
         title: "Meus Projetos",
-        frontend: [
+        webDev: [
             {
                 image: PlantManagerLogo,
                 title: 'PlantManager',
@@ -120,11 +120,11 @@ export default class PT_BR implements IPage {
                 link: 'https://github.com/franklingg/MyPortfolium'
             },
             {
-                image: DesafioTsLogo,
-                title: 'Desafio-TS',
-                description: 'Construção de uma página de delivery responsiva e dinâmica.',
-                labels: [LABELS.REACT, LABELS.JAVASCRIPT],
-                link: 'https://github.com/franklingg/desafio-teamsoft'
+                image: SimlaLogo,
+                title: 'SimLa',
+                description: 'Customizador de ladrilhos virtual para manufatura de cerâmicas',
+                labels: [LABELS.NEXT],
+                link: 'https://github.com/franklingg/SimLa'
             },
             {
                 image: FriacaPartyLogo,
@@ -132,6 +132,13 @@ export default class PT_BR implements IPage {
                 description: 'Site para confirmação de presença em eventos de forma divertida.',
                 labels: [LABELS.REACT, LABELS.FIREBASE],
                 link: 'https://github.com/franklingg/friaca-party'
+            },
+            {
+                image: DesafioTsLogo,
+                title: 'Desafio-TS',
+                description: 'Construção de uma página de delivery responsiva e dinâmica.',
+                labels: [LABELS.REACT, LABELS.JAVASCRIPT],
+                link: 'https://github.com/franklingg/desafio-teamsoft'
             }
         ],
         software: [

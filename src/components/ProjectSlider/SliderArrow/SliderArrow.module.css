@@ -26,6 +26,11 @@
     width: 1.2rem;
 }
 
+.arrow__disabled{
+    opacity: 0.4;
+    cursor: not-allowed !important;
+}
+
 @media (max-width: 768px) {
     .arrow{
         top: 65px;

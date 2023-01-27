@@ -8,7 +8,7 @@ import { useLangContext } from "~/contexts/langContext";
 import SliderArrow from "./SliderArrow";
 
 type ProjectSliderProps = {
-  kind: "frontend" | "software";
+  kind: "webDev" | "software";
 }
 
 export default function ProjectSlider({ kind }: ProjectSliderProps) {
@@ -22,14 +22,14 @@ export default function ProjectSlider({ kind }: ProjectSliderProps) {
 
   const [sliderSettings] = useState<Settings>({
     className: styles.projects__carousel,
-    infinite: true,
+    infinite: false,
     dots: false,
     arrows: true,
     speed: 500,
     slidesToShow: responsiveAttr('slidesToShow'),
     slidesToScroll: 1,
-    nextArrow: <SliderArrow direction="right" />,
-    prevArrow: <SliderArrow direction="left" />,
+    nextArrow: <SliderArrow direction="right" slidesShowing={responsiveAttr('slidesToShow')} />,
+    prevArrow: <SliderArrow direction="left" slidesShowing={responsiveAttr('slidesToShow')} />,
   });
 
   return (
