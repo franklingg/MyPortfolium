@@ -2,7 +2,7 @@ import { IPage, LABELS } from "~/util/Content";
 import { 
     RecomDebora, RecomTiago, RecomTaynara,
     Book, Bulb, Gear,
-    DiscordLogo, SigesLogo, LittleGamesLogo, PlantManagerLogo, PortfoliumLogo, DesafioTsLogo, DsBeginsLogo
+    DiscordLogo, SigesLogo, LittleGamesLogo, PlantManagerLogo, PortfoliumLogo, DesafioTsLogo, DsBeginsLogo, FriacaPartyLogo
 } from '~/assets'
 
 export default class PT_BR implements IPage {
@@ -125,6 +125,13 @@ export default class PT_BR implements IPage {
                 description: 'Construção de uma página de delivery responsiva e dinâmica.',
                 labels: [LABELS.REACT, LABELS.JAVASCRIPT],
                 link: 'https://github.com/franklingg/desafio-teamsoft'
+            },
+            {
+                image: FriacaPartyLogo,
+                title: 'Friaca Party',
+                description: 'Site para confirmação de presença em eventos de forma divertida.',
+                labels: [LABELS.REACT, LABELS.FIREBASE],
+                link: 'https://github.com/franklingg/friaca-party'
             }
         ],
         software: [

@@ -33,7 +33,7 @@
     height: 108px;
 }
 
-.projects__carousel__image > div{
+.projects__carousel__image > span{
     border-radius: 50%;
 }
 

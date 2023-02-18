@@ -2,7 +2,7 @@ import { IPage, LABELS } from "~/util/Content";
 import { 
     RecomDebora, RecomTiago, RecomTaynara,
     Book, Bulb, Gear,
-    DiscordLogo, SigesLogo, LittleGamesLogo, PlantManagerLogo, PortfoliumLogo, DesafioTsLogo, DsBeginsLogo
+    DiscordLogo, SigesLogo, LittleGamesLogo, PlantManagerLogo, PortfoliumLogo, DesafioTsLogo, DsBeginsLogo, FriacaPartyLogo
 } from '~/assets'
 
 export default class EN_US implements IPage {
@@ -125,6 +125,13 @@ export default class EN_US implements IPage {
                 description: 'Building a food delivery page that is reponsive and dynamic.',
                 labels: [LABELS.REACT, LABELS.JAVASCRIPT],
                 link: 'https://github.com/franklingg/desafio-teamsoft'
+            },
+            {
+                image: FriacaPartyLogo,
+                title: 'Friaca Party',
+                description: 'Website useful to handle guest confirmations for your parties.',
+                labels: [LABELS.REACT, LABELS.FIREBASE],
+                link: 'https://github.com/franklingg/friaca-party'
             }
         ],
         software: [
