@@ -59,7 +59,7 @@ export default class EN_US implements IPage {
 
     about = {
         who: "Who am I?",
-        text:  [`My name is Franklin Regis, I'm 22 years old and I'm an undergraduate student in Computer Science at the 
+        text:  [`My name is Franklin Regis, I'm 23 years old and I'm an undergraduate student in Computer Science at the 
                  Federal University of Campina Grande.`,
                 `During my fre time I usually play games and read a lot (great fan of Tolkien here!),
                 as well as always being tuned on the "memes" - like a good modern person.`,
@@ -68,11 +68,11 @@ export default class EN_US implements IPage {
         informationsTitle: "Informations",
         informations: [
             { type: 'Work', value: 5, content: 'months of experience acting as Frontend Developer' },
-            { type: 'Work', value: 8, content: 'months of experience acting as RD&I Developer' },
+            { type: 'Work', value: 1, content: 'year of experience acting as FullStack Developer' },
             { type: 'Competitions', value: 1, content: 'participation on International Olympiads' },
             { type: 'Innovation', value: 1, content: 'year of experience with extension and technology projects' },
             { type: 'English', value: 'B2', content: 'QCE English level (Advanced)' },
-            { type: 'Production', value: 2, content: 'articles published on national congress' },
+            { type: 'Production', value: 2, content: 'articles published on a national congress' },
         ]
     };
 

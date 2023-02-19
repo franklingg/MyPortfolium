@@ -59,7 +59,7 @@ export default class PT_BR implements IPage {
 
     about = {
         who: "Quem sou eu?",
-        text:  [`Me chamo Franklin Regis, tenho 22 anos e sou graduando em Ciência da Computação na Universidade Federal 
+        text:  [`Me chamo Franklin Regis, tenho 23 anos e sou graduando em Ciência da Computação na Universidade Federal 
                 de Campina Grande.`,
                 `Nos momentos de lazer costumo jogar e ler bastante (sou fã de carteirinha de Tolkien!),
                 além de estar sempre a par dos memes - como um bom jovem moderno.`,
@@ -68,7 +68,7 @@ export default class PT_BR implements IPage {
         informationsTitle: "Informações",
         informations: [
             { type: 'Trabalho', value: 5, content: 'meses de experiência atuando como Desenvolvedor Frontend' },
-            { type: 'Trabalho', value: 8, content: 'meses de experiência atuando como Desenvolvedor PD&I' },
+            { type: 'Trabalho', value: 1, content: 'ano de experiência atuando como Desenvolvedor FullStack' },
             { type: 'Competições', value: 1, content: 'participação em Olímpiada Internacional' },
             { type: 'Inovação', value: 1, content: 'ano de experiência com projetos de Extensão e Inovação Tecnológica' },
             { type: 'Inglês', value: 'B2', content: 'nível QCE de inglês (Avançado)' },

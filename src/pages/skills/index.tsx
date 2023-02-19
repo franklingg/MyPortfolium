@@ -13,9 +13,9 @@ import { GetStaticProps } from 'next';
 export default function Skills() {
   const [ allSkills ] = useState<ISkill[]>([
     { name: 'Javascript/TypeScript', value: 80 },
-    { name: 'React/Redux/NextJS', value: 75 },
-    { name: 'React Native', value: 65 },
-    { name: 'Node/Express/MongoDB', value: 40 },
+    { name: 'React/Redux/NextJS/React Native', value: 70 },
+    { name: 'Node/Express/MongoDB', value: 50 },
+    { name: 'Java/SpringBoot', value: 40 },
     { name: 'Machine Learning - Python (Sklearn, Tensorflow)', value: 25 },
   ]);
   const [ maxValue ] = useState(allSkills.reduce((acc, current) => (current.value > acc.value ? current : acc)));
