@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@next/bundle-analyzer": "^12.1.0",
+    "@types/react-dom": "<18.0.0",
     "emailjs-com": "^3.2.0",
     "i18next": "^21.8.4",
     "i18next-browser-languagedetector": "^6.1.4",
@@ -30,7 +31,7 @@
   },
   "devDependencies": {
     "@types/node": "^17.0.14",
-    "@types/react": "17.0.15",
+    "@types/react": "<18.0.0",
     "@types/react-sidebar": "^3.0.2",
     "@types/react-slick": "^0.23.7",
     "eslint": "7.31.0",
