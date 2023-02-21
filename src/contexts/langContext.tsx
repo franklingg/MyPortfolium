@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext, useEffect } from "react";
+import React, { createContext, useState, useContext, useEffect, useCallback } from "react";
 import { AVAILABLE_LANGS, DEFAULT_LANG, ILang, IPage } from '~/util/Content';
 
 interface ILangContext {
@@ -21,13 +21,18 @@ export function LangProvider({ children } : {children: React.ReactNode}) {
     const [pageContent, setPageContent] = useState(defaultState.pageContent);
     const [availableLangs] = useState(defaultState.availableLangs);
 
-    const changeLang = (newLang : string) => {
-      setCurrentLang(availableLangs.find( lang => lang.value === newLang ) || defaultState.currentLang);
-    }
+    const changeLang = useCallback((newLang : string) => {
+      const langToSet = availableLangs.find( lang => lang.value === newLang ) || defaultState.currentLang;
+      localStorage.setItem('@franklingg/portfolium', langToSet.value);
+      setCurrentLang(langToSet);
+    }, [availableLangs]);
 
     useEffect(()=>{
+      const previousSetLang = localStorage.getItem('@franklingg/portfolium');
+      if(previousSetLang) changeLang(previousSetLang)
+      else changeLang(defaultState.currentLang.value)
       setPageContent(currentLang.page);
-    }, [currentLang]);
+    }, [changeLang, currentLang]);
 
   return (
       <LangContext.Provider value={{ currentLang, availableLangs, changeLang, pageContent }}>
