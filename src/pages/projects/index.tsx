@@ -14,7 +14,7 @@ export default function Projects() {
       <h1 className={styles.projects__title}>
         {pageContent.projects.title}
       </h1>
-      <ProjectSlider kind="webDev" />
+      <ProjectSlider kind="web" />
       <ProjectSlider kind="software" />
     </Container>
   );

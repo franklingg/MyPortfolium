@@ -1,6 +1,6 @@
 import PT_BR from './PT_BR';
 import EN_US from './EN_US';
-import { SiFirebase, SiHaskell, SiJava, SiJavascript, SiJupyter, SiNextdotjs, SiPython, SiReact, SiTypescript } from 'react-icons/si';
+import { SiFirebase, SiHaskell, SiJavascript, SiJupyter, SiNextdotjs, SiPython, SiReact, SiTypescript } from 'react-icons/si';
 import { DiProlog } from 'react-icons/di';
 import { IconType } from 'react-icons';
 export interface ILang {
@@ -48,7 +48,6 @@ export const LABELS : { [key: string] : ILabel } = {
     FIREBASE:   { name: 'Firebase'          , color: 'var(--firebase)'  , icon: SiFirebase   },
     REACT:      { name: 'ReactJS'           , color: 'var(--react)'     , icon: SiReact      },
     NEXT:       { name: 'NextJS'            , color: 'var(--next)'      , icon: SiNextdotjs  },
-    JAVA:       { name: 'Java'              , color: 'var(--java)'      , icon: SiJava       },
     PYTHON:     { name: 'Python'            , color: 'var(--python)'    , icon: SiPython     },
     HASKELL:    { name: 'Haskell'           , color: 'var(--haskell)'   , icon: SiHaskell    },
     PROLOG:     { name: 'Prolog'            , color: 'var(--prolog)'    , icon: DiProlog     },
@@ -92,7 +91,7 @@ export interface IPage {
     },
     projects: {
         title: string,
-        webDev: Array<IProject>,
+        web: Array<IProject>,
         software: Array<IProject>
     },
     "404": Array<String>

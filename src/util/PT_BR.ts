@@ -104,7 +104,7 @@ export default class PT_BR implements IPage {
 
     projects = {
         title: "Meus Projetos",
-        webDev: [
+        web: [
             {
                 image: PlantManagerLogo,
                 title: 'PlantManager',
