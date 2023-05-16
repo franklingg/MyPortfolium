@@ -2,7 +2,7 @@ import { IPage, LABELS } from "~/util/Content";
 import { 
     RecomDebora, RecomTiago, RecomTaynara,
     Book, Bulb, Gear,
-    DiscordLogo, SigesLogo, LittleGamesLogo, PlantManagerLogo, PortfoliumLogo, DesafioTsLogo, DsBeginsLogo, FriacaPartyLogo, SimlaLogo
+    DiscordLogo, SigesLogo, LittleGamesLogo, PlantManagerLogo, PortfoliumLogo, DesafioTsLogo, DsBeginsLogo, FriacaPartyLogo, SimlaLogo, BeezLogo
 } from '~/assets'
 
 export default class EN_US implements IPage {
@@ -104,14 +104,7 @@ export default class EN_US implements IPage {
 
     projects = {
         title: "My Projects",
-        web: [
-            {
-                image: PlantManagerLogo,
-                title: 'PlantManager',
-                description: 'Mobile application for register and management of your home plants.',
-                labels: [LABELS.TYPESCRIPT, LABELS.REACT, LABELS.FIREBASE],
-                link: 'https://github.com/franklingg/PlantManager'
-            },
+        frontend_backend: [
             {
                 image: PortfoliumLogo,
                 title: 'MyPortfolium',
@@ -125,6 +118,20 @@ export default class EN_US implements IPage {
                 description: 'Virtual tiles customizer for ceramic manufaturing',
                 labels: [LABELS.NEXT],
                 link: 'https://github.com/franklingg/SimLa'
+            },
+            {
+                image: BeezLogo,
+                title: 'Beez',
+                description: 'Mobile App useful for finding events and entertainment options around you.',
+                labels: [LABELS.FLUTTER, LABELS.FIREBASE],
+                link: 'https://github.com/franklingg/beez'
+            },
+            {
+                image: PlantManagerLogo,
+                title: 'PlantManager',
+                description: 'Mobile application for register and management of your home plants.',
+                labels: [LABELS.TYPESCRIPT, LABELS.REACT, LABELS.FIREBASE],
+                link: 'https://github.com/franklingg/PlantManager'
             },
             {
                 image: FriacaPartyLogo,

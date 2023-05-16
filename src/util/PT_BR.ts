@@ -2,7 +2,7 @@ import { IPage, LABELS } from "~/util/Content";
 import { 
     RecomDebora, RecomTiago, RecomTaynara,
     Book, Bulb, Gear,
-    DiscordLogo, SigesLogo, LittleGamesLogo, PlantManagerLogo, PortfoliumLogo, DesafioTsLogo, DsBeginsLogo, FriacaPartyLogo, SimlaLogo
+    DiscordLogo, SigesLogo, LittleGamesLogo, PlantManagerLogo, PortfoliumLogo, DesafioTsLogo, DsBeginsLogo, FriacaPartyLogo, SimlaLogo, BeezLogo
 } from '~/assets'
 
 export default class PT_BR implements IPage {
@@ -104,14 +104,7 @@ export default class PT_BR implements IPage {
 
     projects = {
         title: "Meus Projetos",
-        web: [
-            {
-                image: PlantManagerLogo,
-                title: 'PlantManager',
-                description: 'Aplicação Mobile para cadastrar e gerenciar suas plantas de casa.',
-                labels: [LABELS.TYPESCRIPT, LABELS.REACT, LABELS.FIREBASE],
-                link: 'https://github.com/franklingg/PlantManager'
-            },
+        frontend_backend: [
             {
                 image: PortfoliumLogo,
                 title: 'MyPortfolium',
@@ -125,6 +118,20 @@ export default class PT_BR implements IPage {
                 description: 'Customizador de ladrilhos virtual para manufatura de cerâmicas',
                 labels: [LABELS.NEXT],
                 link: 'https://github.com/franklingg/SimLa'
+            },
+            {
+                image: BeezLogo,
+                title: 'Beez',
+                description: 'Aplicação Mobile para encontrar formas de entretenimento próximas de você.',
+                labels: [LABELS.FLUTTER, LABELS.FIREBASE],
+                link: 'https://github.com/franklingg/beez'
+            },
+            {
+                image: PlantManagerLogo,
+                title: 'PlantManager',
+                description: 'Aplicação Mobile para cadastrar e gerenciar suas plantas de casa.',
+                labels: [LABELS.TYPESCRIPT, LABELS.REACT, LABELS.FIREBASE],
+                link: 'https://github.com/franklingg/PlantManager'
             },
             {
                 image: FriacaPartyLogo,

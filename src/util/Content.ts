@@ -1,6 +1,6 @@
 import PT_BR from './PT_BR';
 import EN_US from './EN_US';
-import { SiFirebase, SiHaskell, SiJavascript, SiJupyter, SiNextdotjs, SiPython, SiReact, SiTypescript } from 'react-icons/si';
+import { SiFirebase, SiFlutter, SiHaskell, SiJavascript, SiJupyter, SiNextdotjs, SiPython, SiReact, SiTypescript } from 'react-icons/si';
 import { DiProlog } from 'react-icons/di';
 import { IconType } from 'react-icons';
 export interface ILang {
@@ -52,6 +52,7 @@ export const LABELS : { [key: string] : ILabel } = {
     HASKELL:    { name: 'Haskell'           , color: 'var(--haskell)'   , icon: SiHaskell    },
     PROLOG:     { name: 'Prolog'            , color: 'var(--prolog)'    , icon: DiProlog     },
     JUPYTER:    { name: 'Jupyter Notebook'  , color: 'var(--jupyter)'   , icon: SiJupyter    },
+    FLUTTER:    { name: 'Flutter'           , color: 'var(--flutter)'   , icon: SiFlutter    },
 }
 export interface IPage {
     navbar: {
@@ -91,7 +92,7 @@ export interface IPage {
     },
     projects: {
         title: string,
-        web: Array<IProject>,
+        frontend_backend: Array<IProject>,
         software: Array<IProject>
     },
     "404": Array<String>

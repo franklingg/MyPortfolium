@@ -8,7 +8,7 @@ import { useLangContext } from "~/contexts/langContext";
 import SliderArrow from "./SliderArrow";
 
 type ProjectSliderProps = {
-  kind: "web" | "software";
+  kind: "frontend_backend" | "software";
 }
 
 export default function ProjectSlider({ kind }: ProjectSliderProps) {
