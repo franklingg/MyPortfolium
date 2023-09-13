@@ -67,7 +67,7 @@ export default class PT_BR implements IPage {
                 fazer as pessoas ao meu redor se sentirem bem e confortáveis.`],
         informationsTitle: "Informações",
         informations: [
-            { type: 'Trabalho', value: 5, content: 'meses de experiência atuando como Desenvolvedor Frontend' },
+            { type: 'Trabalho', value: 1, content: 'ano de experiência atuando puramente como Desenvolvedor Frontend' },
             { type: 'Trabalho', value: 1, content: 'ano de experiência atuando como Desenvolvedor FullStack' },
             { type: 'Competições', value: 1, content: 'participação em Olímpiada Internacional' },
             { type: 'Inovação', value: 1, content: 'ano de experiência com projetos de Extensão e Inovação Tecnológica' },
