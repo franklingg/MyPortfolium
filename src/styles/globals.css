@@ -1,38 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: 300;
   background-color: var(--black);
 }
 
-:root{
-  --black: #1E1E1E;
+:root {
+  --black: #1e1e1e;
   --lighter-black: #292929;
-  --light-black: #2F2F35;
-  --grey: #AFAFAF;
-  --light: #F6F6F6;
-  --white: #FFF;
-  --light-blue: #02DFED;
-  --purple: #CB7BFF;
-  --green: #00EBB2;
+  --light-black: #2f2f35;
+  --grey: #afafaf;
+  --light: #f6f6f6;
+  --white: #fff;
+  --light-blue: #02dfed;
+  --purple: #cb7bff;
+  --green: #00ebb2;
 
   /* Labels colors */
-  --javascript: #F7DF1E;
-  --typescript: #3178C6;
-  --firebase: #FFA510;
-  --react: #61DAFB;
-  --next: #FFF;
-  --java: #CC4438;
-  --python: #3775A8;
+  --javascript: #f7df1e;
+  --typescript: #3178c6;
+  --firebase: #ffa510;
+  --angular: #dd3056;
+  --react: #61dafb;
+  --next: #fff;
+  --java: #cc4438;
+  --python: #3775a8;
   --haskell: #8f4e8b;
-  --prolog: #F25921;
-  --jupyter: #F37726;
-  --flutter: #5FCAF8;
+  --prolog: #f25921;
+  --jupyter: #f37726;
+  --flutter: #5fcaf8;
 }
 
 a {
@@ -48,36 +49,36 @@ button {
   box-sizing: border-box;
 }
 
-.slick-active > button{
+.slick-active > button {
   background-color: var(--light-blue) !important;
 }
 
 @media (max-width: 1366px) {
-  :root{
+  :root {
     font-size: 14px;
   }
-  h1{
+  h1 {
     font-size: 4.57rem;
   }
-  h2{
+  h2 {
     font-size: 2.29rem;
   }
-  h3{
+  h3 {
     font-size: 1.57rem;
   }
-  h4{
-    font-size: 1.29rem; 
+  h4 {
+    font-size: 1.29rem;
   }
 }
 
 @media (max-width: 768px) {
-  :root{
+  :root {
     font-size: 13px;
   }
 }
 
 @media (max-width: 414px) {
-  :root{
+  :root {
     font-size: 12px;
   }
 }

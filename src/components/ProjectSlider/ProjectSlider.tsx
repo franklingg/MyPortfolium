@@ -8,15 +8,15 @@ import { useLangContext } from "~/contexts/langContext";
 import SliderArrow from "./SliderArrow";
 
 type ProjectSliderProps = {
-  kind: "frontend_backend" | "software";
-}
+  kind: "Web + Mobile" | "software";
+};
 
 export default function ProjectSlider({ kind }: ProjectSliderProps) {
   const { pageContent } = useLangContext();
 
-  const responsiveAttr = useCallback((attr : string) => {
-    if(attr == 'slidesToShow'){
-      return (typeof window !== 'undefined' && window.innerWidth <= 414 ? 1 : 2);
+  const responsiveAttr = useCallback((attr: string) => {
+    if (attr == "slidesToShow") {
+      return typeof window !== "undefined" && window.innerWidth <= 414 ? 1 : 2;
     }
   }, []);
 
@@ -26,10 +26,20 @@ export default function ProjectSlider({ kind }: ProjectSliderProps) {
     dots: false,
     arrows: true,
     speed: 500,
-    slidesToShow: responsiveAttr('slidesToShow'),
+    slidesToShow: responsiveAttr("slidesToShow"),
     slidesToScroll: 1,
-    nextArrow: <SliderArrow direction="right" slidesShowing={responsiveAttr('slidesToShow')} />,
-    prevArrow: <SliderArrow direction="left" slidesShowing={responsiveAttr('slidesToShow')} />,
+    nextArrow: (
+      <SliderArrow
+        direction="right"
+        slidesShowing={responsiveAttr("slidesToShow")}
+      />
+    ),
+    prevArrow: (
+      <SliderArrow
+        direction="left"
+        slidesShowing={responsiveAttr("slidesToShow")}
+      />
+    ),
   });
 
   return (
@@ -37,37 +47,37 @@ export default function ProjectSlider({ kind }: ProjectSliderProps) {
       <h3>{kind}</h3>
       <Slider {...sliderSettings}>
         {pageContent.projects[kind].map((project, idx) => (
-            <a 
-              href={project.link} 
-              key={idx} 
-              target="_blank" 
-              className={styles.projects__carousel__box}
-              rel="noreferrer"
-              draggable={false}
-            >
-              <div className={styles.projects__carousel__image}>
-                <Image src={project.image} alt={project.title} layout="fill" />
-              </div>
-              <div className={styles.projects__carousel__info}>
-                <span>{project.title}</span>
-                <p>{project.description}</p>
-                <div className={styles.projects__carousel__labels}>
-                  {project.labels.map((label, idx) => {
-                    const LabelIcon = label.icon;
-                    return (
-                      <div 
+          <a
+            href={project.link}
+            key={idx}
+            target="_blank"
+            className={styles.projects__carousel__box}
+            rel="noreferrer"
+            draggable={false}
+          >
+            <div className={styles.projects__carousel__image}>
+              <Image src={project.image} alt={project.title} layout="fill" />
+            </div>
+            <div className={styles.projects__carousel__info}>
+              <span>{project.title}</span>
+              <p>{project.description}</p>
+              <div className={styles.projects__carousel__labels}>
+                {project.labels.map((label, idx) => {
+                  const LabelIcon = label.icon;
+                  return (
+                    <div
                       key={idx}
                       className={styles.projects__carousel__label}
-                      style={{borderColor: label.color, color: label.color}}
-                      >
-                        <LabelIcon size="1rem" />
-                        <span>{label.name}</span>
-                      </div>
-                    )}
-                  )}
-                </div>
+                      style={{ borderColor: label.color, color: label.color }}
+                    >
+                      <LabelIcon size="1rem" />
+                      <span>{label.name}</span>
+                    </div>
+                  );
+                })}
               </div>
-            </a>
+            </div>
+          </a>
         ))}
       </Slider>
     </Row>

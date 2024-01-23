@@ -15,8 +15,8 @@ export default function Skills() {
     { name: "React (Redux/NextJS/React Native)", value: 75 },
     { name: "Angular", value: 70 },
     { name: "Dart (Flutter)", value: 70 },
-    { name: "Node (Express/MongoDB)", value: 40 },
-    { name: "Java (SpringBoot)", value: 25 },
+    { name: "Node (Express/MongoDB)", value: 45 },
+    { name: "Python/Java (Flask/SpringBoot)", value: 35 },
   ]);
   const [maxValue] = useState(
     allSkills.reduce((acc, current) =>
