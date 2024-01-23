@@ -1,147 +1,155 @@
-.fixedContainer{
-    position: fixed;
-    right: 0;
-    bottom: 70px;
-    background: linear-gradient(239.94deg, #00EBB2 10.45%, #02DFED 40.94%, #CB7BFF 80.97%);
-    border-radius: 10px 0px 0px 10px;
-    font-family: Poppins;
-    z-index: 100;
+.fixedContainer {
+  position: fixed;
+  right: 0;
+  bottom: 70px;
+  background: linear-gradient(
+    239.94deg,
+    #00ebb2 10.45%,
+    #02dfed 40.94%,
+    #cb7bff 80.97%
+  );
+  border-radius: 10px 0px 0px 10px;
+  font-family: Poppins;
+  z-index: 100;
 }
 
-.closeButton{
-    position: absolute;
-    right: 10px;
-    top: 12px;
-    color: var(--lighter-black);
+.closeButton {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  color: var(--lighter-black);
 }
 
-.closeButton:hover{
-    cursor: pointer;
+.closeButton:hover {
+  cursor: pointer;
 }
 
-.contactButton{
-    color: var(--white);
-    padding: 0;
-    width: 58px;
-    height: 58px;
-    border-radius: 50%;
-    right: 11px;
-    transition: 0.12s all ease-in;
+.contactButton {
+  color: var(--white);
+  padding: 0;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  right: 11px;
+  transition: 0.12s all ease-in;
 }
 
-.contactButton > *{
-    margin: auto !important;
-    max-width: 36px;
-    max-height: 28px;
+.contactButton > * {
+  margin: auto !important;
+  max-width: 36px;
+  max-height: 28px;
 }
 
-.contactButton:hover{
-    cursor: pointer;
-    transform: scale(1.045);
+.contactButton:hover {
+  cursor: pointer;
+  transform: scale(1.045);
 }
 
 .contactForm {
-    padding: 30px 32px 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    max-width: 30.3rem;
+  padding: 30px 32px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  max-width: 30.3rem;
 }
 
 .contactForm__title {
-    margin: 0;
-    margin-bottom: 20px;
-    color: var(--black);
-    text-align: center;
+  margin: 0;
+  margin-bottom: 20px;
+  color: var(--black);
+  text-align: center;
 }
 
-.contactForm__inputs{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.contactForm__inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.contactForm__inputs__person{
-    display: flex;
-    gap: 22px;
+.contactForm__inputs__person {
+  display: flex;
+  gap: 22px;
 }
 
-.contactForm__input{
-    width: 100%;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    padding: 10px 20px;
-    font-family: Poppins;
-    font-weight: 400;
-    font-size: 0.86rem;
+.contactForm__input {
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 0.86rem;
 }
 
-.contactForm__input__textarea{
-    height: 10rem;
+.contactForm__input__textarea {
+  height: 10rem;
 }
 
 .contactForm__send {
-    align-self: flex-end;
-    width: max-content;
-    padding: 9px 3.7rem;
-    border-radius: 10px;
-    border: none;
-    background-color: var(--black);
-    color: var(--white);
-    font-family: Poppins;
-    font-size: 1rem;
-    transition: all 0.15s ease-in-out;
+  align-self: flex-end;
+  width: max-content;
+  padding: 9px 3.7rem;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--black);
+  color: var(--white);
+  font-family: Poppins;
+  font-size: 1rem;
+  transition: all 0.15s ease-in-out;
 }
 
-.contactForm__send:hover{
-    cursor: pointer;
-    transform: scale(1.015);
+.contactForm__send:hover {
+  cursor: pointer;
+  transform: scale(1.015);
 }
 
-.contactForm__spinner{
-    align-self: flex-end;
-    width: 100px;
-    height: 39px;
+.contactForm__spinner {
+  align-self: flex-end;
+  width: 100px;
+  height: 39px;
 }
 
-.feedback{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    padding: 45px 40px 0;
+.feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 45px 40px 0;
 }
 
-.feedback__text{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-weight: 700;
+.feedback__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 700;
 }
 
-.feedback__image{
-    position: relative;
-    width: 310px;
-    height: 370px;
+.feedback__image {
+  width: 310px;
+  height: 370px;
+}
+.feedback__image > img {
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 768px) {
-    .fixedContainer{
-        bottom: 90px;
-    }
+  .fixedContainer {
+    bottom: 90px;
+  }
 }
 
 @media (max-width: 414px) {
-    .contactForm{
-        max-width: 360px;
-    }
+  .contactForm {
+    max-width: 360px;
+  }
 }
 
 @media (max-width: 360px) {
-    .contactForm{
-        max-width: 310px;
-    }
+  .contactForm {
+    max-width: 310px;
+  }
 }

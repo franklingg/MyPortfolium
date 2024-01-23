@@ -35,7 +35,7 @@ export default function Skills() {
           {pageContent.skills.topsList.map((skill, idx) => (
             <div className={styles.skills__topsList__item} key={idx}>
               <div className={styles.skills__topsList__itemImg}>
-                <Image src={skill.icon} alt={skill.text} layout="fill" />
+                <Image src={skill.icon} alt={skill.text} />
               </div>
               <div className={styles.skills__topsList__itemText}>
                 <span>{skill.title}</span>
@@ -55,11 +55,7 @@ export default function Skills() {
           </Row>
         </Col>
         <Col className={styles.skills__all__banner}>
-          <Image
-            src={BannerSkills}
-            alt="Identidade visual de Franklin Regis"
-            layout="fill"
-          />
+          <Image src={BannerSkills} alt="Identidade visual de Franklin Regis" />
         </Col>
       </Row>
     </Container>

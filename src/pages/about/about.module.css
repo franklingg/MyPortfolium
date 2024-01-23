@@ -1,181 +1,190 @@
-.about{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.about__banner{
-    margin: 23px 73px -20px 148px;
-    display: flex;
-    gap: 80px;
+.about__banner {
+  margin: 23px 73px -20px 148px;
+  display: flex;
+  gap: 80px;
 }
 
 .about__banner > * {
-    flex: 1;
+  flex: 1;
 }
 
 .about__banner__info > h1 {
-    margin-top: 185px;
-    color: var(--light-blue);
+  margin-top: 185px;
+  color: var(--light-blue);
 }
 
 .about__banner__info > p {
-    color: var(--white);
-    display: flex;
-    flex-direction: column;
-    text-align: justify;
-    gap: 0.5rem;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  gap: 0.5rem;
 }
 
-.about__banner__img{
-    position: relative;
-    width: 579px;
-    height: 628px;
+.about__banner__img {
+  width: 579px;
+  height: 628px;
 }
 
-.about__informations{
-    margin: 0 148px 120px;
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
+.about__banner__img > img {
+  width: 100%;
+  height: 100%;
 }
 
-.about__informations > h3{
-    margin: 0 -75px;
-    color: var(--green);
+.about__informations {
+  margin: 0 148px 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
 }
 
-.about__informations__grid{
-    color: white;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 80px 62px;
+.about__informations > h3 {
+  margin: 0 -75px;
+  color: var(--green);
 }
 
-.about__informations__gridItem{
-    padding: 18px 29px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background-color: var(--lighter-black);
-    box-shadow: 0px 1px 4px rgba(255, 255, 255, 0.25);
-    border-radius: 10px;
+.about__informations__grid {
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px 62px;
 }
 
-.about__informations__gridItem > h4{
-    margin: 0;
-    font-size: 1.14rem;
-    color: var(--green);
+.about__informations__gridItem {
+  padding: 18px 29px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--lighter-black);
+  box-shadow: 0px 1px 4px rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
 }
 
-.about__informations__gridItem > div{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.about__informations__gridItem > h4 {
+  margin: 0;
+  font-size: 1.14rem;
+  color: var(--green);
 }
 
-.about__informations__gridItem > div > span:first-child{
-    font-size: 6.86rem;
-    line-height: 1;
-    font-weight: 700;
-    background: linear-gradient(239.94deg, #00EBB2 10.45%, #02DFED 40.94%, #CB7BFF 80.97%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.about__informations__gridItem > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.about__informations__gridItem > div > span:first-child {
+  font-size: 6.86rem;
+  line-height: 1;
+  font-weight: 700;
+  background: linear-gradient(
+    239.94deg,
+    #00ebb2 10.45%,
+    #02dfed 40.94%,
+    #cb7bff 80.97%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @media (max-width: 768px) {
-    .about__banner{
-        margin: 10px 70px -5px 120px;
-        gap: 35px;
-    }
+  .about__banner {
+    margin: 10px 70px -5px 120px;
+    gap: 35px;
+  }
 
-    .about__banner__info > h1 {
-        margin-top: 50px;
-    }
+  .about__banner__info > h1 {
+    margin-top: 50px;
+  }
 
-    .about__banner__img{
-        width: 530px;
-        height: 590px;
-    }
+  .about__banner__img {
+    width: 530px;
+    height: 590px;
+  }
 
-    .about__informations{
-        margin: 0 100px 110px
-    }
+  .about__informations {
+    margin: 0 100px 110px;
+  }
 
-    .about__informations > h3{
-        margin: 0 30px;
-    }
+  .about__informations > h3 {
+    margin: 0 30px;
+  }
 
-    .about__informations__grid{
-        gap: 55px 40px;
-    }
+  .about__informations__grid {
+    gap: 55px 40px;
+  }
 
-    .about__informations__gridItem{
-        padding: 15px 24px;
-    }
+  .about__informations__gridItem {
+    padding: 15px 24px;
+  }
 
-    .about__informations__gridItem > div > span:first-child{
-        font-size: 6.2rem;
-    }
+  .about__informations__gridItem > div > span:first-child {
+    font-size: 6.2rem;
+  }
 }
 
 @media (max-width: 414px) {
-    .about__banner{
-        margin: 0 22px;
-        flex-direction: column;
-        align-items: center;
-    }
+  .about__banner {
+    margin: 0 22px;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .about__banner__info > h1 {
-        text-align: center;
-        margin-top: 70px;
-    }
+  .about__banner__info > h1 {
+    text-align: center;
+    margin-top: 70px;
+  }
 
-    .about__banner__info > p {
-        padding: 0 25px;
-    }
+  .about__banner__info > p {
+    padding: 0 25px;
+  }
 
-    .about__banner__img{
-        min-height: 350px;
-        width: 300px;
-    }
+  .about__banner__img {
+    min-height: 350px;
+    width: 300px;
+  }
 
-    .about__informations{
-        margin: 20px 20px 100px;
-    }
+  .about__informations {
+    margin: 20px 20px 100px;
+  }
 
-    .about__informations > h3{
-        margin: 0;
-        text-align: center;
-    }
+  .about__informations > h3 {
+    margin: 0;
+    text-align: center;
+  }
 
-    .about__informations__grid{
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px 25px;
-    }
+  .about__informations__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 25px;
+  }
 
-    .about__informations__gridItem{
-        padding: 10px 16px;
-    }
+  .about__informations__gridItem {
+    padding: 10px 16px;
+  }
 }
 
 @media (max-width: 360px) {
-    .about__banner{
-        margin: 0 13px;
-    }
+  .about__banner {
+    margin: 0 13px;
+  }
 
-    .about__informations{
-        gap: 50px;
-    }
+  .about__informations {
+    gap: 50px;
+  }
 
-    .about__informations__grid{
-        margin: 0 10px;
-        grid-template-columns: 1fr;
-        row-gap: 30px;
-    }
+  .about__informations__grid {
+    margin: 0 10px;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
 
-    .about__informations__gridItem{
-        padding: 8px 16px;
-    }
+  .about__informations__gridItem {
+    padding: 8px 16px;
+  }
 }

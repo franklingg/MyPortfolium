@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useLangContext } from "~/contexts/langContext";
 
 import styles from "./about.module.css";
-import { BannerAbout } from '~/assets';
+import { BannerAbout } from "~/assets";
 import { GetStaticProps } from "next";
 
 export default function About() {
@@ -14,10 +14,14 @@ export default function About() {
       <Row className={styles.about__banner}>
         <Col className={styles.about__banner__info}>
           <h1>{pageContent.about.who}</h1>
-          <p>{pageContent.about.text.map((line, idx) => (<span key={idx}>{line}</span>))}</p>
+          <p>
+            {pageContent.about.text.map((line, idx) => (
+              <span key={idx}>{line}</span>
+            ))}
+          </p>
         </Col>
         <Col className={styles.about__banner__img}>
-          <Image src={BannerAbout} alt="Identidade visual de Franklin Regis" layout="fill" />
+          <Image src={BannerAbout} alt="Identidade visual de Franklin Regis" />
         </Col>
       </Row>
       <Row className={styles.about__informations}>
@@ -38,10 +42,12 @@ export default function About() {
   );
 }
 
-export const getStaticProps : GetStaticProps = async () => {
-  const rev_time = process.env.REVALIDATE_TIME ? parseInt(process.env.REVALIDATE_TIME) : false;
+export const getStaticProps: GetStaticProps = async () => {
+  const rev_time = process.env.REVALIDATE_TIME
+    ? parseInt(process.env.REVALIDATE_TIME)
+    : false;
   return {
     props: {},
-    revalidate: rev_time
-   }
-}
+    revalidate: rev_time,
+  };
+};
