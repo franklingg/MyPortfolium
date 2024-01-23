@@ -34,6 +34,8 @@
     "@types/react": "<18.0.0",
     "@types/react-sidebar": "^3.0.2",
     "@types/react-slick": "^0.23.7",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
     "eslint": "7.31.0",
     "eslint-config-next": "11.0.1",
     "ts-enum-util": "^4.0.2",
