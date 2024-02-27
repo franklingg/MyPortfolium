@@ -72,7 +72,7 @@ export default class PT_BR implements IPage {
   about = {
     who: "Quem sou eu?",
     text: [
-      `Me chamo Franklin Regis, tenho 23 anos e sou graduando em Ciência da Computação na Universidade Federal 
+      `Me chamo Franklin Regis, tenho 23 anos e sou graduado em Ciência da Computação na Universidade Federal 
                 de Campina Grande.`,
       `Nos momentos de lazer costumo jogar e ler bastante (sou fã de carteirinha de Tolkien!),
                 além de estar sempre a par dos memes - como um bom jovem moderno.`,

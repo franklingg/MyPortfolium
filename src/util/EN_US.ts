@@ -72,7 +72,7 @@ export default class EN_US implements IPage {
   about = {
     who: "Who am I?",
     text: [
-      `My name is Franklin Regis, I'm 23 years old and I'm an undergraduate student in Computer Science at the 
+      `My name is Franklin Regis, I'm 23 years old and I am graduated in Computer Science at the 
                  Federal University of Campina Grande.`,
       `During my fre time I usually play games and read a lot (great fan of Tolkien here!),
                 as well as always being tuned on the "memes" - like a good modern person.`,
