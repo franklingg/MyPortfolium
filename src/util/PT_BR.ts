@@ -73,7 +73,7 @@ export default class PT_BR implements IPage {
     who: "Quem sou eu?",
     text: [
       `Me chamo Franklin Regis, tenho 23 anos e sou graduado em Ciência da Computação na Universidade Federal 
-                de Campina Grande.`,
+                de Campina Grande, atualmente buscando o título de Mestre em Engenharia de Software.`,
       `Nos momentos de lazer costumo jogar e ler bastante (sou fã de carteirinha de Tolkien!),
                 além de estar sempre a par dos memes - como um bom jovem moderno.`,
       `Sou um rapaz muito tranquilo, extrovertido e apaixonado pelo que faço, sempre buscando
@@ -83,7 +83,7 @@ export default class PT_BR implements IPage {
     informations: [
       {
         type: "Trabalho",
-        value: 1,
+        value: 2,
         content:
           "ano de experiência atuando puramente como Desenvolvedor Frontend",
       },
@@ -144,7 +144,7 @@ export default class PT_BR implements IPage {
 
   projects = {
     title: "Meus Projetos",
-    "Web + Mobile": [
+    web: [
       {
         image: PortfoliumLogo,
         title: "MyPortfolium",
@@ -162,20 +162,22 @@ export default class PT_BR implements IPage {
         link: "https://github.com/franklingg/SimLa",
       },
       {
-        image: BeezLogo,
-        title: "Beez",
-        description:
-          "Aplicação Mobile para encontrar formas de entretenimento próximas de você.",
-        labels: [LABELS.FLUTTER, LABELS.FIREBASE],
-        link: "https://github.com/franklingg/beez",
-      },
-      {
         image: LostHollowLogo,
         title: "Lost Hollow",
         description:
           "(Freelance) Site complementar para estudar e visualizar o Tarot de Lost Hollow",
         labels: [LABELS.ANGULAR, LABELS.TYPESCRIPT],
         link: "https://github.com/franklingg/lost-hollow",
+      },
+    ],
+    mobile: [
+      {
+        image: BeezLogo,
+        title: "Beez",
+        description:
+          "Aplicação Mobile para encontrar formas de entretenimento próximas de você.",
+        labels: [LABELS.FLUTTER, LABELS.FIREBASE],
+        link: "https://github.com/franklingg/beez",
       },
       {
         image: PlantManagerLogo,
@@ -186,7 +188,7 @@ export default class PT_BR implements IPage {
         link: "https://github.com/franklingg/PlantManager",
       },
     ],
-    software: [
+    miscellaneous: [
       {
         image: SigesLogo,
         title: "SIGES",

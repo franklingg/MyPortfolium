@@ -12,11 +12,15 @@ export default function Footer() {
     <Row as="footer" className={styles.footer}>
       <Col as="span">Franklin Regis</Col>
       <Col className={styles.footer__social}>
-        <Link href="https://github.com/franklingg" passHref prefetch={false}>
+        <Link
+          href="https://github.com/franklingg"
+          passHref
+          prefetch={false}
+          target="_blank"
+        >
           <Col
             className={styles.footer__social__item}
             as="a"
-            target="_blank"
             aria-label="Link for Github"
           >
             <FaGithubSquare size={20} color="var(--grey)" />
@@ -26,11 +30,11 @@ export default function Footer() {
           href="https://www.linkedin.com/in/franklin-regis/"
           passHref
           prefetch={false}
+          target="_blank"
         >
           <Col
             className={styles.footer__social__item}
             as="a"
-            target="_blank"
             aria-label="Link for Linkedin"
           >
             <FaLinkedin size={20} color="var(--grey)" />
@@ -40,11 +44,11 @@ export default function Footer() {
           href="https://www.instagram.com/franklingg1/"
           passHref
           prefetch={false}
+          target="_blank"
         >
           <Col
             className={styles.footer__social__item}
             as="a"
-            target="_blank"
             aria-label="Link for Instagram"
           >
             <FaInstagramSquare size={20} color="var(--grey)" />
@@ -54,11 +58,11 @@ export default function Footer() {
           href="https://discord.com/users/502633304491819018"
           passHref
           prefetch={false}
+          target="_blank"
         >
           <Col
             className={styles.footer__social__item}
             as="a"
-            target="_blank"
             aria-label="Link for Discord"
           >
             <RiDiscordFill size={20} color="var(--grey)" />

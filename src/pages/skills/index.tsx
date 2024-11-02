@@ -12,9 +12,10 @@ import { GetStaticProps } from "next";
 export default function Skills() {
   const [allSkills] = useState<ISkill[]>([
     { name: "Javascript/TypeScript", value: 85 },
-    { name: "React (Redux/NextJS/React Native)", value: 75 },
+    { name: "React & React Native (Redux/NextJS)", value: 80 },
     { name: "Angular", value: 70 },
     { name: "Dart (Flutter)", value: 70 },
+    { name: "AWS & Firebase", value: 60 },
     { name: "Node (Express/MongoDB)", value: 45 },
     { name: "Python/Java (Flask/SpringBoot)", value: 35 },
   ]);

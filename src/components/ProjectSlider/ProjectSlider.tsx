@@ -6,9 +6,10 @@ import Image from "next/image";
 import styles from "./ProjectSlider.module.css";
 import { useLangContext } from "~/contexts/langContext";
 import SliderArrow from "./SliderArrow";
+import { IPage } from "~/util/Content";
 
 type ProjectSliderProps = {
-  kind: "Web + Mobile" | "software";
+  kind: Exclude<keyof IPage["projects"], "title">;
 };
 
 export default function ProjectSlider({ kind }: ProjectSliderProps) {

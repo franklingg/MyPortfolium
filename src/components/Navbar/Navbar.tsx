@@ -171,8 +171,8 @@ export default function Navbar() {
           <GiHamburgerMenu className={styles.navbar__sidebar__contentIcon} />
         </button>
       </Sidebar>
-      <Link href="/" passHref>
-        <Col className={styles.navbar__logo}>
+      <Link href="/" passHref className={styles.navbar__logo}>
+        <Col>
           <Image src={Logo} alt="Logo de Franklin Regis" />
         </Col>
       </Link>

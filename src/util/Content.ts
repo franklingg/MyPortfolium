@@ -116,8 +116,9 @@ export interface IPage {
   };
   projects: {
     title: string;
-    "Web + Mobile": Array<IProject>;
-    software: Array<IProject>;
+    web: Array<IProject>;
+    mobile: Array<IProject>;
+    miscellaneous: Array<IProject>;
   };
   "404": Array<String>;
 }

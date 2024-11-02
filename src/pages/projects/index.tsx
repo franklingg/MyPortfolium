@@ -11,8 +11,9 @@ export default function Projects() {
   return (
     <Container fluid className={styles.projects}>
       <h1 className={styles.projects__title}>{pageContent.projects.title}</h1>
-      <ProjectSlider kind="Web + Mobile" />
-      <ProjectSlider kind="software" />
+      <ProjectSlider kind="web" />
+      <ProjectSlider kind="mobile" />
+      <ProjectSlider kind="miscellaneous" />
     </Container>
   );
 }
