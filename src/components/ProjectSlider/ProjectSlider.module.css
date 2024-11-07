@@ -20,7 +20,7 @@
   box-shadow: 0px 1px 4px rgba(255, 255, 255, 0.25);
   border-radius: 10px;
   margin-left: 4px;
-  max-width: 473px;
+  max-width: 90%;
   padding: 37px 20px;
   display: flex !important;
   align-items: center;
@@ -53,6 +53,7 @@
 .projects__carousel__info > p {
   flex: 1;
   margin: 0;
+  min-height: 5rem;
 }
 
 .projects__carousel__labels {
@@ -108,7 +109,7 @@
   }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .projects__slider {
     margin-top: 40px;
   }
@@ -124,7 +125,7 @@
 
   .projects__carousel__box {
     padding: 16px 9px;
-    max-width: 250px;
+    max-width: 95%;
     margin-left: 4px;
   }
 

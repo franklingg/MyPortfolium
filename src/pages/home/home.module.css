@@ -73,7 +73,7 @@
   background-color: var(--light-black);
   padding: 40px;
   border-radius: 10px;
-  max-width: 1000px;
+  max-width: 90%;
 }
 
 .home__recommendations__carouselImg {
@@ -165,7 +165,7 @@
   }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .home__banner {
     margin: 80px 40px;
   }

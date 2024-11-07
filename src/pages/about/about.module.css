@@ -129,7 +129,7 @@
   }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .about__banner {
     margin: 0 22px;
     flex-direction: column;

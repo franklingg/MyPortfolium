@@ -137,7 +137,7 @@ export default function Navbar() {
     });
   }, [handleClose]);
 
-  return typeof window !== "undefined" && window.innerWidth > 414 ? (
+  return typeof window !== "undefined" && window.innerWidth > 480 ? (
     <Row className={styles.navbar}>
       <Link href="/" passHref>
         <Col className={styles.navbar__logo}>

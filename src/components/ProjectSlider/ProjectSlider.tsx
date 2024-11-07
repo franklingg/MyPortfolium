@@ -17,7 +17,7 @@ export default function ProjectSlider({ kind }: ProjectSliderProps) {
 
   const responsiveAttr = useCallback((attr: string) => {
     if (attr == "slidesToShow") {
-      return typeof window !== "undefined" && window.innerWidth <= 414 ? 1 : 2;
+      return typeof window !== "undefined" && window.innerWidth <= 480 ? 1 : 2;
     }
   }, []);
 

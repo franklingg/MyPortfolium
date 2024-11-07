@@ -45,7 +45,7 @@
   }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .footer {
     padding: 19px 22px;
     justify-content: space-between;
